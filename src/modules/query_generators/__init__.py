@@ -1,0 +1,1 @@
+from .type_1_query_generator import generate

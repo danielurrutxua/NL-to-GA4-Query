@@ -1,0 +1,23 @@
+from enum import Enum
+
+class DateRange(Enum):
+    YEAR = 1
+    YEAR_RANGE = 2
+    MONTH = 3
+    MONTH_RANGE = 4
+    DAY = 5
+    DAY_RANGE = 6
+    LAST_CALENDAR_WEEK = 7
+    LAST_CALENDAR_MONTH = 8
+    LAST_CALENDAR_QUARTER = 9
+    LAST_CALENDAR_YEAR = 10
+    LAST_7_DAYS = 11
+    LAST_14_DAYS = 12
+    LAST_30_DAYS = 13
+    LAST_90_DAYS = 14
+    TODAY = 15
+    YESTERDAY = 16
+    DAYS_AGO = 17
+    WEEKS_AGO = 18
+    MONTHS_AGO = 19
+    YEARS_AGO = 20
