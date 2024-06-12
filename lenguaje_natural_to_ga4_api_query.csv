@@ -1,101 +1,101 @@
-Natural Language Query;Metrics;Date Ranges
-Infórmame los artículos en los que se hizo clic incluidos en la lista de hace 146 semanas.;itemsClickedInList;146WeeksAgo,today
-Ilústrame el importe del reembolso y las vistas por sesión en el 20 de octubre de 2010.;refundAmount,screenPageViewsPerSession;2010-10-20,2010-10-20
-Narra la relación de artículos agregados al carrito sobre vistas y los artículos vistos incluidos en la lista durante el mes de agosto de 2006.;cartToViewRate,itemsViewedInList;2006-08-01,2006-08-31
-Expóname los ingresos totales registrados el 16 de julio de 2017.;totalRevenue;2017-07-16,2017-07-16
-Comunica los artículos vistos incluidos en la promoción entre el 2 de agosto de 2014 y el 6 de febrero de 2021.;itemsViewedInPromotion;2014-08-02,2021-02-06
-Mencióname los clics de la búsqueda de google orgánica de 2003 hasta 2005.;organicGoogleSearchClicks;2003-01-01,2005-12-31
-Declara los ingresos brutos por artículo a lo largo de los últimos 6 años.;grossItemRevenue;6YearsAgo,today
-Revela el importe del reembolso del 2002 al 2009.;refundAmount;2002-01-01,2009-12-31
-Relata los artículos en los que se hizo clic incluidos en la lista del periodo de 2020.;itemsClickedInList;2020-01-01,2020-12-31
-Declarame los eventos por sesión y la conversión de comprador a lo largo del día de hoy.;eventsPerSession,purchaserConversionRate;today,today
-Esclarece el dau/mau del periodo de los últimos 2 meses.;dauPerMau;2MonthsAgo,today
-Divúlgame el dau/mau y los usuarios activos durante los últimos 7 días de los últimos 95 días.;dauPerMau,active7DayUsers;95DaysAgo,today
-Detalla los artículos vistos incluidos en la promoción registrados en los últimos 30 días.;itemsViewedInPromotion;last30days,last30days
-Evidénciame las compras de comercio electrónico y los ingresos por artículos de los últimos 7 días.;ecommercePurchases,itemRevenue;last7days,last7days
-Relata los usuarios activos durante 1 día y el porcentaje de sesiones con conversiones en los últimos 30 días.;active1DayUsers,sessionConversionRate;last30days,last30days
-Define las sesiones por usuario a lo largo de los últimos 9 años.;sessionsPerUser;9YearsAgo,today
-Señálame los artículos en los que se hizo clic incluidos en la lista a lo largo de los últimos 36 meses.;itemsClickedInList;36MonthsAgo,today
-Anúnciame la duración promedio de la sesión del periodo de los últimos 14 días.;averageSessionDuration;last14days,last14days
-Muestra los artículos pagados y las confirmaciones de compra en las últimas 106 semanas.;itemsCheckedOut,checkouts;106WeeksAgo,today
-Expóname la relación de artículos agregados al carrito sobre vistas del periodo de los últimos 30 días.;cartToViewRate;last30days,last30days
-Indícame los agregar a carrito y los usuarios que completaron su primer evento de compra de ayer.;addToCarts,firstTimePurchasers;yesterday,yesterday
-Describe el porcentaje de sesiones con conversiones durante el último mes.;sessionConversionRate;lastCalendarMonth,lastCalendarMonth
-Asegúrame el costo de los anuncios del mes de junio de 2005 al mes de junio de 2020.;advertiserAdCost;2005-06-01,2020-06-30
-Señálame las vistas por sesión y el total de ingresos publicitarios durante los últimos 7 días.;screenPageViewsPerSession,totalAdRevenue;last7days,last7days
-Expón los usuarios afectados por fallas y los clics en los anuncios del día de ayer.;crashAffectedUsers,advertiserAdClicks;yesterday,yesterday
-Transmíteme el porcentaje de sesiones con conversiones y los artículos vistos incluidos en la promoción durante los últimos 7 días.;sessionConversionRate,itemsViewedInPromotion;last7days,last7days
-Manifiéstame el wau/mau de los últimos 46 meses.;wauPerMau;46MonthsAgo,today
-Discute los agregar a carrito y los artículos en los que se hizo clic incluidos en la promoción de los últimos 195 días.;addToCarts,itemsClickedInPromotion;195DaysAgo,today
-Comunica la primera conversión por compra y los agregar a carrito a lo largo de la última semana.;firstTimePurchaserConversionRate,addToCarts;lastCalendarWeek,lastCalendarWeek
-Comenta los artículos vistos incluidos en la lista del periodo del 8 de febrero de 2019 al 22 de julio de 2021.;itemsViewedInList;2019-02-08,2021-07-22
-Adjúntame el importe del envío de los últimos tres meses.;shippingAmount;last90days,last90days
-Divúlgame el costo por conversión y las confirmaciones de compra a lo largo de los últimos 90 días.;advertiserAdCostPerConversion,checkouts;last90days,last90days
-Informa la duración promedio de la sesión y el promedio de ingresos de compras por usuario entre el 4 de noviembre de 2010 y el 26 de junio de 2020.;averageSessionDuration,averagePurchaseRevenuePerUser;2010-11-04,2020-06-26
-Transmíteme la tasa de participación y las vistas de promociones desde el año 2003 hasta 2024del año 2003 al año 2024.;engagementRate,promotionViews;2003-01-01,2024-12-31
-Comunícame los artículos pagados correspondientes al último año.;itemsCheckedOut;lastCalendarYear,lastCalendarYear
-Detalla los agregar a carrito y el promedio de ingresos de compras por usuario del periodo del último trimestre.;addToCarts,averagePurchaseRevenuePerUser;lastCalendarQuarter,lastCalendarQuarter
-Expone el total de ingresos publicitarios y los eventos por sesión de los últimos 30 días.;totalAdRevenue,eventsPerSession;last30days,last30days
-Comenta los artículos comprados desde junio de 2006 hasta octubre de 2017.;itemsPurchased;2006-06-01,2017-10-31
-Señala los clics en promociones correspondientes a ayer.;promotionClicks;yesterday,yesterday
-Expón los artículos en los que se hizo clic incluidos en la promoción y el costo por conversión en el último trimestre.;itemsClickedInPromotion,advertiserAdCostPerConversion;lastCalendarQuarter,lastCalendarQuarter
-Señala el arppu y el total de ingresos publicitarios de ayer.;averagePurchaseRevenuePerPayingUser,totalAdRevenue;yesterday,yesterday
-Esclarece la tasa de clics de la promoción de artículos del periodo de abril de 2003 al periodo de abril de 2008.;itemPromotionClickThroughRate;2003-04-01,2008-04-30
-Manifiesta el importe del reembolso del artículo del periodo de las últimas 2 semanas.;itemRefundAmount;2WeeksAgo,today
-Manifiéstame el promedio de ingresos por compras y la tasa de usuarios que no experimentaron fallas del periodo de las últimas 101 semanas.;averagePurchaseRevenue,crashFreeUsersRate;101WeeksAgo,today
-Comunica el total de usuarios de la cohorte en los últimos 8 años.;cohortTotalUsers;8YearsAgo,today
-Mencióname los usuarios activos durante los últimos 7 días y las transacciones por comprador de la última semana.;active7DayUsers,transactionsPerPurchaser;lastCalendarWeek,lastCalendarWeek
-Elabora los usuarios activos de la cohorte y el importe del reembolso durante el último mes.;cohortActiveUsers,refundAmount;lastCalendarMonth,lastCalendarMonth
-Sugiéreme los clics de la búsqueda de google orgánica en los últimos 9 años.;organicGoogleSearchClicks;9YearsAgo,today
-Sugiere los eventos de vista de listas de artículos y el importe de descuento del artículo durante el último mes.;itemListViewEvents,itemDiscountAmount;lastCalendarMonth,lastCalendarMonth
-Expone los usuarios desplazados durante el 1 de enero de 2018.;scrolledUsers;2018-01-01,2018-01-01
-Transmite las vistas de promociones y el costo por clic de los anuncios del día 28 de mayo de 2015.;promotionViews,advertiserAdCostPerClick;2015-05-28,2015-05-28
-Expone las impresiones de anuncios y el arppu del periodo de los últimos 7 años.;advertiserAdImpressions,averagePurchaseRevenuePerPayingUser;7YearsAgo,today
-Muestra los ingresos brutos por artículo del periodo de los últimos 121 días.;grossItemRevenue;121DaysAgo,today
-Señálame las vistas por sesión y la tasa de clics de la lista de artículos desde septiembre hasta diciembre de 2024.;screenPageViewsPerSession,itemListClickThroughRate;2024-09-01,2024-12-31
-Aclara las sesiones en los últimos 14 días.;sessions;last14days,last14days
-Publica el costo por clic de los anuncios y los artículos en los que se hizo clic incluidos en la lista del periodo de los últimos 39 meses.;advertiserAdCostPerClick,itemsClickedInList;39MonthsAgo,today
-Comunícame las transacciones y los clics en anuncios de publicadores correspondientes a hoy.;transactions,publisherAdClicks;today,today
-Transmite las confirmaciones de compra del periodo de las últimas 105 semanas.;checkouts;105WeeksAgo,today
-Narra el costo por conversión a lo largo de los últimos 19 meses.;advertiserAdCostPerConversion;19MonthsAgo,today
-Háblame la primera conversión por compra y los clics en los anuncios en el año 2018.;firstTimePurchaserConversionRate,advertiserAdClicks;2018-01-01,2018-12-31
-Informa el costo por clic de los anuncios para el año 2011.;advertiserAdCostPerClick;2011-01-01,2011-12-31
-Relata el importe del envío y las sesiones del periodo de diciembre de 2017.;shippingAmount,sessions;2017-12-01,2017-12-31
-Esbozame el promedio de ingresos de compras por usuario de la última semana.;averagePurchaseRevenuePerUser;last7days,last7days
-Háblame las compras de comercio electrónico y los artículos en los que se hizo clic incluidos en la promoción de los últimos 30 días.;ecommercePurchases,itemsClickedInPromotion;last30days,last30days
-Aclara el costo de los anuncios a lo largo del día de hoy.;advertiserAdCost;today,today
-Detalla el retorno de la inversión publicitaria durante el día de ayer.;returnOnAdSpend;yesterday,yesterday
-Relátame el dau/mau y los ingresos brutos por artículo desde septiembre de 2002 hasta septiembre de 2022.;dauPerMau,grossItemRevenue;2002-09-01,2022-09-30
-Presenta los artículos vistos incluidos en la promoción y la tasa de participación a lo largo de 2020.;itemsViewedInPromotion,engagementRate;2020-01-01,2020-12-31
-Esclarece la tasa de clics de la promoción de artículos y los ingresos por compras desde el año 2023 hasta el año 2024.;itemPromotionClickThroughRate,purchaseRevenue;2023-01-01,2024-12-31
-Señala el costo por conversión y los artículos vistos correspondientes a la última semana.;advertiserAdCostPerConversion,itemsViewed;lastCalendarWeek,lastCalendarWeek
-Ilústrame las transacciones a lo largo de los últimos 2 años.;transactions;2YearsAgo,today
-Infórmame el recuento de eventos y las vistas por usuario correspondientes al último año.;eventCount,screenPageViewsPerUser;lastCalendarYear,lastCalendarYear
-Aclara la tasa de clics de la promoción de artículos de los últimos 116 días.;itemPromotionClickThroughRate;116DaysAgo,today
-Explica los eventos de clic en listas de artículos y las sesiones que generaron participación el mes de julio del 2012.;itemListClickEvents,engagedSessions;2012-07-01,2012-07-31
-Relátame la duración promedio de la sesión de ayer.;averageSessionDuration;yesterday,yesterday
-Discute los clics de la búsqueda de google orgánica y la relación de compras sobre vistas de ayer.;organicGoogleSearchClicks,purchaseToViewRate;yesterday,yesterday
-Descríbeme los compradores totales por usuario nuevo y el porcentaje de conversiones de usuario en las últimas 101 semanas.;firstTimePurchasersPerNewUser,userConversionRate;101WeeksAgo,today
-Dime la duración promedio de la sesión y el total de ingresos publicitarios en los últimos 7 días.;averageSessionDuration,totalAdRevenue;last7days,last7days
-Relátame el importe del impuesto durante el mes de marzo de 2003.;taxAmount;2003-03-01,2003-03-31
-Especifícame los artículos en los que se hizo clic incluidos en la promoción y los eventos de clic en listas de artículos de hace 53 semanas.;itemsClickedInPromotion,itemListClickEvents;53WeeksAgo,today
-Define el importe del impuesto y la participación del usuario de los últimos tres meses.;taxAmount,userEngagementDuration;last90days,last90days
-Aclara las transacciones por comprador de hace 10 años.;transactionsPerPurchaser;10YearsAgo,today
-Explica las sesiones y el importe del envío de 2010.;sessions,shippingAmount;2010-01-01,2010-12-31
-Describe las compras de comercio electrónico de los últimos 7 días.;ecommercePurchases;last7days,last7days
-Explícame el valor de evento y la conversión de comprador del día 3 de enero de 2012.;eventValue,purchaserConversionRate;2012-01-03,2012-01-03
-Manifiesta la relación de artículos agregados al carrito sobre vistas a lo largo de las últimas 19 semanas.;cartToViewRate;19WeeksAgo,today
-Relata el promedio de ingresos por compras y el costo por conversión correspondientes a ayer.;averagePurchaseRevenue,advertiserAdCostPerConversion;yesterday,yesterday
-Comunica las conversiones y la participación del usuario a lo largo de 2011.;conversions,userEngagementDuration;2011-01-01,2011-12-31
-Comunícame las transacciones del mes de abril del 2023.;transactions;2023-04-01,2023-04-30
-Enséñame las vistas por usuario a lo largo del día de ayer.;screenPageViewsPerUser;yesterday,yesterday
-Comunica las sesiones que generaron participación en los últimos 7 días.;engagedSessions;last7days,last7days
-Expón el valor de evento y el total de usuarios desde agosto de 2005 hasta diciembre de 2014.;eventValue,totalUsers;2005-08-01,2014-12-31
-Anúnciame los usuarios activos durante 1 día en el mes del año 2024 correspondiente a abril.;active1DayUsers;2024-04-01,2024-04-30
-Indícame las vistas de promociones del periodo de los últimos 90 días.;promotionViews;last90days,last90days
-Sugiere los artículos vistos incluidos en la lista y la primera conversión por compra registrados en 2015.;itemsViewedInList,firstTimePurchaserConversionRate;2015-01-01,2015-12-31
-Define los ingresos totales y la posición promedio de la búsqueda de google orgánica a lo largo de los últimos 14 días.;totalRevenue,organicGoogleSearchAveragePosition;last14days,last14days
-Declárame los agregar a carrito y el porcentaje de conversiones de usuario registrados en el último año.;addToCarts,userConversionRate;lastCalendarYear,lastCalendarYear
-Cuéntame la posición promedio de la búsqueda de google orgánica y los eventos por sesión del periodo de 2002.;organicGoogleSearchAveragePosition,eventsPerSession;2002-01-01,2002-12-31
-Coméntame las sesiones del 8 de diciembre de 2022.;sessions;2022-12-08,2022-12-08
-Esclarece los usuarios afectados por fallas y el costo por conversión a lo largo de los últimos 93 días.;crashAffectedUsers,advertiserAdCostPerConversion;93DaysAgo,today
+Natural Language Query;Metrics;Dimensions;Filters;Date Ranges
+Transmíteme el costo por clic de los anuncios por Primer ID de renderización de CM360 del usuario limitado a usuarios activos que tenga el valor de 31193 del periodo del 5 de abril de 2010 al 2 de enero de 2012.;firstUserCm360RenderingId;advertiserAdCostPerClick;activeUsers == 31193;2010-04-05,2012-01-02
+Relátame los artículos vistos por Primer medio de SA360 del usuario condicionado a pais equivalente a Tailandia registrados en los últimos 7 días.;firstUserSa360Medium;itemsViewed;country == Thailand;last7days,last7days
+Comunícame el promedio de ingresos de compras por usuario por Nombre de la campaña manual filtrado por tipo de dispositivo que tenga un valor de phone de 2009.;manualCampaignName;averagePurchaseRevenuePerUser;deviceCategory == phone;2009-01-01,2009-12-31
+Preséntame los usuarios activos durante los últimos 7 días por Primer ID de la creatividad de DV360 del usuario donde tipo de dispositivo coincide con desktop durante el último mes.;firstUserDv360CreativeId;active7DayUsers;deviceCategory == desktop;lastCalendarMonth,lastCalendarMonth
+Cuéntame los compradores totales por usuario nuevo por Nombre de host de usuarios activos que sea igual a 63946 registrados en las últimas 107 semanas.;hostName;firstTimePurchasersPerNewUser;activeUsers == 63946;107WeeksAgo,today
+Notifícame los ingresos totales por Primer medio de CM360 del usuario restringido a usuarios activos que tenga un valor de 80704 a lo largo del día de ayer.;firstUserCm360Medium;totalRevenue;activeUsers == 80704;yesterday,yesterday
+Aclara las vistas por usuario por Nombre del evento limitado a pais igual a Turquía desde 10 de junio de 2021 hasta 4 de abril de 2022.;eventName;screenPageViewsPerUser;country == Turkey;2021-06-10,2022-04-04
+Infórmame los artículos pagados por Espacio para la creatividad de promoción del artículo restringido a usuarios activos con 61316 del periodo de septiembre de 2014 al periodo de octubre de 2020.;itemPromotionCreativeSlot;itemsCheckedOut;activeUsers == 61316;2014-09-01,2020-10-31
+Háblame las vistas por Fecha y hora (AAAAMMDDHH) limitado a usuarios activos con 6721 en el último año.;dateHour;screenPageViews;activeUsers == 6721;lastCalendarYear,lastCalendarYear
+Dime la primera conversión por compra por ID del primer grupo de anuncios de SA360 del usuario con tipo de dispositivo que sea desktop registrados en el mes de agosto de 2011.;firstUserSa360AdGroupId;firstTimePurchaserConversionRate;deviceCategory == desktop;2011-08-01,2011-08-31
+Acota el recuento de eventos por Plataforma con pais que sea Albania desde octubre 2014 hasta noviembre 2023.;platform;eventCount;country == Albania;2014-10-01,2023-11-30
+Relata la primera conversión por compra por Primera plataforma de origen manual del usuario filtrado por usuarios activos que tengan 27978 del 19 de julio al 7 de diciembre de 2020.;firstUserManualSourcePlatform;firstTimePurchaserConversionRate;activeUsers == 27978;2020-07-19,2020-12-07
+Notifícame el dau/mau por Nombre de la cuenta de Google Ads limitado a tipo de dispositivo que tenga el valor de desktop a lo largo del último año.;googleAdsAccountName;dauPerMau;deviceCategory == desktop;lastCalendarYear,lastCalendarYear
+Infórmame los usuarios activos durante 1 día por Texto de palabra clave de Google Ads de la sesión filtrado por pais que sea Perú entre el 14 de noviembre de 2012 y el 12 de diciembre de 2016.;sessionGoogleAdsKeyword;active1DayUsers;country == Peru;2012-11-14,2016-12-12
+Detalla los eventos por sesión por ID de filtro de datos de prueba condicionado a usuarios activos que coincida con 59948 en los últimos 3 años.;testDataFilterId;eventsPerSession;activeUsers == 59948;3YearsAgo,today
+Señala los clics en promociones por Tipo de creatividad de CM360 filtrado por tipo de dispositivo con phone desde el año 2008 hasta el año 2022.;cm360CreativeType;promotionClicks;deviceCategory == phone;2008-01-01,2022-12-31
+Relata las impresiones de la búsqueda de google orgánica por ID de la campaña de CM360 de la sesión limitado a usuarios activos que tenga el valor de 27696 desde el mes de febrero de 2015 hasta el mes de mayo de 2018.;sessionCm360CampaignId;organicGoogleSearchImpressions;activeUsers == 27696;2015-02-01,2018-05-31
+Expón el arppu por ID del grupo de anuncios de SA360 restringido a pais cuyo valor sea Sudáfrica de 2011 hasta 2021.;sa360AdGroupId;averagePurchaseRevenuePerPayingUser;country == South Africa;2011-01-01,2021-12-31
+Ilustra los artículos comprados por Nombre de la campaña manual de la sesión filtrado por tipo de dispositivo que sea tablet entre 2019 y 2020.;sessionManualCampaignName;itemsPurchased;deviceCategory == tablet;2019-01-01,2020-12-31
+Manifiesta los clics de la búsqueda de google orgánica por ID de la cuenta de CM360 de la sesión limitado a pais equivalente a Indonesia registrados en el último año.;sessionCm360AccountId;organicGoogleSearchClicks;country == Indonesia;lastCalendarYear,lastCalendarYear
+Testimonia el importe del envío por Año limitado a tipo de dispositivo que sea desktop del día de ayer.;year;shippingAmount;deviceCategory == desktop;yesterday,yesterday
+Comenta la exposición de la unidad de anuncios por Formato de creatividad de SA360 de la sesión filtrado por pais que tengan Turkmenistán el día 6 de noviembre de 2015.;sessionSa360CreativeFormat;adUnitExposure;country == Turkmenistan;2015-11-06,2015-11-06
+Comenta el recuento de eventos por Carácter donde usuarios activos coincide con 12316 desde el 9 de enero de 2014 hasta el 11 de diciembre de 2017.;character;eventCount;activeUsers == 12316;2014-01-09,2017-12-11
+Coméntame el importe del envío por Medio de CM360 de usuarios activos igual a 72383 de los últimos 90 días.;cm360Medium;shippingAmount;activeUsers == 72383;last90days,last90days
+Señala el porcentaje de rebote por ID del anunciante de CM360 con pais equivalente a Vietnam de ayer.;cm360AdvertiserId;bounceRate;country == Vietnam;yesterday,yesterday
+Sugiere el dau/wau por Nombre del primer socio de DV360 del usuario filtrado por usuarios activos con 31142 de hace 183 días.;firstUserDv360PartnerName;dauPerWau;activeUsers == 31142;183DaysAgo,today
+Narra el total de compradores por Semana filtrado por pais igual a Estados Unidos en los últimos 14 días.;week;totalPurchasers;country == United States;last14days,last14days
+Cuéntame la posición promedio de la búsqueda de google orgánica por Nombre de la campaña de DV360 de la sesión condicionado a tipo de dispositivo equivalente a phone del trimestre pasado.;sessionDv360CampaignName;organicGoogleSearchAveragePosition;deviceCategory == phone;lastCalendarQuarter,lastCalendarQuarter
+Aclárame los usuarios nuevos por ID de la primera campaña de CM360 del usuario filtrado por pais que tenga un valor de Eslovaquia a lo largo de la última semana.;firstUserCm360CampaignId;newUsers;country == Slovakia;lastCalendarWeek,lastCalendarWeek
+Discute la exposición de la unidad de anuncios por ID del anunciante de DV360 de la sesión donde pais equivale a República Checa de hoy.;sessionDv360AdvertiserId;adUnitExposure;country == Czech Republic;today,today
+Formula las vistas de promociones por Nombre de la cuenta de CM360 de la sesión filtrado por pais igual a Perú en octubre de 2010.;sessionCm360AccountName;promotionViews;country == Peru;2010-10-01,2010-10-31
+Testimonia los agregar a carrito por Grupo de canales principal de la sesión limitado a pais cuyo valor sea Portugal a lo largo de la última semana.;sessionPrimaryChannelGroup;addToCarts;country == Portugal;lastCalendarWeek,lastCalendarWeek
+Declárame el total de ingresos publicitarios por Medio manual de la sesión igual a tipo de dispositivo en phone en el mes del 2023 correspondiente a noviembre.;sessionManualMedium;totalAdRevenue;deviceCategory == phone;2023-11-01,2023-11-30
+Háblame el retorno de la inversión publicitaria por Modelo del dispositivo filtrado por tipo de dispositivo cuyo valor sea desktop del mes de marzo de 2015 al mes de octubre de 2018.;deviceModel;returnOnAdSpend;deviceCategory == desktop;2015-03-01,2018-10-31
+Comunícame el valor de evento por ID del sitio de CM360 restringido a usuarios activos equivalente a 90433 durante los últimos 7 días.;cm360SiteId;eventValue;activeUsers == 90433;last7days,last7days
+Transmite los ingresos totales por Medio de la sesión condicionado a tipo de dispositivo equivalente a desktop correspondientes a las últimas 6 semanas.;sessionMedium;totalRevenue;deviceCategory == desktop;6WeeksAgo,today
+Testimonia las impresiones de la búsqueda de google orgánica por Medio de la sesión condicionado a usuarios activos que coincida con 30736 de 2017 a 2018.;sessionMedium;organicGoogleSearchImpressions;activeUsers == 30736;2017-01-01,2018-12-31
+Aclara las confirmaciones de compra por Medio de SA360 limitado a pais que sea igual a Jordania para el año 2011.;sa360Medium;checkouts;country == Jordan;2011-01-01,2011-12-31
+Infórmame los artículos vistos incluidos en la promoción por Búsqueda de Google Ads de la sesión restringido a pais con Noruega del 11 de mayo de 2018.;sessionGoogleAdsQuery;itemsViewedInPromotion;country == Norway;2018-05-11,2018-05-11
+Háblame los eventos de vista de artículos por Carácter limitado a pais que sea igual a Irak correspondientes a los últimos 14 días.;character;itemViewEvents;country == Iraq;last14days,last14days
+Ilústrame las vistas de promociones por ID de la campaña de CM360 condicionado a pais equivalente a Sudáfrica correspondientes al último mes.;cm360CampaignId;promotionViews;country == South Africa;lastCalendarMonth,lastCalendarMonth
+Muestra las vistas por ID de la campaña de Google Ads de la sesión filtrado por pais igual a Nigeria de hace 59 días.;sessionGoogleAdsCampaignId;screenPageViews;country == Nigeria;59DaysAgo,today
+Explícame el promedio de ingresos por compras por Término manual de la sesión condicionado a tipo de dispositivo cuyo valor sea phone registrados en el último mes.;sessionManualTerm;averagePurchaseRevenue;deviceCategory == phone;lastCalendarMonth,lastCalendarMonth
+Revelame los ingresos por compras por Nombre de la primera campaña manual del usuario condicionado a pais igual a Venezuela a lo largo de los últimos 14 días.;firstUserManualCampaignName;purchaseRevenue;country == Venezuela;last14days,last14days
+Relátame el total de ingresos publicitarios por Enésimo día limitado a pais que tenga el valor de Egipto a lo largo del 23 de noviembre de 2017.;nthDay;totalAdRevenue;country == Egypt;2017-11-23,2017-11-23
+Explícame los compradores totales por usuario nuevo por Nombre de la primera cuenta de Google Ads del usuario filtrado por tipo de dispositivo con phone de los últimos treinta días.;firstUserGoogleAdsAccountName;firstTimePurchasersPerNewUser;deviceCategory == phone;lastCalendarMonth,lastCalendarMonth
+Detalla el costo de los anuncios por Nombre del pedido de inserción de DV360 condicionado a tipo de dispositivo cuyo valor sea desktop de 2020.;dv360InsertionOrderName;advertiserAdCost;deviceCategory == desktop;2020-01-01,2020-12-31
+Relata los usuarios nuevos por Primer grupo de canales predeterminado del usuario con pais que tenga un valor de Montenegro en los últimos 7 días.;firstUserDefaultChannelGroup;newUsers;country == Montenegro;last7days,last7days
+Acota los ingresos brutos por artículo por Primer contenido de anuncio manual del usuario limitado a usuarios activos que tenga el valor de 49017 a lo largo del último trimestre.;firstUserManualAdContent;grossItemRevenue;activeUsers == 49017;lastCalendarQuarter,lastCalendarQuarter
+Describe los ingresos por compras por Término manual que tenga usuarios activos con el valor de 25929 en los últimos 7 días.;manualTerm;purchaseRevenue;activeUsers == 25929;last7days,last7days
+Describe el total de usuarios de la cohorte por Cupón de pedido condicionado a usuarios activos que tenga un valor de 39376 durante el último mes.;orderCoupon;cohortTotalUsers;activeUsers == 39376;lastCalendarMonth,lastCalendarMonth
+Asegúrame los eventos de clic en listas de artículos por Tipo de red de publicidad de Google Ads condicionado a pais equivalente a Mongolia durante los últimos 16 meses.;googleAdsAdNetworkType;itemListClickEvents;country == Mongolia;16MonthsAgo,today
+Detállame el retorno de la inversión publicitaria por ID de vinculación filtrado por pais igual a Bangladés de los últimos 14 días.;linkId;returnOnAdSpend;country == Bangladesh;last14days,last14days
+Sostén las sesiones por usuario por ID de la cuenta de motor de SA360 restringido a tipo de dispositivo que tenga el valor de phone en 2009.;sessionSa360EngineAccountId;sessionsPerUser;deviceCategory == phone;2009-01-01,2009-12-31
+Relátame la primera conversión por compra por ID de la cuenta de CM360 de la sesión filtrado por tipo de dispositivo que tenga un valor de phone registrados hoy.;sessionCm360AccountId;firstTimePurchaserConversionRate;deviceCategory == phone;today,today
+Informa las sesiones por Variante del artículo filtrado por usuarios activos que tenga el valor de 23692 de los últimos 26 meses.;itemVariant;sessions;activeUsers == 23692;26MonthsAgo,today
+Divúlgame el recuento de eventos por Enésimo año con tipo de dispositivo equivalente a tablet mes de julio del año 2013.;nthYear;eventCount;deviceCategory == tablet;2013-07-01,2013-07-31
+Transmíteme las transacciones por comprador por Nombre de la cuenta de motor de SA360 restringido a pais que tengan Marruecos de ayer.;sa360EngineAccountName;transactionsPerPurchaser;country == Morocco;yesterday,yesterday
+Acota el retorno de la inversión publicitaria por Contenido del anuncio manual de la sesión que tenga usuarios activos igual a 42351 de hace 6 años.;sessionManualAdContent;returnOnAdSpend;activeUsers == 42351;6YearsAgo,today
+Señala las impresiones de anuncios de publicadores por ID de la campaña de Google Ads de la sesión igual a usuarios activos en 13521 en 2003.;sessionGoogleAdsCampaignId;publisherAdImpressions;activeUsers == 13521;2003-01-01,2003-12-31
+Comunica la tasa de clics de la promoción de artículos por ID de posición de CM360 limitado a tipo de dispositivo que tenga el valor de desktop en los últimos 80 días.;cm360PlacementId;itemPromotionClickThroughRate;deviceCategory == desktop;80DaysAgo,today
+Coméntame la tasa de participación por ID de cliente de Google Ads de la sesión restringido a tipo de dispositivo que sea desktop de los últimos siete días.;sessionGoogleAdsCustomerId;engagementRate;deviceCategory == desktop;lastCalendarWeek,lastCalendarWeek
+Discute los usuarios que completaron su primer evento de compra por ID del sitio de CM360 filtrado por tipo de dispositivo que coincida con desktop registrados en los últimos 35 meses.;cm360SiteId;firstTimePurchasers;deviceCategory == desktop;35MonthsAgo,today
+Indícame los usuarios nuevos por ID del grupo de anuncios de Google Ads condicionado a tipo de dispositivo que coincida con tablet a lo largo de 2015.;googleAdsAdGroupId;newUsers;deviceCategory == tablet;2015-01-01,2015-12-31
+Asegúrame el promedio de ingresos de compras por usuario por Nombre de la cuenta de Google Ads de la sesión con tipo de dispositivo que sea igual a phone en la última semana.;sessionGoogleAdsAccountName;averagePurchaseRevenuePerUser;deviceCategory == phone;lastCalendarWeek,lastCalendarWeek
+Sugiere la conversión de comprador por Búsqueda de Google Ads igual a tipo de dispositivo desktop desde junio hasta agosto de 2022.;googleAdsQuery;purchaserConversionRate;deviceCategory == desktop;2022-06-01,2022-08-31
+Detalla los artículos comprados por Acceso con ID de usuario limitado a usuarios activos igual a 51770 durante el último año.;signedInWithUserId;itemsPurchased;activeUsers == 51770;lastCalendarYear,lastCalendarYear
+Relátame las transacciones por comprador por Tipo de red de publicidad de Google Ads limitado a tipo de dispositivo que tenga el valor de phone de 2017 hasta 2020.;googleAdsAdNetworkType;transactionsPerPurchaser;deviceCategory == phone;2017-01-01,2020-12-31
+Explica las vistas por sesión por ID del sitio de CM360 de la sesión restringido a usuarios activos cuyo valor sea 94691 del periodo de los últimos 20 meses.;sessionCm360SiteId;screenPageViewsPerSession;activeUsers == 94691;20MonthsAgo,today
+Muestra la tasa de clics de la lista de artículos por Resolución de pantalla igual a tipo de dispositivo en phone registrados en el último año.;screenResolution;itemListClickThroughRate;deviceCategory == phone;lastCalendarYear,lastCalendarYear
+Muestra los ingresos por artículos por Nombre del anunciante de DV360 condicionado a tipo de dispositivo que tenga el valor de desktop registrados en el mes de febrero del 2011.;dv360AdvertiserName;itemRevenue;deviceCategory == desktop;2011-02-01,2011-02-28
+Acota las transacciones por comprador por Tipo de contenido con usuarios activos que sea igual a 26000 desde mayo de 2002 hasta junio de 2023.;contentType;transactionsPerPurchaser;activeUsers == 26000;2002-05-01,2023-06-30
+Declara los usuarios activos por Táctica de marketing manual de la sesión limitado a usuarios activos que tenga el valor de 54498 de la última semana.;sessionManualMarketingTactic;activeUsers;activeUsers == 54498;last7days,last7days
+Detalla los clics en anuncios de publicadores por ID de la ciudad filtrado por usuarios activos igual a 84861 registrados en la última semana.;cityId;publisherAdClicks;activeUsers == 84861;lastCalendarWeek,lastCalendarWeek
+Cuéntame la conversión de comprador por ID de la ciudad condicionado a pais que tenga un valor de Bosnia y Herzegovina correspondientes a los últimos 4 años.;cityId;purchaserConversionRate;country == Bosnia and Herzegovina;4YearsAgo,today
+Describe el importe del impuesto por Fuente manual de la sesión de usuarios activos igual a 47071 de los últimos 14 días.;sessionManualSource;taxAmount;activeUsers == 47071;last14days,last14days
+Aclárame los artículos vistos incluidos en la lista por ID de la creatividad de DV360 de la sesión limitado a pais que coincida con Bélgica registrados en las últimas 169 semanas.;sessionDv360CreativeId;itemsViewedInList;country == Belgium;169WeeksAgo,today
+Relátame los clics en anuncios de publicadores por Nombre del primer sitio de CM360 del usuario filtrado por pais cuyo valor sea Arabia Saudita registrados en los últimos 10 años.;firstUserCm360SiteName;publisherAdClicks;country == Saudi Arabia;10YearsAgo,today
+Señálame las impresiones de anuncios por ID de posición de CM360 filtrado por usuarios activos que tengan 83239 a lo largo de los últimos 162 días.;cm360PlacementId;advertiserAdImpressions;activeUsers == 83239;162DaysAgo,today
+Sugiere el total de usuarios por Primer grupo de canales predeterminado del usuario filtrado por pais que sea Nepal desde el mes de agosto de 2016 hasta el mes de noviembre de 2024.;firstUserDefaultChannelGroup;totalUsers;country == Nepal;2016-08-01,2024-11-30
+Ilústrame el total de compradores por ID de la primera cuenta de motor de SA360 del usuario con tipo de dispositivo que sea desktop en el día de hoy.;firstUserSa360EngineAccountId;totalPurchasers;deviceCategory == desktop;today,today
+Manifiesta la primera conversión por compra por ID de la creatividad de DV360 condicionado a tipo de dispositivo cuyo valor sea tablet correspondientes a los últimos 90 días.;dv360CreativeId;firstTimePurchaserConversionRate;deviceCategory == tablet;last90days,last90days
+Indícame la tasa de participación por ID de posición de CM360 filtrado por usuarios activos cuyo valor sea 69505 durante el día de ayer.;cm360PlacementId;engagementRate;activeUsers == 69505;yesterday,yesterday
+Relata los artículos en los que se hizo clic incluidos en la lista por ID del primer pedido de inserción de DV360 del usuario restringido a tipo de dispositivo que sea desktop de la última semana.;firstUserDv360InsertionOrderId;itemsClickedInList;deviceCategory == desktop;lastCalendarWeek,lastCalendarWeek
+Refiéreme el total de ingresos publicitarios por Fuente limitado a pais equivalente a Singapur de la semana pasada.;source;totalAdRevenue;country == Singapore;lastCalendarWeek,lastCalendarWeek
+Indícame los ingresos totales por ID de renderización de CM360 de la sesión de usuarios activos igual a 97846 a lo largo del último mes.;sessionCm360RenderingId;totalRevenue;activeUsers == 97846;lastCalendarMonth,lastCalendarMonth
+Sostén el promedio de ingresos por compras por Primera fuente o medio de SA360 del usuario con tipo de dispositivo cuyo valor sea phone desde abril 2002 hasta noviembre 2007.;firstUserSa360SourceMedium;averagePurchaseRevenue;deviceCategory == phone;2002-04-01,2007-11-30
+Expón los usuarios activos durante los últimos 7 días por Mes del año que tenga tipo de dispositivo igual a desktop de las últimas 22 semanas.;yearMonth;active7DayUsers;deviceCategory == desktop;22WeeksAgo,today
+Precísame el importe del reembolso por Primera fuente o medio de SA360 del usuario limitado a usuarios activos que coincida con 30194 a lo largo de los últimos 5 años.;firstUserSa360SourceMedium;refundAmount;activeUsers == 30194;5YearsAgo,today
+Narra los usuarios nuevos por Primera fuente o medio de SA360 del usuario con tipo de dispositivo que sea phone del trimestre pasado.;firstUserSa360SourceMedium;newUsers;deviceCategory == phone;lastCalendarQuarter,lastCalendarQuarter
+Narra los usuarios nuevos por Medio manual con tipo de dispositivo que sea desktop el día 13 de marzo de 2022.;manualMedium;newUsers;deviceCategory == desktop;2022-03-13,2022-03-13
+Transmite la tasa de clics de la búsqueda orgánica de google por Edad restringido a tipo de dispositivo que tenga el valor de phone desde 9 de marzo de 2011 hasta 28 de abril de 2019.;userAgeBracket;organicGoogleSearchClickThroughRate;deviceCategory == phone;2011-03-09,2019-04-28
+Establece las sesiones por Medio de DV360 de la sesión con usuarios activos equivalente a 3551 correspondientes a los últimos 34 meses.;sessionDv360Medium;sessions;activeUsers == 3551;34MonthsAgo,today
+Narra los usuarios que completaron su primer evento de compra por ID de la campaña manual restringido a usuarios activos que coincida con 49318 registrados hoy.;manualCampaignId;firstTimePurchasers;activeUsers == 49318;today,today
+Revela los clics en los anuncios por ID de la cuenta de motor de SA360 de usuarios activos igual a 5223 a lo largo del día de hoy.;sa360EngineAccountId;advertiserAdClicks;activeUsers == 5223;today,today
+Transmite las conversiones por ID del grupo condicionado a usuarios activos equivalente a 72939 del 21 de abril de 2019.;groupId;conversions;activeUsers == 72939;2019-04-21,2019-04-21
+Comenta los ingresos brutos por compras por ID del primer grupo de anuncios de SA360 del usuario con usuarios activos que tenga un valor de 70356 desde el mes de septiembre de 2000 hasta el mes de noviembre de 2009.;firstUserSa360AdGroupId;grossPurchaseRevenue;activeUsers == 70356;2000-09-01,2009-11-30
+Testimonia el porcentaje de sesiones con conversiones por ID del anunciante de CM360 de la sesión filtrado por usuarios activos que sea 26666 a lo largo de las últimas 177 semanas.;sessionCm360AdvertiserId;sessionConversionRate;activeUsers == 26666;177WeeksAgo,today
+Manifiesta el total de usuarios por Espacio para la creatividad de promoción del artículo filtrado por pais que tengan Estados Unidos del último año.;itemPromotionCreativeSlot;totalUsers;country == United States;lastCalendarYear,lastCalendarYear
+Dime los ingresos totales por Estructura de costos de la posición de CM360 condicionado a pais que tengan India del mes de marzo de 2016 al mes de septiembre de 2020.;cm360PlacementCostStructure;totalRevenue;country == India;2016-03-01,2020-09-30
