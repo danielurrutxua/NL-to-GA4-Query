@@ -1,7 +1,11 @@
 import pandas as pd
 
+initial_phrases_df = pd.read_csv('resources/sinonimos_dime.csv')
 metrics_df = pd.read_csv('resources/metrics.csv')
 dimensions_df = pd.read_csv('resources/dimensions.csv')
+
+def get_random_initial_phrase():
+    return initial_phrases_df.sample(n=1).iloc[0].iloc[0]
 
 def get_random_metric():
     return metrics_df.sample(n=1).iloc[0]

@@ -11,8 +11,6 @@ def main():
 
     for _ in range(num_pairs):
         type = random.choice(query_types)
-        type = 2
-
         if(type==1): pair = generate_type_1()
         elif(type==2): pair = generate_type_2()
 

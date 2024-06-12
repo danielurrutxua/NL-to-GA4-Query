@@ -1,11 +1,11 @@
 import random
-from modules.query_generators.constants.initial_phrases import initial_phrases
+from modules.query_generators.utils.resources import get_random_initial_phrase
 from modules.query_generators.utils.resources import get_random_metric
 from modules.date_ranges import generate as generate_date_ranges
 
 def generate():
     # Seleccionar aleatoriamente una manera de comenzar la frase
-    initial_phrase = random.choice(initial_phrases)
+    initial_phrase = get_random_initial_phrase()
 
     # Seleccionar una métrica aleatoria
     metric = get_random_metric()

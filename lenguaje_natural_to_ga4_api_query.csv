@@ -1,0 +1,101 @@
+Natural Language Query;Metrics;Date Ranges
+Infórmame los artículos en los que se hizo clic incluidos en la lista de hace 146 semanas.;itemsClickedInList;146WeeksAgo,today
+Ilústrame el importe del reembolso y las vistas por sesión en el 20 de octubre de 2010.;refundAmount,screenPageViewsPerSession;2010-10-20,2010-10-20
+Narra la relación de artículos agregados al carrito sobre vistas y los artículos vistos incluidos en la lista durante el mes de agosto de 2006.;cartToViewRate,itemsViewedInList;2006-08-01,2006-08-31
+Expóname los ingresos totales registrados el 16 de julio de 2017.;totalRevenue;2017-07-16,2017-07-16
+Comunica los artículos vistos incluidos en la promoción entre el 2 de agosto de 2014 y el 6 de febrero de 2021.;itemsViewedInPromotion;2014-08-02,2021-02-06
+Mencióname los clics de la búsqueda de google orgánica de 2003 hasta 2005.;organicGoogleSearchClicks;2003-01-01,2005-12-31
+Declara los ingresos brutos por artículo a lo largo de los últimos 6 años.;grossItemRevenue;6YearsAgo,today
+Revela el importe del reembolso del 2002 al 2009.;refundAmount;2002-01-01,2009-12-31
+Relata los artículos en los que se hizo clic incluidos en la lista del periodo de 2020.;itemsClickedInList;2020-01-01,2020-12-31
+Declarame los eventos por sesión y la conversión de comprador a lo largo del día de hoy.;eventsPerSession,purchaserConversionRate;today,today
+Esclarece el dau/mau del periodo de los últimos 2 meses.;dauPerMau;2MonthsAgo,today
+Divúlgame el dau/mau y los usuarios activos durante los últimos 7 días de los últimos 95 días.;dauPerMau,active7DayUsers;95DaysAgo,today
+Detalla los artículos vistos incluidos en la promoción registrados en los últimos 30 días.;itemsViewedInPromotion;last30days,last30days
+Evidénciame las compras de comercio electrónico y los ingresos por artículos de los últimos 7 días.;ecommercePurchases,itemRevenue;last7days,last7days
+Relata los usuarios activos durante 1 día y el porcentaje de sesiones con conversiones en los últimos 30 días.;active1DayUsers,sessionConversionRate;last30days,last30days
+Define las sesiones por usuario a lo largo de los últimos 9 años.;sessionsPerUser;9YearsAgo,today
+Señálame los artículos en los que se hizo clic incluidos en la lista a lo largo de los últimos 36 meses.;itemsClickedInList;36MonthsAgo,today
+Anúnciame la duración promedio de la sesión del periodo de los últimos 14 días.;averageSessionDuration;last14days,last14days
+Muestra los artículos pagados y las confirmaciones de compra en las últimas 106 semanas.;itemsCheckedOut,checkouts;106WeeksAgo,today
+Expóname la relación de artículos agregados al carrito sobre vistas del periodo de los últimos 30 días.;cartToViewRate;last30days,last30days
+Indícame los agregar a carrito y los usuarios que completaron su primer evento de compra de ayer.;addToCarts,firstTimePurchasers;yesterday,yesterday
+Describe el porcentaje de sesiones con conversiones durante el último mes.;sessionConversionRate;lastCalendarMonth,lastCalendarMonth
+Asegúrame el costo de los anuncios del mes de junio de 2005 al mes de junio de 2020.;advertiserAdCost;2005-06-01,2020-06-30
+Señálame las vistas por sesión y el total de ingresos publicitarios durante los últimos 7 días.;screenPageViewsPerSession,totalAdRevenue;last7days,last7days
+Expón los usuarios afectados por fallas y los clics en los anuncios del día de ayer.;crashAffectedUsers,advertiserAdClicks;yesterday,yesterday
+Transmíteme el porcentaje de sesiones con conversiones y los artículos vistos incluidos en la promoción durante los últimos 7 días.;sessionConversionRate,itemsViewedInPromotion;last7days,last7days
+Manifiéstame el wau/mau de los últimos 46 meses.;wauPerMau;46MonthsAgo,today
+Discute los agregar a carrito y los artículos en los que se hizo clic incluidos en la promoción de los últimos 195 días.;addToCarts,itemsClickedInPromotion;195DaysAgo,today
+Comunica la primera conversión por compra y los agregar a carrito a lo largo de la última semana.;firstTimePurchaserConversionRate,addToCarts;lastCalendarWeek,lastCalendarWeek
+Comenta los artículos vistos incluidos en la lista del periodo del 8 de febrero de 2019 al 22 de julio de 2021.;itemsViewedInList;2019-02-08,2021-07-22
+Adjúntame el importe del envío de los últimos tres meses.;shippingAmount;last90days,last90days
+Divúlgame el costo por conversión y las confirmaciones de compra a lo largo de los últimos 90 días.;advertiserAdCostPerConversion,checkouts;last90days,last90days
+Informa la duración promedio de la sesión y el promedio de ingresos de compras por usuario entre el 4 de noviembre de 2010 y el 26 de junio de 2020.;averageSessionDuration,averagePurchaseRevenuePerUser;2010-11-04,2020-06-26
+Transmíteme la tasa de participación y las vistas de promociones desde el año 2003 hasta 2024del año 2003 al año 2024.;engagementRate,promotionViews;2003-01-01,2024-12-31
+Comunícame los artículos pagados correspondientes al último año.;itemsCheckedOut;lastCalendarYear,lastCalendarYear
+Detalla los agregar a carrito y el promedio de ingresos de compras por usuario del periodo del último trimestre.;addToCarts,averagePurchaseRevenuePerUser;lastCalendarQuarter,lastCalendarQuarter
+Expone el total de ingresos publicitarios y los eventos por sesión de los últimos 30 días.;totalAdRevenue,eventsPerSession;last30days,last30days
+Comenta los artículos comprados desde junio de 2006 hasta octubre de 2017.;itemsPurchased;2006-06-01,2017-10-31
+Señala los clics en promociones correspondientes a ayer.;promotionClicks;yesterday,yesterday
+Expón los artículos en los que se hizo clic incluidos en la promoción y el costo por conversión en el último trimestre.;itemsClickedInPromotion,advertiserAdCostPerConversion;lastCalendarQuarter,lastCalendarQuarter
+Señala el arppu y el total de ingresos publicitarios de ayer.;averagePurchaseRevenuePerPayingUser,totalAdRevenue;yesterday,yesterday
+Esclarece la tasa de clics de la promoción de artículos del periodo de abril de 2003 al periodo de abril de 2008.;itemPromotionClickThroughRate;2003-04-01,2008-04-30
+Manifiesta el importe del reembolso del artículo del periodo de las últimas 2 semanas.;itemRefundAmount;2WeeksAgo,today
+Manifiéstame el promedio de ingresos por compras y la tasa de usuarios que no experimentaron fallas del periodo de las últimas 101 semanas.;averagePurchaseRevenue,crashFreeUsersRate;101WeeksAgo,today
+Comunica el total de usuarios de la cohorte en los últimos 8 años.;cohortTotalUsers;8YearsAgo,today
+Mencióname los usuarios activos durante los últimos 7 días y las transacciones por comprador de la última semana.;active7DayUsers,transactionsPerPurchaser;lastCalendarWeek,lastCalendarWeek
+Elabora los usuarios activos de la cohorte y el importe del reembolso durante el último mes.;cohortActiveUsers,refundAmount;lastCalendarMonth,lastCalendarMonth
+Sugiéreme los clics de la búsqueda de google orgánica en los últimos 9 años.;organicGoogleSearchClicks;9YearsAgo,today
+Sugiere los eventos de vista de listas de artículos y el importe de descuento del artículo durante el último mes.;itemListViewEvents,itemDiscountAmount;lastCalendarMonth,lastCalendarMonth
+Expone los usuarios desplazados durante el 1 de enero de 2018.;scrolledUsers;2018-01-01,2018-01-01
+Transmite las vistas de promociones y el costo por clic de los anuncios del día 28 de mayo de 2015.;promotionViews,advertiserAdCostPerClick;2015-05-28,2015-05-28
+Expone las impresiones de anuncios y el arppu del periodo de los últimos 7 años.;advertiserAdImpressions,averagePurchaseRevenuePerPayingUser;7YearsAgo,today
+Muestra los ingresos brutos por artículo del periodo de los últimos 121 días.;grossItemRevenue;121DaysAgo,today
+Señálame las vistas por sesión y la tasa de clics de la lista de artículos desde septiembre hasta diciembre de 2024.;screenPageViewsPerSession,itemListClickThroughRate;2024-09-01,2024-12-31
+Aclara las sesiones en los últimos 14 días.;sessions;last14days,last14days
+Publica el costo por clic de los anuncios y los artículos en los que se hizo clic incluidos en la lista del periodo de los últimos 39 meses.;advertiserAdCostPerClick,itemsClickedInList;39MonthsAgo,today
+Comunícame las transacciones y los clics en anuncios de publicadores correspondientes a hoy.;transactions,publisherAdClicks;today,today
+Transmite las confirmaciones de compra del periodo de las últimas 105 semanas.;checkouts;105WeeksAgo,today
+Narra el costo por conversión a lo largo de los últimos 19 meses.;advertiserAdCostPerConversion;19MonthsAgo,today
+Háblame la primera conversión por compra y los clics en los anuncios en el año 2018.;firstTimePurchaserConversionRate,advertiserAdClicks;2018-01-01,2018-12-31
+Informa el costo por clic de los anuncios para el año 2011.;advertiserAdCostPerClick;2011-01-01,2011-12-31
+Relata el importe del envío y las sesiones del periodo de diciembre de 2017.;shippingAmount,sessions;2017-12-01,2017-12-31
+Esbozame el promedio de ingresos de compras por usuario de la última semana.;averagePurchaseRevenuePerUser;last7days,last7days
+Háblame las compras de comercio electrónico y los artículos en los que se hizo clic incluidos en la promoción de los últimos 30 días.;ecommercePurchases,itemsClickedInPromotion;last30days,last30days
+Aclara el costo de los anuncios a lo largo del día de hoy.;advertiserAdCost;today,today
+Detalla el retorno de la inversión publicitaria durante el día de ayer.;returnOnAdSpend;yesterday,yesterday
+Relátame el dau/mau y los ingresos brutos por artículo desde septiembre de 2002 hasta septiembre de 2022.;dauPerMau,grossItemRevenue;2002-09-01,2022-09-30
+Presenta los artículos vistos incluidos en la promoción y la tasa de participación a lo largo de 2020.;itemsViewedInPromotion,engagementRate;2020-01-01,2020-12-31
+Esclarece la tasa de clics de la promoción de artículos y los ingresos por compras desde el año 2023 hasta el año 2024.;itemPromotionClickThroughRate,purchaseRevenue;2023-01-01,2024-12-31
+Señala el costo por conversión y los artículos vistos correspondientes a la última semana.;advertiserAdCostPerConversion,itemsViewed;lastCalendarWeek,lastCalendarWeek
+Ilústrame las transacciones a lo largo de los últimos 2 años.;transactions;2YearsAgo,today
+Infórmame el recuento de eventos y las vistas por usuario correspondientes al último año.;eventCount,screenPageViewsPerUser;lastCalendarYear,lastCalendarYear
+Aclara la tasa de clics de la promoción de artículos de los últimos 116 días.;itemPromotionClickThroughRate;116DaysAgo,today
+Explica los eventos de clic en listas de artículos y las sesiones que generaron participación el mes de julio del 2012.;itemListClickEvents,engagedSessions;2012-07-01,2012-07-31
+Relátame la duración promedio de la sesión de ayer.;averageSessionDuration;yesterday,yesterday
+Discute los clics de la búsqueda de google orgánica y la relación de compras sobre vistas de ayer.;organicGoogleSearchClicks,purchaseToViewRate;yesterday,yesterday
+Descríbeme los compradores totales por usuario nuevo y el porcentaje de conversiones de usuario en las últimas 101 semanas.;firstTimePurchasersPerNewUser,userConversionRate;101WeeksAgo,today
+Dime la duración promedio de la sesión y el total de ingresos publicitarios en los últimos 7 días.;averageSessionDuration,totalAdRevenue;last7days,last7days
+Relátame el importe del impuesto durante el mes de marzo de 2003.;taxAmount;2003-03-01,2003-03-31
+Especifícame los artículos en los que se hizo clic incluidos en la promoción y los eventos de clic en listas de artículos de hace 53 semanas.;itemsClickedInPromotion,itemListClickEvents;53WeeksAgo,today
+Define el importe del impuesto y la participación del usuario de los últimos tres meses.;taxAmount,userEngagementDuration;last90days,last90days
+Aclara las transacciones por comprador de hace 10 años.;transactionsPerPurchaser;10YearsAgo,today
+Explica las sesiones y el importe del envío de 2010.;sessions,shippingAmount;2010-01-01,2010-12-31
+Describe las compras de comercio electrónico de los últimos 7 días.;ecommercePurchases;last7days,last7days
+Explícame el valor de evento y la conversión de comprador del día 3 de enero de 2012.;eventValue,purchaserConversionRate;2012-01-03,2012-01-03
+Manifiesta la relación de artículos agregados al carrito sobre vistas a lo largo de las últimas 19 semanas.;cartToViewRate;19WeeksAgo,today
+Relata el promedio de ingresos por compras y el costo por conversión correspondientes a ayer.;averagePurchaseRevenue,advertiserAdCostPerConversion;yesterday,yesterday
+Comunica las conversiones y la participación del usuario a lo largo de 2011.;conversions,userEngagementDuration;2011-01-01,2011-12-31
+Comunícame las transacciones del mes de abril del 2023.;transactions;2023-04-01,2023-04-30
+Enséñame las vistas por usuario a lo largo del día de ayer.;screenPageViewsPerUser;yesterday,yesterday
+Comunica las sesiones que generaron participación en los últimos 7 días.;engagedSessions;last7days,last7days
+Expón el valor de evento y el total de usuarios desde agosto de 2005 hasta diciembre de 2014.;eventValue,totalUsers;2005-08-01,2014-12-31
+Anúnciame los usuarios activos durante 1 día en el mes del año 2024 correspondiente a abril.;active1DayUsers;2024-04-01,2024-04-30
+Indícame las vistas de promociones del periodo de los últimos 90 días.;promotionViews;last90days,last90days
+Sugiere los artículos vistos incluidos en la lista y la primera conversión por compra registrados en 2015.;itemsViewedInList,firstTimePurchaserConversionRate;2015-01-01,2015-12-31
+Define los ingresos totales y la posición promedio de la búsqueda de google orgánica a lo largo de los últimos 14 días.;totalRevenue,organicGoogleSearchAveragePosition;last14days,last14days
+Declárame los agregar a carrito y el porcentaje de conversiones de usuario registrados en el último año.;addToCarts,userConversionRate;lastCalendarYear,lastCalendarYear
+Cuéntame la posición promedio de la búsqueda de google orgánica y los eventos por sesión del periodo de 2002.;organicGoogleSearchAveragePosition,eventsPerSession;2002-01-01,2002-12-31
+Coméntame las sesiones del 8 de diciembre de 2022.;sessions;2022-12-08,2022-12-08
+Esclarece los usuarios afectados por fallas y el costo por conversión a lo largo de los últimos 93 días.;crashAffectedUsers,advertiserAdCostPerConversion;93DaysAgo,today
