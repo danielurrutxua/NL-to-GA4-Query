@@ -5,9 +5,10 @@ def export(pairs):
     for pair in pairs:
         natural_language_query = pair[0]
         api_query = pair[1]
-        metrics = ','.join(api_query['metrics'])  # Separar métricas por coma
+        metrics = ','.join(api_query['dimensions'])  # Separar métricas por coma
+        dimensions = ','.join(api_query['metrics'])  # Separar métricas por coma
         date_ranges = '; '.join([f"{date_range['startDate']},{date_range['endDate']}" for date_range in api_query['dateRanges']])  # Separar rangos de fechas por punto y coma
-        data.append({'Natural Language Query': natural_language_query, 'Metrics': metrics, 'Date Ranges': date_ranges})
+        data.append({'Natural Language Query': natural_language_query, 'Metrics': metrics, 'Dimensions': dimensions, 'Date Ranges': date_ranges})
 
     # Crear el DataFrame
     df = pd.DataFrame(data)

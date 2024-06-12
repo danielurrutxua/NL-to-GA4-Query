@@ -19,4 +19,4 @@ def generate():
     natural_language_query = f"{initial_phrase} {metric_phrase1.lower()} y {metric_phrase2.lower()} {date_phrase}."
     
     # Devolver la consulta en lenguaje natural y la estructura de la API
-    return (natural_language_query, {"metrics": [metric1.iloc[0], metric2.iloc[0]], "dateRanges": [date_range_api_query]})
+    return (natural_language_query, {"metrics": [metric1.iloc[0], metric2.iloc[0]], "dimensions": [], "dateRanges": [date_range_api_query]})

@@ -153,7 +153,7 @@ No incluye: filtros o segmentaciones adicionales.
 ```json
 Necesito el número de conversiones por campaña el 15 de febrero de 2023.
 ```
-##### Consulta de tipo 1 traducida en formato JSON
+#### Consulta de tipo 1 traducida en formato JSON
 
 ```json
 {
@@ -163,18 +163,84 @@ Necesito el número de conversiones por campaña el 15 de febrero de 2023.
 }
 ```
 
-#### Ejemplo de generación de pares con fechas relativas
-
-##### Consulta en lenguaje natural
+#### Consulta en lenguaje natural
 ```json
 Necesito el total de usuarios activos por ciudad del último mes.
 ```
-##### Consulta de tipo 1 traducida en formato JSON
+#### Consulta de tipo 1 traducida en formato JSON
 
 ```json
 {
   "metrics": ["activeUsers"],
   "dimensions": ["city"],
+  "dateRanges": [{"startDate": "lastCalendarMonth", "endDate": "lastCalendarMonth"}]
+}
+```
+
+## Tipo 4: Consultas de Métricas con Rango de Fechas, Dimensiones y Filtros
+
+Las consultas de **Tipo 4** añaden una capa adicional de complejidad al incluir filtros específicos que restringen los resultados basados en ciertos criterios. Esto permite un análisis más detallado y focalizado. Los filtros pueden aplicarse tanto a las métricas como a las dimensiones.
+
+### Ejemplos
+
+1. **Dame el número total de usuarios en marzo de 2022, filtrado por país igual a Estados Unidos.**
+   - Métrica: `users`
+   - Dimensión: `country`
+   - Filtro: `country == "United States"`
+   - Rango de Fechas: `2022-03-01 a 2022-03-31`
+
+2. **Quiero ver las sesiones totales por navegador del último trimestre, filtrado por dispositivo móvil.**
+   - Métrica: `sessions`
+   - Dimensión: `browser`
+   - Filtro: `deviceCategory == "mobile"`
+   - Rango de Fechas: `2022-01-01 a 2022-03-31`
+
+3. **Dame los ingresos por producto durante noviembre de 2022, filtrado por categoría de producto igual a "Electronics".**
+   - Métrica: `itemRevenue`
+   - Dimensión: `productName`
+   - Filtro: `productCategory == "Electronics"`
+   - Rango de Fechas: `2022-11-01 a 2022-11-30`
+
+4. **Quiero ver el total de eventos completados por tipo de evento en abril de 2023, filtrado por eventos que contengan "click".**
+   - Métrica: `eventCount`
+   - Dimensión: `eventName`
+   - Filtro: `eventName CONTAINS "click"`
+   - Rango de Fechas: `2023-04-01 a 2023-04-30`
+
+5. **Quiero ver el total de usuarios activos por ciudad durante el último mes, filtrado por ciudades con más de 1000 usuarios.**
+   - Métrica: `activeUsers`
+   - Dimensión: `city`
+   - Filtro: `activeUsers > 1000`
+   - Rango de Fechas: `2023-05-01 a 2023-05-31`
+
+### Ejemplo de generación de pares
+
+#### Consulta en lenguaje natural
+```json
+Necesito el número de usuarios por país el 5 de mayo de 2014, filtrado por país igual a Estados Unidos.
+```
+#### Consulta de tipo 1 traducida en formato JSON
+
+```json
+{
+  "metrics": ["users"],
+  "dimensions": ["country"],
+  "filters": ["country == 'United States'"],
+  "dateRanges": [{"startDate": "2014-05-05", "endDate": "2014-05-05"}]
+}
+```
+
+#### Consulta en lenguaje natural
+```json
+Necesito el total de usuarios activos por ciudad del último mes, filtrado por ciudades con más de 1000 usuarios.
+```
+#### Consulta de tipo 1 traducida en formato JSON
+
+```json
+{
+  "metrics": ["activeUsers"],
+  "dimensions": ["city"],
+  "filters": ["activeUsers > 1000"],
   "dateRanges": [{"startDate": "lastCalendarMonth", "endDate": "lastCalendarMonth"}]
 }
 ```
