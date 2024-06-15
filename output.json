@@ -1,0 +1,1613 @@
+[
+    {
+        "natural_language_query": "Argumenta los eventos de vista de artículos y el arpu de los últimos 30 días",
+        "api_query": {
+            "metrics": [
+                "itemViewEvents",
+                "averageRevenuePerUser"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "last30days",
+                    "endDate": "last30days"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Testimonia el Promedio de ingresos de compras por usuario en los últimos 14 días",
+        "api_query": {
+            "metrics": [
+                "averagePurchaseRevenuePerUser"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "last14days",
+                    "endDate": "last14days"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Elabora los artículos pagados y el total de ingresos publicitarios por ID de la campaña de DV360 de las últimas 69 semanas",
+        "api_query": {
+            "metrics": [
+                "itemsCheckedOut",
+                "totalAdRevenue"
+            ],
+            "dimensions": [
+                "dv360CampaignId"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "69WeeksAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Anúnciame los clics en promociones y el promedio de ingresos de compras por usuario por Fuente del anuncio registrados en las últimas 184 semanas",
+        "api_query": {
+            "metrics": [
+                "promotionClicks",
+                "averagePurchaseRevenuePerUser"
+            ],
+            "dimensions": [
+                "adSourceName"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "184WeeksAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Publica la Relación de artículos agregados al carrito sobre vistas correspondientes a los últimos 3 años",
+        "api_query": {
+            "metrics": [
+                "cartToViewRate"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "3YearsAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Sugiéreme la tasa de clics de la lista de artículos y los artículos vistos por ID de cliente de Google Ads de la sesión de los últimos 8 años",
+        "api_query": {
+            "metrics": [
+                "itemListClickThroughRate",
+                "itemsViewed"
+            ],
+            "dimensions": [
+                "sessionGoogleAdsCustomerId"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "8YearsAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Relata la Tasa de clics de la promoción de artículos por Day durante el último trimestre",
+        "api_query": {
+            "metrics": [
+                "itemPromotionClickThroughRate"
+            ],
+            "dimensions": [
+                "day"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "lastCalendarQuarter",
+                    "endDate": "lastCalendarQuarter"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Señala los Artículos vistos incluidos en la lista por URL de referencia de la página durante los últimos 7 días",
+        "api_query": {
+            "metrics": [
+                "itemsViewedInList"
+            ],
+            "dimensions": [
+                "pageReferrer"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "last7days",
+                    "endDate": "last7days"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Describe el Porcentaje de conversiones de usuario por Fuente de DV360 de la sesión del 7 de noviembre de 2010 al 26 de abril de 2012",
+        "api_query": {
+            "metrics": [
+                "userConversionRate"
+            ],
+            "dimensions": [
+                "sessionDv360Source"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "2010-11-07",
+                    "endDate": "2012-04-26"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Comunica las Sesiones que generaron participación del periodo del 1 de junio de 2015 al 7 de noviembre de 2022",
+        "api_query": {
+            "metrics": [
+                "engagedSessions"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "2015-06-01",
+                    "endDate": "2022-11-07"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Adjúntame el total de ingresos publicitarios y los artículos vistos incluidos en la promoción en los últimos 14 días",
+        "api_query": {
+            "metrics": [
+                "totalAdRevenue",
+                "itemsViewedInPromotion"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "last14days",
+                    "endDate": "last14days"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Relátame el Total de compradores de los últimos tres meses",
+        "api_query": {
+            "metrics": [
+                "totalPurchasers"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "last90days",
+                    "endDate": "last90days"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Manifiesta el Promedio de ingresos de compras por usuario por ID de línea de pedido de DV360 en el mes del 2021 correspondiente a junio",
+        "api_query": {
+            "metrics": [
+                "averagePurchaseRevenuePerUser"
+            ],
+            "dimensions": [
+                "dv360LineItemId"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "2021-06-01",
+                    "endDate": "2021-06-30"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Infórmame las Transacciones por comprador registrados en los últimos 53 días",
+        "api_query": {
+            "metrics": [
+                "transactionsPerPurchaser"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "53DaysAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Manifiesta los Artículos en los que se hizo clic incluidos en la promoción por Primera fuente o medio de DV360 del usuario de 2020",
+        "api_query": {
+            "metrics": [
+                "itemsClickedInPromotion"
+            ],
+            "dimensions": [
+                "firstUserDv360SourceMedium"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "2020-01-01",
+                    "endDate": "2020-12-31"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Aclara las conversiones y la participación del usuario por Nombre del pedido de inserción de DV360 de la sesión de hoy",
+        "api_query": {
+            "metrics": [
+                "conversions",
+                "userEngagementDuration"
+            ],
+            "dimensions": [
+                "sessionDv360InsertionOrderName"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "today",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Sugiere la conversión de comprador y las sesiones por usuario por ID de la cuenta de motor de SA360 correspondientes al último año",
+        "api_query": {
+            "metrics": [
+                "purchaserConversionRate",
+                "sessionsPerUser"
+            ],
+            "dimensions": [
+                "sessionSa360EngineAccountId"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "lastCalendarYear",
+                    "endDate": "lastCalendarYear"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Expón las Confirmaciones de compra por Primera búsqueda de Google Ads del usuario del periodo del último mes",
+        "api_query": {
+            "metrics": [
+                "checkouts"
+            ],
+            "dimensions": [
+                "firstUserGoogleAdsQuery"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "lastCalendarMonth",
+                    "endDate": "lastCalendarMonth"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Declarame los Artículos comprados del mes pasado",
+        "api_query": {
+            "metrics": [
+                "itemsPurchased"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "lastCalendarMonth",
+                    "endDate": "lastCalendarMonth"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Publica el arpu y el recuento de eventos de 2003",
+        "api_query": {
+            "metrics": [
+                "averageRevenuePerUser",
+                "eventCount"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "2003-01-01",
+                    "endDate": "2003-12-31"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Divúlgame la Conversión de comprador registrados en los últimos 14 días",
+        "api_query": {
+            "metrics": [
+                "purchaserConversionRate"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "last14days",
+                    "endDate": "last14days"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Comunica los artículos vistos incluidos en la lista y el importe del impuesto por Clases de vínculos de los últimos 90 días",
+        "api_query": {
+            "metrics": [
+                "itemsViewedInList",
+                "taxAmount"
+            ],
+            "dimensions": [
+                "linkClasses"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "last90days",
+                    "endDate": "last90days"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Manifiéstame los clics en los anuncios y los artículos vistos incluidos en la lista por ID del primer grupo de anuncios de Google Ads del usuario para el 20 de mayo de 2016",
+        "api_query": {
+            "metrics": [
+                "advertiserAdClicks",
+                "itemsViewedInList"
+            ],
+            "dimensions": [
+                "firstUserGoogleAdsAdGroupId"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "2016-05-20",
+                    "endDate": "2016-05-20"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Testimonia la Posición promedio de la Búsqueda de Google orgánica por Primera fuente del usuario del periodo del último mes",
+        "api_query": {
+            "metrics": [
+                "organicGoogleSearchAveragePosition"
+            ],
+            "dimensions": [
+                "firstUserSource"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "lastCalendarMonth",
+                    "endDate": "lastCalendarMonth"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Asegúrame los artículos agregados al carrito y la tasa de participación por Primer grupo de canales principal del usuario en los últimos 90 días",
+        "api_query": {
+            "metrics": [
+                "itemsAddedToCart",
+                "engagementRate"
+            ],
+            "dimensions": [
+                "firstUserPrimaryChannelGroup"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "last90days",
+                    "endDate": "last90days"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Aclara los Artículos en los que se hizo clic incluidos en la lista a lo largo de las últimas 154 semanas",
+        "api_query": {
+            "metrics": [
+                "itemsClickedInList"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "154WeeksAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Declárame los eventos de vista de listas de artículos y los ingresos por compras durante los últimos 7 días",
+        "api_query": {
+            "metrics": [
+                "itemListViewEvents",
+                "purchaseRevenue"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "last7days",
+                    "endDate": "last7days"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Anúnciame el arpu y el valor de evento por Extensión de archivo correspondientes a los últimos 3 años",
+        "api_query": {
+            "metrics": [
+                "averageRevenuePerUser",
+                "eventValue"
+            ],
+            "dimensions": [
+                "fileExtension"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "3YearsAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Comenta la primera conversión por compra y la relación de artículos agregados al carrito sobre vistas por ID de la creatividad de CM360 correspondientes a los últimos 4 años",
+        "api_query": {
+            "metrics": [
+                "firstTimePurchaserConversionRate",
+                "cartToViewRate"
+            ],
+            "dimensions": [
+                "cm360CreativeId"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "4YearsAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Relata el costo de los anuncios y el importe del reembolso por Primer grupo de canales principal del usuario del trimestre pasado",
+        "api_query": {
+            "metrics": [
+                "advertiserAdCost",
+                "refundAmount"
+            ],
+            "dimensions": [
+                "firstUserPrimaryChannelGroup"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "lastCalendarQuarter",
+                    "endDate": "lastCalendarQuarter"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Divúlgame las Sesiones que generaron participación de los últimos 28 meses",
+        "api_query": {
+            "metrics": [
+                "engagedSessions"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "28MonthsAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Planteame la relación de artículos agregados al carrito sobre vistas y el importe del impuesto por Variante del artículo de los últimos 90 días",
+        "api_query": {
+            "metrics": [
+                "cartToViewRate",
+                "taxAmount"
+            ],
+            "dimensions": [
+                "itemVariant"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "last90days",
+                    "endDate": "last90days"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Especifícame los Clics de la Búsqueda de Google orgánica por Texto de palabra clave de Google Ads de 2022",
+        "api_query": {
+            "metrics": [
+                "organicGoogleSearchClicks"
+            ],
+            "dimensions": [
+                "googleAdsKeyword"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "2022-01-01",
+                    "endDate": "2022-12-31"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Aclara el promedio de ingresos de compras por usuario y el importe de descuento del artículo por Primer medio del usuario de las últimas dos semanas",
+        "api_query": {
+            "metrics": [
+                "averagePurchaseRevenuePerUser",
+                "itemDiscountAmount"
+            ],
+            "dimensions": [
+                "firstUserMedium"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "last14days",
+                    "endDate": "last14days"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Aclara los artículos agregados al carrito y las conversiones del último año",
+        "api_query": {
+            "metrics": [
+                "itemsAddedToCart",
+                "conversions"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "lastCalendarYear",
+                    "endDate": "lastCalendarYear"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Esclarece el Total de compradores por País de hace 9 años",
+        "api_query": {
+            "metrics": [
+                "totalPurchasers"
+            ],
+            "dimensions": [
+                "country"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "9YearsAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Revelame los eventos de vista de artículos y las vistas por sesión registrados en los últimos 7 días",
+        "api_query": {
+            "metrics": [
+                "itemViewEvents",
+                "screenPageViewsPerSession"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "last7days",
+                    "endDate": "last7days"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Formula el importe del impuesto y los artículos en los que se hizo clic incluidos en la promoción por Fuente de DV360 a lo largo del último mes",
+        "api_query": {
+            "metrics": [
+                "taxAmount",
+                "itemsClickedInPromotion"
+            ],
+            "dimensions": [
+                "dv360Source"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "lastCalendarMonth",
+                    "endDate": "lastCalendarMonth"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Señala las confirmaciones de compra y los artículos en los que se hizo clic incluidos en la lista desde 7 de febrero de 2017 hasta 23 de febrero de 2021",
+        "api_query": {
+            "metrics": [
+                "checkouts",
+                "itemsClickedInList"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "2017-02-07",
+                    "endDate": "2021-02-23"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Relátame los eventos de vista de artículos y la relación de artículos agregados al carrito sobre vistas por Enésima hora del periodo del 12 de mayo de 2017 al 19 de abril de 2020",
+        "api_query": {
+            "metrics": [
+                "itemViewEvents",
+                "cartToViewRate"
+            ],
+            "dimensions": [
+                "nthHour"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "2017-05-12",
+                    "endDate": "2020-04-19"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Asegúrame la Tasa de clics de la promoción de artículos por Primera táctica de marketing manual del usuario del periodo de los últimos 45 meses",
+        "api_query": {
+            "metrics": [
+                "itemPromotionClickThroughRate"
+            ],
+            "dimensions": [
+                "firstUserManualMarketingTactic"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "45MonthsAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Narra la tasa de clics de la búsqueda orgánica de google y los artículos en los que se hizo clic incluidos en la lista de la semana pasada",
+        "api_query": {
+            "metrics": [
+                "organicGoogleSearchClickThroughRate",
+                "itemsClickedInList"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "lastCalendarWeek",
+                    "endDate": "lastCalendarWeek"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Testimonia los Usuarios nuevos de ayer",
+        "api_query": {
+            "metrics": [
+                "newUsers"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "yesterday",
+                    "endDate": "yesterday"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Informa los artículos pagados y las sesiones por usuario por Primer ID de renderización de CM360 del usuario durante la última semana",
+        "api_query": {
+            "metrics": [
+                "itemsCheckedOut",
+                "sessionsPerUser"
+            ],
+            "dimensions": [
+                "firstUserCm360RenderingId"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "lastCalendarWeek",
+                    "endDate": "lastCalendarWeek"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Cuéntame los ingresos por artículos y los usuarios afectados por fallas mes de febrero del 2012",
+        "api_query": {
+            "metrics": [
+                "itemRevenue",
+                "crashAffectedUsers"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "2012-02-01",
+                    "endDate": "2012-02-29"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Acota los artículos comprados y el total de compradores por Es evento de conversión correspondientes a las últimas 22 semanas",
+        "api_query": {
+            "metrics": [
+                "itemsPurchased",
+                "totalPurchasers"
+            ],
+            "dimensions": [
+                "isConversionEvent"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "22WeeksAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Reporta los Usuarios activos durante 1 día durante los últimos 3 días",
+        "api_query": {
+            "metrics": [
+                "active1DayUsers"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "3DaysAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Indica el Importe del impuesto a lo largo del último trimestre",
+        "api_query": {
+            "metrics": [
+                "taxAmount"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "lastCalendarQuarter",
+                    "endDate": "lastCalendarQuarter"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Señálame las conversiones y el dau/mau de hace 44 meses",
+        "api_query": {
+            "metrics": [
+                "conversions",
+                "dauPerMau"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "44MonthsAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Coméntame la Tasa de clics de la lista de artículos de hace 2 años",
+        "api_query": {
+            "metrics": [
+                "itemListClickThroughRate"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "2YearsAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Relátame las sesiones que generaron participación y la duración promedio de la sesión a lo largo del día de ayer",
+        "api_query": {
+            "metrics": [
+                "engagedSessions",
+                "averageSessionDuration"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "yesterday",
+                    "endDate": "yesterday"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Discute los usuarios activos durante los últimos 28 días y los artículos vistos correspondientes a los últimos 30 días",
+        "api_query": {
+            "metrics": [
+                "active28DayUsers",
+                "itemsViewed"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "last30days",
+                    "endDate": "last30days"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Ilústrame el Recuento de eventos por usuario por Primer ID de posición de CM360 del usuario durante el 14 de febrero de 2014",
+        "api_query": {
+            "metrics": [
+                "eventCountPerUser"
+            ],
+            "dimensions": [
+                "firstUserCm360PlacementId"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "2014-02-14",
+                    "endDate": "2014-02-14"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Transmite el Promedio de ingresos de compras por usuario entre 2015 y 2018",
+        "api_query": {
+            "metrics": [
+                "averagePurchaseRevenuePerUser"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "2015-01-01",
+                    "endDate": "2018-12-31"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Anúnciame los Eventos de clic en listas de artículos en el último trimestre",
+        "api_query": {
+            "metrics": [
+                "itemListClickEvents"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "lastCalendarQuarter",
+                    "endDate": "lastCalendarQuarter"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Aclárame la primera conversión por compra y las vistas por Texto de palabra clave de SA360 de la sesión de los últimos doce meses",
+        "api_query": {
+            "metrics": [
+                "firstTimePurchaserConversionRate",
+                "screenPageViews"
+            ],
+            "dimensions": [
+                "sessionSa360Keyword"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "lastCalendarYear",
+                    "endDate": "lastCalendarYear"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Evidénciame las Compras de comercio electrónico por Sistema operativo en los últimos 150 días",
+        "api_query": {
+            "metrics": [
+                "ecommercePurchases"
+            ],
+            "dimensions": [
+                "operatingSystem"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "150DaysAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Esbozame el Promedio de ingresos por compras por Nombre del socio de DV360 durante el último año",
+        "api_query": {
+            "metrics": [
+                "averagePurchaseRevenue"
+            ],
+            "dimensions": [
+                "dv360PartnerName"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "lastCalendarYear",
+                    "endDate": "lastCalendarYear"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Expón el importe del envío y la primera conversión por compra por Texto de palabra clave de SA360 de la sesión de los últimos 53 días",
+        "api_query": {
+            "metrics": [
+                "shippingAmount",
+                "firstTimePurchaserConversionRate"
+            ],
+            "dimensions": [
+                "sessionSa360Keyword"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "53DaysAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Mencióname el Recuento de eventos por Nombre de la creatividad de CM360 de la sesión registrados hoy",
+        "api_query": {
+            "metrics": [
+                "eventCount"
+            ],
+            "dimensions": [
+                "sessionCm360CreativeName"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "today",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Comenta el retorno de la inversión publicitaria y los ingresos brutos por artículo por Primer ID de posición de CM360 del usuario registrados en las últimas 7 semanas",
+        "api_query": {
+            "metrics": [
+                "returnOnAdSpend",
+                "grossItemRevenue"
+            ],
+            "dimensions": [
+                "firstUserCm360PlacementId"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "7WeeksAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Publica el porcentaje de rebote y las sesiones que generaron participación del año 2011",
+        "api_query": {
+            "metrics": [
+                "bounceRate",
+                "engagedSessions"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "2011-01-01",
+                    "endDate": "2011-12-31"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Declara el Costo por conversión a lo largo del último trimestre",
+        "api_query": {
+            "metrics": [
+                "advertiserAdCostPerConversion"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "lastCalendarQuarter",
+                    "endDate": "lastCalendarQuarter"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Dime el DAU/WAU por Fuente de DV360 del último trimestre",
+        "api_query": {
+            "metrics": [
+                "dauPerWau"
+            ],
+            "dimensions": [
+                "dv360Source"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "lastCalendarQuarter",
+                    "endDate": "lastCalendarQuarter"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Detalla el costo de los anuncios y los usuarios desplazados en los últimos 14 meses",
+        "api_query": {
+            "metrics": [
+                "advertiserAdCost",
+                "scrolledUsers"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "14MonthsAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Asegúrame los Eventos de clic en listas de artículos por Primer ID de posición de CM360 del usuario a lo largo de los últimos 10 meses",
+        "api_query": {
+            "metrics": [
+                "itemListClickEvents"
+            ],
+            "dimensions": [
+                "firstUserCm360PlacementId"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "10MonthsAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Testimonia el Importe del reembolso del artículo por ID de la creatividad de DV360 correspondientes a ayer",
+        "api_query": {
+            "metrics": [
+                "itemRefundAmount"
+            ],
+            "dimensions": [
+                "dv360CreativeId"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "yesterday",
+                    "endDate": "yesterday"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Manifiesta las impresiones de anuncios y los artículos en los que se hizo clic incluidos en la lista a lo largo del último trimestre",
+        "api_query": {
+            "metrics": [
+                "advertiserAdImpressions",
+                "itemsClickedInList"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "lastCalendarQuarter",
+                    "endDate": "lastCalendarQuarter"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Argumenta los Artículos vistos incluidos en la promoción por Extensión de archivo de ayer",
+        "api_query": {
+            "metrics": [
+                "itemsViewedInPromotion"
+            ],
+            "dimensions": [
+                "fileExtension"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "yesterday",
+                    "endDate": "yesterday"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Sugiéreme la Exposición de la unidad de anuncios por Enésima semana correspondientes al 20 de julio de 2017",
+        "api_query": {
+            "metrics": [
+                "adUnitExposure"
+            ],
+            "dimensions": [
+                "nthWeek"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "2017-07-20",
+                    "endDate": "2017-07-20"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Aclara los usuarios activos durante 1 día y los ingresos totales del día de hoy",
+        "api_query": {
+            "metrics": [
+                "active1DayUsers",
+                "totalRevenue"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "today",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Testimonia el wau/mau y los eventos por sesión por Fecha y hora (AAAAMMDDHH) correspondientes al último mes",
+        "api_query": {
+            "metrics": [
+                "wauPerMau",
+                "eventsPerSession"
+            ],
+            "dimensions": [
+                "dateHour"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "lastCalendarMonth",
+                    "endDate": "lastCalendarMonth"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Notifícame los Artículos vistos por Formato de creatividad de CM360 de la sesión del día de ayer",
+        "api_query": {
+            "metrics": [
+                "itemsViewed"
+            ],
+            "dimensions": [
+                "sessionCm360CreativeFormat"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "yesterday",
+                    "endDate": "yesterday"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Ilústrame el promedio de ingresos de compras por usuario y los usuarios activos durante los últimos 28 días registrados en el último mes",
+        "api_query": {
+            "metrics": [
+                "averagePurchaseRevenuePerUser",
+                "active28DayUsers"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "lastCalendarMonth",
+                    "endDate": "lastCalendarMonth"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Preséntame las Sesiones por Nombre de la primera línea de pedido de DV360 del usuario del 2020 al 2023",
+        "api_query": {
+            "metrics": [
+                "sessions"
+            ],
+            "dimensions": [
+                "firstUserDv360LinteItemName"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "2020-01-01",
+                    "endDate": "2023-12-31"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Sostén las vistas por sesión y las impresiones de anuncios de publicadores registrados en la última semana",
+        "api_query": {
+            "metrics": [
+                "screenPageViewsPerSession",
+                "publisherAdImpressions"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "lastCalendarWeek",
+                    "endDate": "lastCalendarWeek"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Señálame el Porcentaje de sesiones con conversiones de los últimos tres meses",
+        "api_query": {
+            "metrics": [
+                "sessionConversionRate"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "last90days",
+                    "endDate": "last90days"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Aclara la tasa de participación y los artículos pagados de hace 42 semanas",
+        "api_query": {
+            "metrics": [
+                "engagementRate",
+                "itemsCheckedOut"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "42WeeksAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Mencióname el arppu y la conversión de comprador por ID de la cuenta de administrador de SA360 desde el año 2012 hasta el año 2015",
+        "api_query": {
+            "metrics": [
+                "averagePurchaseRevenuePerPayingUser",
+                "purchaserConversionRate"
+            ],
+            "dimensions": [
+                "sa360ManagerAccountId"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "2012-01-01",
+                    "endDate": "2015-12-31"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Describe el porcentaje de rebote y la relación de compras sobre vistas por Primera campaña del usuario a lo largo de los últimos 90 días",
+        "api_query": {
+            "metrics": [
+                "bounceRate",
+                "purchaseToViewRate"
+            ],
+            "dimensions": [
+                "firstUserCampaignName"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "last90days",
+                    "endDate": "last90days"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Expón la duración promedio de la sesión y las impresiones de la búsqueda de google orgánica del año pasado",
+        "api_query": {
+            "metrics": [
+                "averageSessionDuration",
+                "organicGoogleSearchImpressions"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "lastCalendarYear",
+                    "endDate": "lastCalendarYear"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Expón la Posición promedio de la Búsqueda de Google orgánica durante la última semana",
+        "api_query": {
+            "metrics": [
+                "organicGoogleSearchAveragePosition"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "lastCalendarWeek",
+                    "endDate": "lastCalendarWeek"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Discute el Costo por clic de los anuncios entre el mes de junio de 2015 y el mes de diciembre de 2024",
+        "api_query": {
+            "metrics": [
+                "advertiserAdCostPerClick"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "2015-06-01",
+                    "endDate": "2024-12-31"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Evidénciame los agregar a carrito y el total de ingresos publicitarios del periodo del 14 de septiembre de 2019 al 10 de octubre de 2021",
+        "api_query": {
+            "metrics": [
+                "addToCarts",
+                "totalAdRevenue"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "2019-09-14",
+                    "endDate": "2021-10-10"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Argumenta los eventos por sesión y los clics de la búsqueda de google orgánica por Primer ID del anunciante de CM360 del usuario en el mes de febrero del 2015",
+        "api_query": {
+            "metrics": [
+                "eventsPerSession",
+                "organicGoogleSearchClicks"
+            ],
+            "dimensions": [
+                "firstUserCm360AdvertiserId"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "2015-02-01",
+                    "endDate": "2015-02-28"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Ilústrame el Retorno de la inversión publicitaria por Tipo de creatividad de CM360 en el día de hoy",
+        "api_query": {
+            "metrics": [
+                "returnOnAdSpend"
+            ],
+            "dimensions": [
+                "cm360CreativeType"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "today",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Expón los Artículos pagados por Nombre de la campaña manual registrados el 14 de abril de 2020",
+        "api_query": {
+            "metrics": [
+                "itemsCheckedOut"
+            ],
+            "dimensions": [
+                "manualCampaignName"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "2020-04-14",
+                    "endDate": "2020-04-14"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Acota los artículos vistos y la relación de compras sobre vistas por Nombre del socio de DV360 en los últimos 14 días",
+        "api_query": {
+            "metrics": [
+                "itemsViewed",
+                "purchaseToViewRate"
+            ],
+            "dimensions": [
+                "dv360PartnerName"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "last14days",
+                    "endDate": "last14days"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Ilústrame las vistas y el promedio de ingresos de compras por usuario por Bloque de anuncios del mes pasado",
+        "api_query": {
+            "metrics": [
+                "screenPageViews",
+                "averagePurchaseRevenuePerUser"
+            ],
+            "dimensions": [
+                "adUnitName"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "lastCalendarMonth",
+                    "endDate": "lastCalendarMonth"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Argumenta el Costo de los anuncios de hace 162 semanas",
+        "api_query": {
+            "metrics": [
+                "advertiserAdCost"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "162WeeksAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Exponme los Eventos por sesión por Idioma a lo largo de 2000",
+        "api_query": {
+            "metrics": [
+                "eventsPerSession"
+            ],
+            "dimensions": [
+                "language"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "2000-01-01",
+                    "endDate": "2000-12-31"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Acota el Costo por clic de los anuncios por Texto de palabra clave de SA360 registrados en los últimos 30 días",
+        "api_query": {
+            "metrics": [
+                "advertiserAdCostPerClick"
+            ],
+            "dimensions": [
+                "sa360KeywordText"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "last30days",
+                    "endDate": "last30days"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Sostén el Costo por conversión durante los últimos 7 días",
+        "api_query": {
+            "metrics": [
+                "advertiserAdCostPerConversion"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "last7days",
+                    "endDate": "last7days"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Detalla los Artículos vistos incluidos en la lista por ID de la primera cuenta de motor de SA360 del usuario correspondientes al último año",
+        "api_query": {
+            "metrics": [
+                "itemsViewedInList"
+            ],
+            "dimensions": [
+                "firstUserSa360EngineAccountId"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "lastCalendarYear",
+                    "endDate": "lastCalendarYear"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Detalla los usuarios que completaron su primer evento de compra y los eventos de vista de artículos de la semana pasada",
+        "api_query": {
+            "metrics": [
+                "firstTimePurchasers",
+                "itemViewEvents"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "lastCalendarWeek",
+                    "endDate": "lastCalendarWeek"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Descríbeme el valor de evento y los ingresos por compras en los últimos 90 días",
+        "api_query": {
+            "metrics": [
+                "eventValue",
+                "purchaseRevenue"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "last90days",
+                    "endDate": "last90days"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Testifícame los ingresos por artículos y el porcentaje de sesiones con conversiones por Sistema operativo con versión del periodo de los últimos 181 días",
+        "api_query": {
+            "metrics": [
+                "itemRevenue",
+                "sessionConversionRate"
+            ],
+            "dimensions": [
+                "operatingSystemWithVersion"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "181DaysAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Adjúntame los Usuarios activos durante los últimos 7 días durante los últimos 27 meses",
+        "api_query": {
+            "metrics": [
+                "active7DayUsers"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "27MonthsAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Publica los artículos en los que se hizo clic incluidos en la lista y el dau/wau durante el día de ayer",
+        "api_query": {
+            "metrics": [
+                "itemsClickedInList",
+                "dauPerWau"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "yesterday",
+                    "endDate": "yesterday"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Muestra las vistas por sesión y los artículos agregados al carrito durante los últimos 30 días",
+        "api_query": {
+            "metrics": [
+                "screenPageViewsPerSession",
+                "itemsAddedToCart"
+            ],
+            "dateRanges": [
+                {
+                    "startDate": "last30days",
+                    "endDate": "last30days"
+                }
+            ]
+        }
+    }
+]

@@ -1,4 +1,6 @@
 import random
+from ..query_generators.utils.resources import get_random_dimension
+from .constants.data_type_enum import DataType
 from .constants.filter_type_enum import FilterType
 from .constants.equal_variants import variants as equal_variants
 from .constants.filter_object_enum import FilterObject
@@ -10,13 +12,11 @@ from .constants.sources import sources, source_synonyms
 
 
 def generate():
-    match random.choice(list(FilterType)):
-        case FilterType.EQUALS:
-            return equals()
-        case FilterType.MORE_THAN:
-            return equals()
-        case FilterType.LESS_THAN:
-            return equals()
+    dimension = get_random_dimension()
+
+    match DataType.valueOf(dimension.iloc[3]):
+        case DataType.STRING:
+            
 
 
 def equals():
