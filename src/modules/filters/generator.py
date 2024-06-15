@@ -3,6 +3,7 @@ from .constants.filter_type_enum import FilterType
 from .constants.equal_variants import variants as equal_variants
 from .constants.filter_object_enum import FilterObject
 from .constants.countries import countries
+from .constants.device_categories import device_categories
 def generate():
     match random.choice(list(FilterType)):
         case FilterType.EQUALS: return equals()
@@ -20,10 +21,10 @@ def choose_object_value():
     match random.choice(list(FilterObject)):
         case FilterObject.COUNTRY:
             country = random.choice(countries)
-            return "pais", "country", country["Spanish"], country["English"]
+            return "pais", "country", country[1], country[0]
         case FilterObject.ACTIVE_USERS:
             num = random.randint(1, 100000)
             return "usuarios activos", "activeUsers", str(num), str(num) 
         case FilterObject.DEVICE_CATEGORY:
-            device_category = random.choice(("desktop", "tablet", "phone"))
-            return "tipo de dispositivo", "deviceCategory", device_category, device_category
+            device_category = random.choice(device_categories)
+            return "tipo de dispositivo", "deviceCategory", device_category[0], random.choice(device_categories[1])
