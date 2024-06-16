@@ -1,11 +1,46 @@
 [
     {
-        "natural_language_query": "Argumenta los eventos de vista de artículos y el arpu de los últimos 30 días",
+        "natural_language_query": "Señala los Usuarios nuevos de ID de la primera campaña de SA360 del usuario cuyo valor finaliza con andom_va;ue del 9 de mayo al 21 de diciembre de 2020",
         "api_query": {
             "metrics": [
-                "itemViewEvents",
-                "averageRevenuePerUser"
+                "newUsers"
             ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "firstUserSa360CampaignId",
+                    "stringFilter": {
+                        "matchType": "ENDS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "2020-05-09",
+                    "endDate": "2020-12-21"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Mencióname el promedio de ingresos de compras por usuario y los ingresos brutos por compras por estructura de costos de la posición de cm360 de la sesión donde Nombre de la cuenta de motor de SA360 concluye con andom_va;ue de los últimos 30 días",
+        "api_query": {
+            "metrics": [
+                "averagePurchaseRevenuePerUser",
+                "grossPurchaseRevenue"
+            ],
+            "dimensions": [
+                "sessionCm360PlacementCostStructure"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "sa360EngineAccountName",
+                    "stringFilter": {
+                        "matchType": "ENDS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
             "dateRanges": [
                 {
                     "startDate": "last30days",
@@ -15,11 +50,50 @@
         }
     },
     {
-        "natural_language_query": "Testimonia el Promedio de ingresos de compras por usuario en los últimos 14 días",
+        "natural_language_query": "Indica los artículos vistos incluidos en la lista y los artículos en los que se hizo clic incluidos en la promoción por tipo de creatividad de cm360 de la sesión condicionado a ID de campaña de SA360 de la sesión que contiene andom_va;ue del 4 de enero al 8 de febrero de 2022",
         "api_query": {
             "metrics": [
-                "averagePurchaseRevenuePerUser"
+                "itemsViewedInList",
+                "itemsClickedInPromotion"
             ],
+            "dimensions": [
+                "sessionCm360CreativeType"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "sessionSa360CampaignId",
+                    "stringFilter": {
+                        "matchType": "CONTAINS",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "2022-01-04",
+                    "endDate": "2022-02-08"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Acota la Duración promedio de la sesión por consulta de sa360 de la sesión restringido a Título de la página y nombre de pantalla que termina con andom_va;ue a lo largo de los últimos 14 días",
+        "api_query": {
+            "metrics": [
+                "averageSessionDuration"
+            ],
+            "dimensions": [
+                "sessionSa360Query"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "unifiedScreenName",
+                    "stringFilter": {
+                        "matchType": "ENDS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
             "dateRanges": [
                 {
                     "startDate": "last14days",
@@ -29,82 +103,21 @@
         }
     },
     {
-        "natural_language_query": "Elabora los artículos pagados y el total de ingresos publicitarios por ID de la campaña de DV360 de las últimas 69 semanas",
+        "natural_language_query": "Esclarece los eventos de vista de listas de artículos y las impresiones de la búsqueda de google orgánica restringido a Contenido del anuncio manual que comience con andom_va;ue a lo largo del último trimestre",
         "api_query": {
             "metrics": [
-                "itemsCheckedOut",
-                "totalAdRevenue"
+                "itemListViewEvents",
+                "organicGoogleSearchImpressions"
             ],
-            "dimensions": [
-                "dv360CampaignId"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "69WeeksAgo",
-                    "endDate": "today"
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "manualAdContent",
+                    "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "andom_va;ue"
+                    }
                 }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Anúnciame los clics en promociones y el promedio de ingresos de compras por usuario por Fuente del anuncio registrados en las últimas 184 semanas",
-        "api_query": {
-            "metrics": [
-                "promotionClicks",
-                "averagePurchaseRevenuePerUser"
-            ],
-            "dimensions": [
-                "adSourceName"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "184WeeksAgo",
-                    "endDate": "today"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Publica la Relación de artículos agregados al carrito sobre vistas correspondientes a los últimos 3 años",
-        "api_query": {
-            "metrics": [
-                "cartToViewRate"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "3YearsAgo",
-                    "endDate": "today"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Sugiéreme la tasa de clics de la lista de artículos y los artículos vistos por ID de cliente de Google Ads de la sesión de los últimos 8 años",
-        "api_query": {
-            "metrics": [
-                "itemListClickThroughRate",
-                "itemsViewed"
-            ],
-            "dimensions": [
-                "sessionGoogleAdsCustomerId"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "8YearsAgo",
-                    "endDate": "today"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Relata la Tasa de clics de la promoción de artículos por Day durante el último trimestre",
-        "api_query": {
-            "metrics": [
-                "itemPromotionClickThroughRate"
-            ],
-            "dimensions": [
-                "day"
-            ],
+            },
             "dateRanges": [
                 {
                     "startDate": "lastCalendarQuarter",
@@ -114,74 +127,48 @@
         }
     },
     {
-        "natural_language_query": "Señala los Artículos vistos incluidos en la lista por URL de referencia de la página durante los últimos 7 días",
+        "natural_language_query": "Informa la relación de compras sobre vistas y los clics en promociones por nombre de la cuenta de google ads filtrado por ID de la creatividad de DV360 cuyo valor contiene andom_va;ue para 2001",
         "api_query": {
             "metrics": [
-                "itemsViewedInList"
+                "purchaseToViewRate",
+                "promotionClicks"
             ],
             "dimensions": [
-                "pageReferrer"
+                "googleAdsAccountName"
             ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "dv360CreativeId",
+                    "stringFilter": {
+                        "matchType": "CONTAINS",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
             "dateRanges": [
                 {
-                    "startDate": "last7days",
-                    "endDate": "last7days"
+                    "startDate": "2001-01-01",
+                    "endDate": "2001-12-31"
                 }
             ]
         }
     },
     {
-        "natural_language_query": "Describe el Porcentaje de conversiones de usuario por Fuente de DV360 de la sesión del 7 de noviembre de 2010 al 26 de abril de 2012",
+        "natural_language_query": "Comunícame los eventos de vista de artículos y la conversión de comprador acaba con Ruta de la página y clase de pantalla en andom_va;ue correspondientes a los últimos 90 días",
         "api_query": {
             "metrics": [
-                "userConversionRate"
+                "itemViewEvents",
+                "purchaserConversionRate"
             ],
-            "dimensions": [
-                "sessionDv360Source"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "2010-11-07",
-                    "endDate": "2012-04-26"
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "unifiedPagePathScreen",
+                    "stringFilter": {
+                        "matchType": "ENDS_WITH",
+                        "value": "andom_va;ue"
+                    }
                 }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Comunica las Sesiones que generaron participación del periodo del 1 de junio de 2015 al 7 de noviembre de 2022",
-        "api_query": {
-            "metrics": [
-                "engagedSessions"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "2015-06-01",
-                    "endDate": "2022-11-07"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Adjúntame el total de ingresos publicitarios y los artículos vistos incluidos en la promoción en los últimos 14 días",
-        "api_query": {
-            "metrics": [
-                "totalAdRevenue",
-                "itemsViewedInPromotion"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "last14days",
-                    "endDate": "last14days"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Relátame el Total de compradores de los últimos tres meses",
-        "api_query": {
-            "metrics": [
-                "totalPurchasers"
-            ],
+            },
             "dateRanges": [
                 {
                     "startDate": "last90days",
@@ -191,81 +178,298 @@
         }
     },
     {
-        "natural_language_query": "Manifiesta el Promedio de ingresos de compras por usuario por ID de línea de pedido de DV360 en el mes del 2021 correspondiente a junio",
+        "natural_language_query": "Sugiéreme los Artículos agregados al carrito limitado a Formato de creatividad de DV360 cuyo valor termina con andom_va;ue durante los últimos 5 años",
+        "api_query": {
+            "metrics": [
+                "itemsAddedToCart"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "dv360CreativeFormat",
+                    "stringFilter": {
+                        "matchType": "ENDS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "5YearsAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Muestra la conversión de comprador y los usuarios activos durante 1 día por navegador restringido a Bloque de anuncios que sea igual a andom_va;ue desde el año 2010 hasta 2023del año 2010 al año 2023",
+        "api_query": {
+            "metrics": [
+                "purchaserConversionRate",
+                "active1DayUsers"
+            ],
+            "dimensions": [
+                "browser"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "adUnitName",
+                    "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "2010-01-01",
+                    "endDate": "2023-12-31"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Esclarece el importe del impuesto y las impresiones de anuncios de publicadores que tenga Título del video que termina con andom_va;ue registrados en los últimos 7 días",
+        "api_query": {
+            "metrics": [
+                "taxAmount",
+                "publisherAdImpressions"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "videoTitle",
+                    "stringFilter": {
+                        "matchType": "ENDS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "last7days",
+                    "endDate": "last7days"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Notifícame los usuarios afectados por fallas y el valor de evento por nombre de la primera cuenta de google ads del usuario filtrado por Formato de creatividad manual de la sesión cuyo valor contiene andom_va;ue a lo largo del día de ayer",
+        "api_query": {
+            "metrics": [
+                "crashAffectedUsers",
+                "eventValue"
+            ],
+            "dimensions": [
+                "firstUserGoogleAdsAccountName"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "sessionManualCreativeFormat",
+                    "stringFilter": {
+                        "matchType": "CONTAINS",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "yesterday",
+                    "endDate": "yesterday"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Evidénciame las Vistas de promociones por campaña incluye Primer ID de cliente de Google Ads del usuario en andom_va;ue del 3 de abril al 10 de octubre de 2022",
+        "api_query": {
+            "metrics": [
+                "promotionViews"
+            ],
+            "dimensions": [
+                "campaignName"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "firstUserGoogleAdsCustomerId",
+                    "stringFilter": {
+                        "matchType": "CONTAINS",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "2022-04-03",
+                    "endDate": "2022-10-10"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Expón el Promedio de ingresos de compras por usuario por nombre de la primera cuenta de cm360 del usuario comienza con Nombre de la posición de CM360 de la sesión en andom_va;ue durante los últimos 7 días",
         "api_query": {
             "metrics": [
                 "averagePurchaseRevenuePerUser"
             ],
             "dimensions": [
-                "dv360LineItemId"
+                "firstUserCm360AccountName"
             ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "sessionCm360PlacementName",
+                    "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
             "dateRanges": [
                 {
-                    "startDate": "2021-06-01",
-                    "endDate": "2021-06-30"
+                    "startDate": "last7days",
+                    "endDate": "last7days"
                 }
             ]
         }
     },
     {
-        "natural_language_query": "Infórmame las Transacciones por comprador registrados en los últimos 53 días",
+        "natural_language_query": "Argumenta el costo por clic de los anuncios y los eventos de clic en listas de artículos por fuente o medio manual de la sesión restringido a ID de socio de DV360 con andom_va;ue del 17 de abril al 10 de julio de 2020",
         "api_query": {
             "metrics": [
-                "transactionsPerPurchaser"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "53DaysAgo",
-                    "endDate": "today"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Manifiesta los Artículos en los que se hizo clic incluidos en la promoción por Primera fuente o medio de DV360 del usuario de 2020",
-        "api_query": {
-            "metrics": [
-                "itemsClickedInPromotion"
+                "advertiserAdCostPerClick",
+                "itemListClickEvents"
             ],
             "dimensions": [
-                "firstUserDv360SourceMedium"
+                "sessionManualSourceMedium"
             ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "dv360PartnerId",
+                    "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
             "dateRanges": [
                 {
-                    "startDate": "2020-01-01",
-                    "endDate": "2020-12-31"
+                    "startDate": "2020-04-17",
+                    "endDate": "2020-07-10"
                 }
             ]
         }
     },
     {
-        "natural_language_query": "Aclara las conversiones y la participación del usuario por Nombre del pedido de inserción de DV360 de la sesión de hoy",
+        "natural_language_query": "Exprésame el Importe del impuesto con ID de transmisión que termina con andom_va;ue del trimestre pasado",
         "api_query": {
             "metrics": [
-                "conversions",
-                "userEngagementDuration"
+                "taxAmount"
             ],
-            "dimensions": [
-                "sessionDv360InsertionOrderName"
-            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "streamId",
+                    "stringFilter": {
+                        "matchType": "ENDS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
             "dateRanges": [
                 {
-                    "startDate": "today",
-                    "endDate": "today"
+                    "startDate": "lastCalendarQuarter",
+                    "endDate": "lastCalendarQuarter"
                 }
             ]
         }
     },
     {
-        "natural_language_query": "Sugiere la conversión de comprador y las sesiones por usuario por ID de la cuenta de motor de SA360 correspondientes al último año",
+        "natural_language_query": "Discute el Total de usuarios de la cohorte acaba con Plataforma de origen manual andom_va;ue de los últimos 30 días",
         "api_query": {
             "metrics": [
-                "purchaserConversionRate",
-                "sessionsPerUser"
+                "cohortTotalUsers"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "manualSourcePlatform",
+                    "stringFilter": {
+                        "matchType": "ENDS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "last30days",
+                    "endDate": "last30days"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Preséntame los ingresos brutos por artículo y los artículos vistos que tenga Nombre de promoción del artículo que contiene andom_va;ue del periodo de marzo de 2012 al periodo de marzo de 2017",
+        "api_query": {
+            "metrics": [
+                "grossItemRevenue",
+                "itemsViewed"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "itemPromotionName",
+                    "stringFilter": {
+                        "matchType": "CONTAINS",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "2012-03-01",
+                    "endDate": "2017-03-31"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Sostén la tasa de clics de la promoción de artículos y el total de ingresos publicitarios limitado a Fuente de SA360 que comience con andom_va;ue correspondientes al mes de enero del 2011",
+        "api_query": {
+            "metrics": [
+                "itemPromotionClickThroughRate",
+                "totalAdRevenue"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "sa360Source",
+                    "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "2011-01-01",
+                    "endDate": "2011-01-31"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Enséñame los ingresos por compras y la exposición de la unidad de anuncios por nombre del artículo restringido a Contenido del anuncio manual que contiene andom_va;ue en el último año",
+        "api_query": {
+            "metrics": [
+                "purchaseRevenue",
+                "adUnitExposure"
             ],
             "dimensions": [
-                "sessionSa360EngineAccountId"
+                "itemName"
             ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "manualAdContent",
+                    "stringFilter": {
+                        "matchType": "CONTAINS",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
             "dateRanges": [
                 {
                     "startDate": "lastCalendarYear",
@@ -275,157 +479,246 @@
         }
     },
     {
-        "natural_language_query": "Expón las Confirmaciones de compra por Primera búsqueda de Google Ads del usuario del periodo del último mes",
+        "natural_language_query": "Háblame el recuento de eventos y el costo por conversión acaba con Formato del anuncio andom_va;ue de hace 5 años",
         "api_query": {
             "metrics": [
-                "checkouts"
+                "eventCount",
+                "advertiserAdCostPerConversion"
             ],
-            "dimensions": [
-                "firstUserGoogleAdsQuery"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "lastCalendarMonth",
-                    "endDate": "lastCalendarMonth"
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "adFormat",
+                    "stringFilter": {
+                        "matchType": "ENDS_WITH",
+                        "value": "andom_va;ue"
+                    }
                 }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Declarame los Artículos comprados del mes pasado",
-        "api_query": {
-            "metrics": [
-                "itemsPurchased"
-            ],
+            },
             "dateRanges": [
                 {
-                    "startDate": "lastCalendarMonth",
-                    "endDate": "lastCalendarMonth"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Publica el arpu y el recuento de eventos de 2003",
-        "api_query": {
-            "metrics": [
-                "averageRevenuePerUser",
-                "eventCount"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "2003-01-01",
-                    "endDate": "2003-12-31"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Divúlgame la Conversión de comprador registrados en los últimos 14 días",
-        "api_query": {
-            "metrics": [
-                "purchaserConversionRate"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "last14days",
-                    "endDate": "last14days"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Comunica los artículos vistos incluidos en la lista y el importe del impuesto por Clases de vínculos de los últimos 90 días",
-        "api_query": {
-            "metrics": [
-                "itemsViewedInList",
-                "taxAmount"
-            ],
-            "dimensions": [
-                "linkClasses"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "last90days",
-                    "endDate": "last90days"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Manifiéstame los clics en los anuncios y los artículos vistos incluidos en la lista por ID del primer grupo de anuncios de Google Ads del usuario para el 20 de mayo de 2016",
-        "api_query": {
-            "metrics": [
-                "advertiserAdClicks",
-                "itemsViewedInList"
-            ],
-            "dimensions": [
-                "firstUserGoogleAdsAdGroupId"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "2016-05-20",
-                    "endDate": "2016-05-20"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Testimonia la Posición promedio de la Búsqueda de Google orgánica por Primera fuente del usuario del periodo del último mes",
-        "api_query": {
-            "metrics": [
-                "organicGoogleSearchAveragePosition"
-            ],
-            "dimensions": [
-                "firstUserSource"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "lastCalendarMonth",
-                    "endDate": "lastCalendarMonth"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Asegúrame los artículos agregados al carrito y la tasa de participación por Primer grupo de canales principal del usuario en los últimos 90 días",
-        "api_query": {
-            "metrics": [
-                "itemsAddedToCart",
-                "engagementRate"
-            ],
-            "dimensions": [
-                "firstUserPrimaryChannelGroup"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "last90days",
-                    "endDate": "last90days"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Aclara los Artículos en los que se hizo clic incluidos en la lista a lo largo de las últimas 154 semanas",
-        "api_query": {
-            "metrics": [
-                "itemsClickedInList"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "154WeeksAgo",
+                    "startDate": "5YearsAgo",
                     "endDate": "today"
                 }
             ]
         }
     },
     {
-        "natural_language_query": "Declárame los eventos de vista de listas de artículos y los ingresos por compras durante los últimos 7 días",
+        "natural_language_query": "Anúnciame la Tasa de participación por primer id de posición de cm360 del usuario condicionado a ID de la creatividad de CM360 que comience con andom_va;ue registrados en los últimos 90 días",
+        "api_query": {
+            "metrics": [
+                "engagementRate"
+            ],
+            "dimensions": [
+                "firstUserCm360PlacementId"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "cm360CreativeId",
+                    "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "last90days",
+                    "endDate": "last90days"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Relata los usuarios activos durante 1 día y los artículos vistos por edad restringido a ID del país cuyo valor comienza con andom_va;ue correspondientes a los últimos 30 días",
+        "api_query": {
+            "metrics": [
+                "active1DayUsers",
+                "itemsViewed"
+            ],
+            "dimensions": [
+                "userAgeBracket"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "countryId",
+                    "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "last30days",
+                    "endDate": "last30days"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Adjúntame la participación del usuario y el porcentaje de sesiones con conversiones condicionado a Primer ID de la creatividad de Google Ads del usuario cuyo valor contiene andom_va;ue desde el mes de agosto de 2006 hasta el mes de agosto de 2018",
+        "api_query": {
+            "metrics": [
+                "userEngagementDuration",
+                "sessionConversionRate"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "firstUserGoogleAdsCreativeId",
+                    "stringFilter": {
+                        "matchType": "CONTAINS",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "2006-08-01",
+                    "endDate": "2018-08-31"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Esclarece los Eventos de clic en listas de artículos por cohorte limitado a Cohorte que tenga un valor de andom_va;ue de hace 31 meses",
+        "api_query": {
+            "metrics": [
+                "itemListClickEvents"
+            ],
+            "dimensions": [
+                "cohort"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "cohort",
+                    "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "31MonthsAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Expón los eventos de vista de listas de artículos y las sesiones que generaron participación por primer id de renderización de cm360 del usuario donde ID de cliente de Google Ads de la sesión engloba andom_va;ue del último año",
         "api_query": {
             "metrics": [
                 "itemListViewEvents",
-                "purchaseRevenue"
+                "engagedSessions"
             ],
+            "dimensions": [
+                "firstUserCm360RenderingId"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "sessionGoogleAdsCustomerId",
+                    "stringFilter": {
+                        "matchType": "CONTAINS",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "lastCalendarYear",
+                    "endDate": "lastCalendarYear"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Esbozame el dau/mau y los clics en los anuncios incluye Nombre del primer anunciante de CM360 del usuario andom_va;ue a lo largo de los últimos 134 días",
+        "api_query": {
+            "metrics": [
+                "dauPerMau",
+                "advertiserAdClicks"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "firstUserCm360AdvertiserName",
+                    "stringFilter": {
+                        "matchType": "CONTAINS",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "134DaysAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Detalla las Impresiones de anuncios de publicadores filtrado por Semana ISO del año que incluye andom_va;ue en las últimas 108 semanas",
+        "api_query": {
+            "metrics": [
+                "publisherAdImpressions"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "isoWeek",
+                    "stringFilter": {
+                        "matchType": "CONTAINS",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "108WeeksAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Expóname el total de compradores y los usuarios activos durante 1 día con Nombre de la cuenta de CM360 cuyo valor acaba con andom_va;ue correspondientes al último mes",
+        "api_query": {
+            "metrics": [
+                "totalPurchasers",
+                "active1DayUsers"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "cm360AccountName",
+                    "stringFilter": {
+                        "matchType": "ENDS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "lastCalendarMonth",
+                    "endDate": "lastCalendarMonth"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Manifiéstame la tasa de clics de la lista de artículos y la relación de artículos agregados al carrito sobre vistas condicionado a Nombre del anunciante de DV360 de la sesión igual a andom_va;ue registrados en los últimos 7 días",
+        "api_query": {
+            "metrics": [
+                "itemListClickThroughRate",
+                "cartToViewRate"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "sessionDv360AdvertiserName",
+                    "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
             "dateRanges": [
                 {
                     "startDate": "last7days",
@@ -435,33 +728,480 @@
         }
     },
     {
-        "natural_language_query": "Anúnciame el arpu y el valor de evento por Extensión de archivo correspondientes a los últimos 3 años",
+        "natural_language_query": "Detalla los Clics de la Búsqueda de Google orgánica por primer tipo de red de publicidad de google ads del usuario con Modelo del dispositivo móvil que contiene andom_va;ue en los últimos 7 años",
         "api_query": {
             "metrics": [
-                "averageRevenuePerUser",
-                "eventValue"
+                "organicGoogleSearchClicks"
             ],
             "dimensions": [
-                "fileExtension"
+                "firstUserGoogleAdsAdNetworkType"
             ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "mobileDeviceModel",
+                    "stringFilter": {
+                        "matchType": "CONTAINS",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
             "dateRanges": [
                 {
-                    "startDate": "3YearsAgo",
+                    "startDate": "7YearsAgo",
                     "endDate": "today"
                 }
             ]
         }
     },
     {
-        "natural_language_query": "Comenta la primera conversión por compra y la relación de artículos agregados al carrito sobre vistas por ID de la creatividad de CM360 correspondientes a los últimos 4 años",
+        "natural_language_query": "Muestra el total de usuarios y la posición promedio de la búsqueda de google orgánica condicionado a Nombre del primer sitio de CM360 del usuario que tengan andom_va;ue correspondientes a los últimos 30 días",
         "api_query": {
             "metrics": [
-                "firstTimePurchaserConversionRate",
-                "cartToViewRate"
+                "totalUsers",
+                "organicGoogleSearchAveragePosition"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "firstUserCm360SiteName",
+                    "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "30DaysAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Revela el importe del envío y las conversiones por id de la primera campaña del usuario con Nombre del anunciante de CM360 de la sesión que sea andom_va;ue en los últimos 7 días",
+        "api_query": {
+            "metrics": [
+                "shippingAmount",
+                "conversions"
             ],
             "dimensions": [
-                "cm360CreativeId"
+                "firstUserCampaignId"
             ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "sessionCm360AdvertiserName",
+                    "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "last7days",
+                    "endDate": "last7days"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Evidénciame los compradores totales por usuario nuevo y el total de usuarios acaba con Texto de palabra clave de SA360 de la sesión andom_va;ue en el día de hoy",
+        "api_query": {
+            "metrics": [
+                "firstTimePurchasersPerNewUser",
+                "totalUsers"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "sessionSa360Keyword",
+                    "stringFilter": {
+                        "matchType": "ENDS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "today",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Preséntame el porcentaje de conversiones de usuario y la duración promedio de la sesión por nombre del anunciante de cm360 de la sesión que tenga Fuente o medio de CM360 de la sesión con el valor de andom_va;ue entre 2012 y 2022",
+        "api_query": {
+            "metrics": [
+                "userConversionRate",
+                "averageSessionDuration"
+            ],
+            "dimensions": [
+                "sessionCm360AdvertiserName"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "sessionCm360SourceMedium",
+                    "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "2012-01-01",
+                    "endDate": "2022-12-31"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Relata los Artículos en los que se hizo clic incluidos en la lista de Primer medio de SA360 del usuario cuyo valor contiene andom_va;ue durante el día de ayer",
+        "api_query": {
+            "metrics": [
+                "itemsClickedInList"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "firstUserSa360Medium",
+                    "stringFilter": {
+                        "matchType": "CONTAINS",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "yesterday",
+                    "endDate": "yesterday"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Expón los Artículos pagados por nombre del anunciante de cm360 condicionado a ID de ubicación del artículo que coincida con andom_va;ue en los últimos 30 días",
+        "api_query": {
+            "metrics": [
+                "itemsCheckedOut"
+            ],
+            "dimensions": [
+                "cm360AdvertiserName"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "itemLocationID",
+                    "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "last30days",
+                    "endDate": "last30days"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Detalla la Tasa de clics de la lista de artículos por formato de creatividad de dv360 de Nombre de la cuenta de motor de SA360 de la sesión cuyo valor inicia con andom_va;ue a lo largo de los últimos 200 días",
+        "api_query": {
+            "metrics": [
+                "itemListClickThroughRate"
+            ],
+            "dimensions": [
+                "dv360CreativeFormat"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "sessionSa360EngineAccountName",
+                    "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "200DaysAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Explica las conversiones y los artículos comprados por primera plataforma de origen del usuario restringido a Nombre de la creatividad de promoción del artículo que acabe con andom_va;ue de las últimas 20 semanas",
+        "api_query": {
+            "metrics": [
+                "conversions",
+                "itemsPurchased"
+            ],
+            "dimensions": [
+                "firstUserSourcePlatform"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "itemPromotionCreativeName",
+                    "stringFilter": {
+                        "matchType": "ENDS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "20WeeksAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Narra los artículos vistos y los clics en los anuncios por estructura de costos de la posición de cm360 de la sesión de ID de la campaña de Google Ads de la sesión que contiene andom_va;ue correspondientes a los últimos 6 años",
+        "api_query": {
+            "metrics": [
+                "itemsViewed",
+                "advertiserAdClicks"
+            ],
+            "dimensions": [
+                "sessionCm360PlacementCostStructure"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "sessionGoogleAdsCampaignId",
+                    "stringFilter": {
+                        "matchType": "CONTAINS",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "6YearsAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Esclarece las vistas y la participación del usuario por carácter limitado a Extensión de archivo cuyo valor incluye andom_va;ue correspondientes al último mes",
+        "api_query": {
+            "metrics": [
+                "screenPageViews",
+                "userEngagementDuration"
+            ],
+            "dimensions": [
+                "character"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "fileExtension",
+                    "stringFilter": {
+                        "matchType": "CONTAINS",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "lastCalendarMonth",
+                    "endDate": "lastCalendarMonth"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Anúnciame los Clics de la Búsqueda de Google orgánica de Primera fuente de CM360 del usuario cuyo valor incluye andom_va;ue de hace 32 meses",
+        "api_query": {
+            "metrics": [
+                "organicGoogleSearchClicks"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "firstUserCm360Source",
+                    "stringFilter": {
+                        "matchType": "CONTAINS",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "32MonthsAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Comunícame el Porcentaje de conversiones de usuario por fuente/medio de la sesión de Nombre de la primera creatividad de CM360 del usuario igual a andom_va;ue durante los últimos 7 meses",
+        "api_query": {
+            "metrics": [
+                "userConversionRate"
+            ],
+            "dimensions": [
+                "sessionSourceMedium"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "firstUserCm360CreativeName",
+                    "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "7MonthsAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Testimonia la tasa de participación y los usuarios que completaron su primer evento de compra que tenga Dominio del vínculo que empieza con andom_va;ue del periodo de las últimas 71 semanas",
+        "api_query": {
+            "metrics": [
+                "engagementRate",
+                "firstTimePurchasers"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "linkDomain",
+                    "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "71WeeksAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Refiéreme los eventos de clic en listas de artículos y la relación de compras sobre vistas filtrado por ID de la cuenta de administrador de SA360 de la sesión que sea andom_va;ue a lo largo de los últimos 14 días",
+        "api_query": {
+            "metrics": [
+                "itemListClickEvents",
+                "purchaseToViewRate"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "sessionSa360ManagerAccountId",
+                    "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "last14days",
+                    "endDate": "last14days"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Explica el Importe del envío por término manual de la sesión donde ID de mercado de intercambio de DV360 empieza por andom_va;ue entre 2023 y 2024",
+        "api_query": {
+            "metrics": [
+                "shippingAmount"
+            ],
+            "dimensions": [
+                "sessionManualTerm"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "dv360ExchangeId",
+                    "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "2023-01-01",
+                    "endDate": "2024-12-31"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Discute las Conversiones que sea Método que contiene andom_va;ue correspondientes al mes de enero de 2002",
+        "api_query": {
+            "metrics": [
+                "conversions"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "method",
+                    "stringFilter": {
+                        "matchType": "CONTAINS",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "2002-01-01",
+                    "endDate": "2002-01-31"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Define las impresiones de anuncios de publicadores y las vistas por nombre de la cuenta de administrador de sa360 limitado a Campaña cuyo valor acaba con andom_va;ue de los últimos 30 días",
+        "api_query": {
+            "metrics": [
+                "publisherAdImpressions",
+                "screenPageViews"
+            ],
+            "dimensions": [
+                "sa360ManagerAccountName"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "campaignName",
+                    "stringFilter": {
+                        "matchType": "ENDS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "last30days",
+                    "endDate": "last30days"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Relata los Artículos comprados por variante del artículo con Medio manual igual a andom_va;ue de los últimos 4 años",
+        "api_query": {
+            "metrics": [
+                "itemsPurchased"
+            ],
+            "dimensions": [
+                "itemVariant"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "manualMedium",
+                    "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
             "dateRanges": [
                 {
                     "startDate": "4YearsAgo",
@@ -471,226 +1211,21 @@
         }
     },
     {
-        "natural_language_query": "Relata el costo de los anuncios y el importe del reembolso por Primer grupo de canales principal del usuario del trimestre pasado",
+        "natural_language_query": "Describe los usuarios activos durante los últimos 28 días y el porcentaje de conversiones de usuario acaba con Espacio para la creatividad de promoción del artículo en andom_va;ue en el día de ayer",
         "api_query": {
             "metrics": [
-                "advertiserAdCost",
-                "refundAmount"
+                "active28DayUsers",
+                "userConversionRate"
             ],
-            "dimensions": [
-                "firstUserPrimaryChannelGroup"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "lastCalendarQuarter",
-                    "endDate": "lastCalendarQuarter"
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "itemPromotionCreativeSlot",
+                    "stringFilter": {
+                        "matchType": "ENDS_WITH",
+                        "value": "andom_va;ue"
+                    }
                 }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Divúlgame las Sesiones que generaron participación de los últimos 28 meses",
-        "api_query": {
-            "metrics": [
-                "engagedSessions"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "28MonthsAgo",
-                    "endDate": "today"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Planteame la relación de artículos agregados al carrito sobre vistas y el importe del impuesto por Variante del artículo de los últimos 90 días",
-        "api_query": {
-            "metrics": [
-                "cartToViewRate",
-                "taxAmount"
-            ],
-            "dimensions": [
-                "itemVariant"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "last90days",
-                    "endDate": "last90days"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Especifícame los Clics de la Búsqueda de Google orgánica por Texto de palabra clave de Google Ads de 2022",
-        "api_query": {
-            "metrics": [
-                "organicGoogleSearchClicks"
-            ],
-            "dimensions": [
-                "googleAdsKeyword"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "2022-01-01",
-                    "endDate": "2022-12-31"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Aclara el promedio de ingresos de compras por usuario y el importe de descuento del artículo por Primer medio del usuario de las últimas dos semanas",
-        "api_query": {
-            "metrics": [
-                "averagePurchaseRevenuePerUser",
-                "itemDiscountAmount"
-            ],
-            "dimensions": [
-                "firstUserMedium"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "last14days",
-                    "endDate": "last14days"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Aclara los artículos agregados al carrito y las conversiones del último año",
-        "api_query": {
-            "metrics": [
-                "itemsAddedToCart",
-                "conversions"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "lastCalendarYear",
-                    "endDate": "lastCalendarYear"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Esclarece el Total de compradores por País de hace 9 años",
-        "api_query": {
-            "metrics": [
-                "totalPurchasers"
-            ],
-            "dimensions": [
-                "country"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "9YearsAgo",
-                    "endDate": "today"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Revelame los eventos de vista de artículos y las vistas por sesión registrados en los últimos 7 días",
-        "api_query": {
-            "metrics": [
-                "itemViewEvents",
-                "screenPageViewsPerSession"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "last7days",
-                    "endDate": "last7days"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Formula el importe del impuesto y los artículos en los que se hizo clic incluidos en la promoción por Fuente de DV360 a lo largo del último mes",
-        "api_query": {
-            "metrics": [
-                "taxAmount",
-                "itemsClickedInPromotion"
-            ],
-            "dimensions": [
-                "dv360Source"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "lastCalendarMonth",
-                    "endDate": "lastCalendarMonth"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Señala las confirmaciones de compra y los artículos en los que se hizo clic incluidos en la lista desde 7 de febrero de 2017 hasta 23 de febrero de 2021",
-        "api_query": {
-            "metrics": [
-                "checkouts",
-                "itemsClickedInList"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "2017-02-07",
-                    "endDate": "2021-02-23"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Relátame los eventos de vista de artículos y la relación de artículos agregados al carrito sobre vistas por Enésima hora del periodo del 12 de mayo de 2017 al 19 de abril de 2020",
-        "api_query": {
-            "metrics": [
-                "itemViewEvents",
-                "cartToViewRate"
-            ],
-            "dimensions": [
-                "nthHour"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "2017-05-12",
-                    "endDate": "2020-04-19"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Asegúrame la Tasa de clics de la promoción de artículos por Primera táctica de marketing manual del usuario del periodo de los últimos 45 meses",
-        "api_query": {
-            "metrics": [
-                "itemPromotionClickThroughRate"
-            ],
-            "dimensions": [
-                "firstUserManualMarketingTactic"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "45MonthsAgo",
-                    "endDate": "today"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Narra la tasa de clics de la búsqueda orgánica de google y los artículos en los que se hizo clic incluidos en la lista de la semana pasada",
-        "api_query": {
-            "metrics": [
-                "organicGoogleSearchClickThroughRate",
-                "itemsClickedInList"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "lastCalendarWeek",
-                    "endDate": "lastCalendarWeek"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Testimonia los Usuarios nuevos de ayer",
-        "api_query": {
-            "metrics": [
-                "newUsers"
-            ],
+            },
             "dateRanges": [
                 {
                     "startDate": "yesterday",
@@ -700,105 +1235,272 @@
         }
     },
     {
-        "natural_language_query": "Informa los artículos pagados y las sesiones por usuario por Primer ID de renderización de CM360 del usuario durante la última semana",
+        "natural_language_query": "Exprésame los eventos de clic en listas de artículos y los usuarios nuevos por id de la creatividad de dv360 incluye Nombre del anunciante de CM360 de la sesión andom_va;ue desde el año 2018 hasta 2024del año 2018 al año 2024",
         "api_query": {
             "metrics": [
-                "itemsCheckedOut",
-                "sessionsPerUser"
+                "itemListClickEvents",
+                "newUsers"
             ],
             "dimensions": [
-                "firstUserCm360RenderingId"
+                "dv360CreativeId"
             ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "sessionCm360AdvertiserName",
+                    "stringFilter": {
+                        "matchType": "CONTAINS",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
             "dateRanges": [
                 {
-                    "startDate": "lastCalendarWeek",
-                    "endDate": "lastCalendarWeek"
+                    "startDate": "2018-01-01",
+                    "endDate": "2024-12-31"
                 }
             ]
         }
     },
     {
-        "natural_language_query": "Cuéntame los ingresos por artículos y los usuarios afectados por fallas mes de febrero del 2012",
+        "natural_language_query": "Asegúrame el Total de usuarios de la cohorte filtrado por Continente cuyo valor acaba con andom_va;ue del 16 de octubre de 2018 al 23 de septiembre de 2019",
         "api_query": {
             "metrics": [
-                "itemRevenue",
-                "crashAffectedUsers"
+                "cohortTotalUsers"
             ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "continent",
+                    "stringFilter": {
+                        "matchType": "ENDS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
             "dateRanges": [
                 {
-                    "startDate": "2012-02-01",
-                    "endDate": "2012-02-29"
+                    "startDate": "2018-10-16",
+                    "endDate": "2019-09-23"
                 }
             ]
         }
     },
     {
-        "natural_language_query": "Acota los artículos comprados y el total de compradores por Es evento de conversión correspondientes a las últimas 22 semanas",
+        "natural_language_query": "Transmite las sesiones por usuario y la posición promedio de la búsqueda de google orgánica por primer grupo de canales principal del usuario limitado a Página de destino que empieza con andom_va;ue durante el mes de diciembre del 2001",
         "api_query": {
             "metrics": [
-                "itemsPurchased",
-                "totalPurchasers"
+                "sessionsPerUser",
+                "organicGoogleSearchAveragePosition"
             ],
             "dimensions": [
-                "isConversionEvent"
+                "firstUserPrimaryChannelGroup"
             ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "landingPage",
+                    "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
             "dateRanges": [
                 {
-                    "startDate": "22WeeksAgo",
+                    "startDate": "2001-12-01",
+                    "endDate": "2001-12-31"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Mencióname el Importe del reembolso por fuente de la sesión filtrado por Nombre del anunciante de CM360 de la sesión que incluye andom_va;ue en el día de hoy",
+        "api_query": {
+            "metrics": [
+                "refundAmount"
+            ],
+            "dimensions": [
+                "sessionSource"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "sessionCm360AdvertiserName",
+                    "stringFilter": {
+                        "matchType": "CONTAINS",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "today",
                     "endDate": "today"
                 }
             ]
         }
     },
     {
-        "natural_language_query": "Reporta los Usuarios activos durante 1 día durante los últimos 3 días",
+        "natural_language_query": "Explica los Ingresos brutos por artículo limitado a Método que tenga un valor de andom_va;ue a lo largo del último año",
         "api_query": {
             "metrics": [
-                "active1DayUsers"
+                "grossItemRevenue"
             ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "method",
+                    "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
             "dateRanges": [
                 {
-                    "startDate": "3DaysAgo",
-                    "endDate": "today"
+                    "startDate": "lastCalendarYear",
+                    "endDate": "lastCalendarYear"
                 }
             ]
         }
     },
     {
-        "natural_language_query": "Indica el Importe del impuesto a lo largo del último trimestre",
+        "natural_language_query": "Adjúntame el dau/wau y el recuento de eventos por usuario por primer id de la creatividad de cm360 del usuario limitado a Nombre de la campaña manual cuyo valor incluye andom_va;ue del año pasado",
         "api_query": {
             "metrics": [
-                "taxAmount"
+                "dauPerWau",
+                "eventCountPerUser"
             ],
+            "dimensions": [
+                "firstUserCm360CreativeId"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "manualCampaignName",
+                    "stringFilter": {
+                        "matchType": "CONTAINS",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
             "dateRanges": [
                 {
-                    "startDate": "lastCalendarQuarter",
-                    "endDate": "lastCalendarQuarter"
+                    "startDate": "lastCalendarYear",
+                    "endDate": "lastCalendarYear"
                 }
             ]
         }
     },
     {
-        "natural_language_query": "Señálame las conversiones y el dau/mau de hace 44 meses",
-        "api_query": {
-            "metrics": [
-                "conversions",
-                "dauPerMau"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "44MonthsAgo",
-                    "endDate": "today"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Coméntame la Tasa de clics de la lista de artículos de hace 2 años",
+        "natural_language_query": "Descríbeme la Tasa de clics de la lista de artículos de ID de artículo cuyo valor contiene andom_va;ue del 5 de noviembre de 2013 al 8 de abril de 2014",
         "api_query": {
             "metrics": [
                 "itemListClickThroughRate"
             ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "itemId",
+                    "stringFilter": {
+                        "matchType": "CONTAINS",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "2013-11-05",
+                    "endDate": "2014-04-08"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Muestra el retorno de la inversión publicitaria y los usuarios activos durante 1 día por versión de la creatividad de cm360 filtrado por ID de la creatividad de DV360 de la sesión que acabe con andom_va;ue del día 3 de febrero de 2016",
+        "api_query": {
+            "metrics": [
+                "returnOnAdSpend",
+                "active1DayUsers"
+            ],
+            "dimensions": [
+                "cm360CreativeVersion"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "sessionDv360CreativeId",
+                    "stringFilter": {
+                        "matchType": "ENDS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "2016-02-03",
+                    "endDate": "2016-02-03"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Divúlgame las Impresiones de la Búsqueda de Google orgánica condicionado a ID del primer pedido de inserción de DV360 del usuario cuyo valor comienza con andom_va;ue en los últimos 140 días",
+        "api_query": {
+            "metrics": [
+                "organicGoogleSearchImpressions"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "firstUserDv360InsertionOrderId",
+                    "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "140DaysAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Aclara el ARPPU por id del primer grupo de anuncios de google ads del usuario condicionado a Primera fuente de DV360 del usuario equivalente a andom_va;ue a lo largo de los últimos 30 días",
+        "api_query": {
+            "metrics": [
+                "averagePurchaseRevenuePerPayingUser"
+            ],
+            "dimensions": [
+                "firstUserGoogleAdsAdGroupId"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "firstUserDv360Source",
+                    "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "last30days",
+                    "endDate": "last30days"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Transmite los Usuarios activos durante 1 día condicionado a Nombre del día de la semana cuyo valor termina con andom_va;ue del periodo de los últimos 2 años",
+        "api_query": {
+            "metrics": [
+                "active1DayUsers"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "dayOfWeekName",
+                    "stringFilter": {
+                        "matchType": "ENDS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
             "dateRanges": [
                 {
                     "startDate": "2YearsAgo",
@@ -808,691 +1510,73 @@
         }
     },
     {
-        "natural_language_query": "Relátame las sesiones que generaron participación y la duración promedio de la sesión a lo largo del día de ayer",
-        "api_query": {
-            "metrics": [
-                "engagedSessions",
-                "averageSessionDuration"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "yesterday",
-                    "endDate": "yesterday"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Discute los usuarios activos durante los últimos 28 días y los artículos vistos correspondientes a los últimos 30 días",
-        "api_query": {
-            "metrics": [
-                "active28DayUsers",
-                "itemsViewed"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "last30days",
-                    "endDate": "last30days"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Ilústrame el Recuento de eventos por usuario por Primer ID de posición de CM360 del usuario durante el 14 de febrero de 2014",
-        "api_query": {
-            "metrics": [
-                "eventCountPerUser"
-            ],
-            "dimensions": [
-                "firstUserCm360PlacementId"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "2014-02-14",
-                    "endDate": "2014-02-14"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Transmite el Promedio de ingresos de compras por usuario entre 2015 y 2018",
-        "api_query": {
-            "metrics": [
-                "averagePurchaseRevenuePerUser"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "2015-01-01",
-                    "endDate": "2018-12-31"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Anúnciame los Eventos de clic en listas de artículos en el último trimestre",
-        "api_query": {
-            "metrics": [
-                "itemListClickEvents"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "lastCalendarQuarter",
-                    "endDate": "lastCalendarQuarter"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Aclárame la primera conversión por compra y las vistas por Texto de palabra clave de SA360 de la sesión de los últimos doce meses",
-        "api_query": {
-            "metrics": [
-                "firstTimePurchaserConversionRate",
-                "screenPageViews"
-            ],
-            "dimensions": [
-                "sessionSa360Keyword"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "lastCalendarYear",
-                    "endDate": "lastCalendarYear"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Evidénciame las Compras de comercio electrónico por Sistema operativo en los últimos 150 días",
+        "natural_language_query": "Expón las Compras de comercio electrónico con Nombre del socio de DV360 que incluye andom_va;ue registrados en los últimos 103 días",
         "api_query": {
             "metrics": [
                 "ecommercePurchases"
             ],
-            "dimensions": [
-                "operatingSystem"
-            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "dv360PartnerName",
+                    "stringFilter": {
+                        "matchType": "CONTAINS",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
             "dateRanges": [
                 {
-                    "startDate": "150DaysAgo",
+                    "startDate": "103DaysAgo",
                     "endDate": "today"
                 }
             ]
         }
     },
     {
-        "natural_language_query": "Esbozame el Promedio de ingresos por compras por Nombre del socio de DV360 durante el último año",
+        "natural_language_query": "Detalla el Total de usuarios de la cohorte por título del video condicionado a Modelo del dispositivo que comience con andom_va;ue del periodo de los últimos 5 años",
         "api_query": {
             "metrics": [
-                "averagePurchaseRevenue"
+                "cohortTotalUsers"
             ],
             "dimensions": [
-                "dv360PartnerName"
+                "videoTitle"
             ],
-            "dateRanges": [
-                {
-                    "startDate": "lastCalendarYear",
-                    "endDate": "lastCalendarYear"
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "deviceModel",
+                    "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "andom_va;ue"
+                    }
                 }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Expón el importe del envío y la primera conversión por compra por Texto de palabra clave de SA360 de la sesión de los últimos 53 días",
-        "api_query": {
-            "metrics": [
-                "shippingAmount",
-                "firstTimePurchaserConversionRate"
-            ],
-            "dimensions": [
-                "sessionSa360Keyword"
-            ],
+            },
             "dateRanges": [
                 {
-                    "startDate": "53DaysAgo",
+                    "startDate": "5YearsAgo",
                     "endDate": "today"
                 }
             ]
         }
     },
     {
-        "natural_language_query": "Mencióname el Recuento de eventos por Nombre de la creatividad de CM360 de la sesión registrados hoy",
+        "natural_language_query": "Comunica los artículos en los que se hizo clic incluidos en la lista y el costo por conversión por idioma limitado a Nombre del primer intercambio de DV360 del usuario igual a andom_va;ue durante los últimos 7 días",
         "api_query": {
             "metrics": [
-                "eventCount"
-            ],
-            "dimensions": [
-                "sessionCm360CreativeName"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "today",
-                    "endDate": "today"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Comenta el retorno de la inversión publicitaria y los ingresos brutos por artículo por Primer ID de posición de CM360 del usuario registrados en las últimas 7 semanas",
-        "api_query": {
-            "metrics": [
-                "returnOnAdSpend",
-                "grossItemRevenue"
-            ],
-            "dimensions": [
-                "firstUserCm360PlacementId"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "7WeeksAgo",
-                    "endDate": "today"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Publica el porcentaje de rebote y las sesiones que generaron participación del año 2011",
-        "api_query": {
-            "metrics": [
-                "bounceRate",
-                "engagedSessions"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "2011-01-01",
-                    "endDate": "2011-12-31"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Declara el Costo por conversión a lo largo del último trimestre",
-        "api_query": {
-            "metrics": [
+                "itemsClickedInList",
                 "advertiserAdCostPerConversion"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "lastCalendarQuarter",
-                    "endDate": "lastCalendarQuarter"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Dime el DAU/WAU por Fuente de DV360 del último trimestre",
-        "api_query": {
-            "metrics": [
-                "dauPerWau"
-            ],
-            "dimensions": [
-                "dv360Source"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "lastCalendarQuarter",
-                    "endDate": "lastCalendarQuarter"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Detalla el costo de los anuncios y los usuarios desplazados en los últimos 14 meses",
-        "api_query": {
-            "metrics": [
-                "advertiserAdCost",
-                "scrolledUsers"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "14MonthsAgo",
-                    "endDate": "today"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Asegúrame los Eventos de clic en listas de artículos por Primer ID de posición de CM360 del usuario a lo largo de los últimos 10 meses",
-        "api_query": {
-            "metrics": [
-                "itemListClickEvents"
-            ],
-            "dimensions": [
-                "firstUserCm360PlacementId"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "10MonthsAgo",
-                    "endDate": "today"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Testimonia el Importe del reembolso del artículo por ID de la creatividad de DV360 correspondientes a ayer",
-        "api_query": {
-            "metrics": [
-                "itemRefundAmount"
-            ],
-            "dimensions": [
-                "dv360CreativeId"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "yesterday",
-                    "endDate": "yesterday"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Manifiesta las impresiones de anuncios y los artículos en los que se hizo clic incluidos en la lista a lo largo del último trimestre",
-        "api_query": {
-            "metrics": [
-                "advertiserAdImpressions",
-                "itemsClickedInList"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "lastCalendarQuarter",
-                    "endDate": "lastCalendarQuarter"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Argumenta los Artículos vistos incluidos en la promoción por Extensión de archivo de ayer",
-        "api_query": {
-            "metrics": [
-                "itemsViewedInPromotion"
-            ],
-            "dimensions": [
-                "fileExtension"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "yesterday",
-                    "endDate": "yesterday"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Sugiéreme la Exposición de la unidad de anuncios por Enésima semana correspondientes al 20 de julio de 2017",
-        "api_query": {
-            "metrics": [
-                "adUnitExposure"
-            ],
-            "dimensions": [
-                "nthWeek"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "2017-07-20",
-                    "endDate": "2017-07-20"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Aclara los usuarios activos durante 1 día y los ingresos totales del día de hoy",
-        "api_query": {
-            "metrics": [
-                "active1DayUsers",
-                "totalRevenue"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "today",
-                    "endDate": "today"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Testimonia el wau/mau y los eventos por sesión por Fecha y hora (AAAAMMDDHH) correspondientes al último mes",
-        "api_query": {
-            "metrics": [
-                "wauPerMau",
-                "eventsPerSession"
-            ],
-            "dimensions": [
-                "dateHour"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "lastCalendarMonth",
-                    "endDate": "lastCalendarMonth"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Notifícame los Artículos vistos por Formato de creatividad de CM360 de la sesión del día de ayer",
-        "api_query": {
-            "metrics": [
-                "itemsViewed"
-            ],
-            "dimensions": [
-                "sessionCm360CreativeFormat"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "yesterday",
-                    "endDate": "yesterday"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Ilústrame el promedio de ingresos de compras por usuario y los usuarios activos durante los últimos 28 días registrados en el último mes",
-        "api_query": {
-            "metrics": [
-                "averagePurchaseRevenuePerUser",
-                "active28DayUsers"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "lastCalendarMonth",
-                    "endDate": "lastCalendarMonth"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Preséntame las Sesiones por Nombre de la primera línea de pedido de DV360 del usuario del 2020 al 2023",
-        "api_query": {
-            "metrics": [
-                "sessions"
-            ],
-            "dimensions": [
-                "firstUserDv360LinteItemName"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "2020-01-01",
-                    "endDate": "2023-12-31"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Sostén las vistas por sesión y las impresiones de anuncios de publicadores registrados en la última semana",
-        "api_query": {
-            "metrics": [
-                "screenPageViewsPerSession",
-                "publisherAdImpressions"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "lastCalendarWeek",
-                    "endDate": "lastCalendarWeek"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Señálame el Porcentaje de sesiones con conversiones de los últimos tres meses",
-        "api_query": {
-            "metrics": [
-                "sessionConversionRate"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "last90days",
-                    "endDate": "last90days"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Aclara la tasa de participación y los artículos pagados de hace 42 semanas",
-        "api_query": {
-            "metrics": [
-                "engagementRate",
-                "itemsCheckedOut"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "42WeeksAgo",
-                    "endDate": "today"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Mencióname el arppu y la conversión de comprador por ID de la cuenta de administrador de SA360 desde el año 2012 hasta el año 2015",
-        "api_query": {
-            "metrics": [
-                "averagePurchaseRevenuePerPayingUser",
-                "purchaserConversionRate"
-            ],
-            "dimensions": [
-                "sa360ManagerAccountId"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "2012-01-01",
-                    "endDate": "2015-12-31"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Describe el porcentaje de rebote y la relación de compras sobre vistas por Primera campaña del usuario a lo largo de los últimos 90 días",
-        "api_query": {
-            "metrics": [
-                "bounceRate",
-                "purchaseToViewRate"
-            ],
-            "dimensions": [
-                "firstUserCampaignName"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "last90days",
-                    "endDate": "last90days"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Expón la duración promedio de la sesión y las impresiones de la búsqueda de google orgánica del año pasado",
-        "api_query": {
-            "metrics": [
-                "averageSessionDuration",
-                "organicGoogleSearchImpressions"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "lastCalendarYear",
-                    "endDate": "lastCalendarYear"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Expón la Posición promedio de la Búsqueda de Google orgánica durante la última semana",
-        "api_query": {
-            "metrics": [
-                "organicGoogleSearchAveragePosition"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "lastCalendarWeek",
-                    "endDate": "lastCalendarWeek"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Discute el Costo por clic de los anuncios entre el mes de junio de 2015 y el mes de diciembre de 2024",
-        "api_query": {
-            "metrics": [
-                "advertiserAdCostPerClick"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "2015-06-01",
-                    "endDate": "2024-12-31"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Evidénciame los agregar a carrito y el total de ingresos publicitarios del periodo del 14 de septiembre de 2019 al 10 de octubre de 2021",
-        "api_query": {
-            "metrics": [
-                "addToCarts",
-                "totalAdRevenue"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "2019-09-14",
-                    "endDate": "2021-10-10"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Argumenta los eventos por sesión y los clics de la búsqueda de google orgánica por Primer ID del anunciante de CM360 del usuario en el mes de febrero del 2015",
-        "api_query": {
-            "metrics": [
-                "eventsPerSession",
-                "organicGoogleSearchClicks"
-            ],
-            "dimensions": [
-                "firstUserCm360AdvertiserId"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "2015-02-01",
-                    "endDate": "2015-02-28"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Ilústrame el Retorno de la inversión publicitaria por Tipo de creatividad de CM360 en el día de hoy",
-        "api_query": {
-            "metrics": [
-                "returnOnAdSpend"
-            ],
-            "dimensions": [
-                "cm360CreativeType"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "today",
-                    "endDate": "today"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Expón los Artículos pagados por Nombre de la campaña manual registrados el 14 de abril de 2020",
-        "api_query": {
-            "metrics": [
-                "itemsCheckedOut"
-            ],
-            "dimensions": [
-                "manualCampaignName"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "2020-04-14",
-                    "endDate": "2020-04-14"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Acota los artículos vistos y la relación de compras sobre vistas por Nombre del socio de DV360 en los últimos 14 días",
-        "api_query": {
-            "metrics": [
-                "itemsViewed",
-                "purchaseToViewRate"
-            ],
-            "dimensions": [
-                "dv360PartnerName"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "last14days",
-                    "endDate": "last14days"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Ilústrame las vistas y el promedio de ingresos de compras por usuario por Bloque de anuncios del mes pasado",
-        "api_query": {
-            "metrics": [
-                "screenPageViews",
-                "averagePurchaseRevenuePerUser"
-            ],
-            "dimensions": [
-                "adUnitName"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "lastCalendarMonth",
-                    "endDate": "lastCalendarMonth"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Argumenta el Costo de los anuncios de hace 162 semanas",
-        "api_query": {
-            "metrics": [
-                "advertiserAdCost"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "162WeeksAgo",
-                    "endDate": "today"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Exponme los Eventos por sesión por Idioma a lo largo de 2000",
-        "api_query": {
-            "metrics": [
-                "eventsPerSession"
             ],
             "dimensions": [
                 "language"
             ],
-            "dateRanges": [
-                {
-                    "startDate": "2000-01-01",
-                    "endDate": "2000-12-31"
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "firstUserDv360ExchangeName",
+                    "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "andom_va;ue"
+                    }
                 }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Acota el Costo por clic de los anuncios por Texto de palabra clave de SA360 registrados en los últimos 30 días",
-        "api_query": {
-            "metrics": [
-                "advertiserAdCostPerClick"
-            ],
-            "dimensions": [
-                "sa360KeywordText"
-            ],
-            "dateRanges": [
-                {
-                    "startDate": "last30days",
-                    "endDate": "last30days"
-                }
-            ]
-        }
-    },
-    {
-        "natural_language_query": "Sostén el Costo por conversión durante los últimos 7 días",
-        "api_query": {
-            "metrics": [
-                "advertiserAdCostPerConversion"
-            ],
+            },
             "dateRanges": [
                 {
                     "startDate": "last7days",
@@ -1502,14 +1586,21 @@
         }
     },
     {
-        "natural_language_query": "Detalla los Artículos vistos incluidos en la lista por ID de la primera cuenta de motor de SA360 del usuario correspondientes al último año",
+        "natural_language_query": "Exprésame el costo por clic de los anuncios y la tasa de participación con Nuevos / recurrentes igual a andom_va;ue del último año",
         "api_query": {
             "metrics": [
-                "itemsViewedInList"
+                "advertiserAdCostPerClick",
+                "engagementRate"
             ],
-            "dimensions": [
-                "firstUserSa360EngineAccountId"
-            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "newVsReturning",
+                    "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
             "dateRanges": [
                 {
                     "startDate": "lastCalendarYear",
@@ -1519,27 +1610,144 @@
         }
     },
     {
-        "natural_language_query": "Detalla los usuarios que completaron su primer evento de compra y los eventos de vista de artículos de la semana pasada",
+        "natural_language_query": "Expón los usuarios activos de la cohorte y el retorno de la inversión publicitaria limitado a Intereses que termina con andom_va;ue a lo largo del último año",
         "api_query": {
             "metrics": [
-                "firstTimePurchasers",
-                "itemViewEvents"
+                "cohortActiveUsers",
+                "returnOnAdSpend"
             ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "brandingInterest",
+                    "stringFilter": {
+                        "matchType": "ENDS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
             "dateRanges": [
                 {
-                    "startDate": "lastCalendarWeek",
-                    "endDate": "lastCalendarWeek"
+                    "startDate": "lastCalendarYear",
+                    "endDate": "lastCalendarYear"
                 }
             ]
         }
     },
     {
-        "natural_language_query": "Descríbeme el valor de evento y los ingresos por compras en los últimos 90 días",
+        "natural_language_query": "Acota las transacciones por comprador y los usuarios que completaron su primer evento de compra condicionado a Medio de CM360 que coincida con andom_va;ue durante los últimos 7 días",
         "api_query": {
             "metrics": [
-                "eventValue",
-                "purchaseRevenue"
+                "transactionsPerPurchaser",
+                "firstTimePurchasers"
             ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "cm360Medium",
+                    "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "last7days",
+                    "endDate": "last7days"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Manifiesta la Tasa de usuarios que no experimentaron fallas por fecha y hora (aaaammddhh) igual a Modelo del dispositivo móvil dentro de andom_va;ue en el mes de julio de 2021",
+        "api_query": {
+            "metrics": [
+                "crashFreeUsersRate"
+            ],
+            "dimensions": [
+                "dateHour"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "mobileDeviceModel",
+                    "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "2021-07-01",
+                    "endDate": "2021-07-31"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Planteame los Eventos por sesión de Plataforma que sea igual a andom_va;ue del mes de mayo de 2020 al mes de octubre de 2023",
+        "api_query": {
+            "metrics": [
+                "eventsPerSession"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "platform",
+                    "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "2020-05-01",
+                    "endDate": "2023-10-31"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Revela las Confirmaciones de compra filtrado por Nombre de la campaña manual de la sesión que termina con andom_va;ue durante el día de hoy",
+        "api_query": {
+            "metrics": [
+                "checkouts"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "sessionManualCampaignName",
+                    "stringFilter": {
+                        "matchType": "ENDS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "today",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Explaya los usuarios activos durante los últimos 7 días y los usuarios afectados por fallas por tipo de campaña de google ads filtrado por Primer formato de creatividad de SA360 del usuario igual a andom_va;ue de los últimos 90 días",
+        "api_query": {
+            "metrics": [
+                "active7DayUsers",
+                "crashAffectedUsers"
+            ],
+            "dimensions": [
+                "googleAdsCampaignType"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "firstUserSa360CreativeFormat",
+                    "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
             "dateRanges": [
                 {
                     "startDate": "last90days",
@@ -1549,63 +1757,757 @@
         }
     },
     {
-        "natural_language_query": "Testifícame los ingresos por artículos y el porcentaje de sesiones con conversiones por Sistema operativo con versión del periodo de los últimos 181 días",
+        "natural_language_query": "Presenta el porcentaje de rebote y los usuarios nuevos con ID de cliente de Google Ads que tenga un valor de andom_va;ue durante el día de hoy",
         "api_query": {
             "metrics": [
-                "itemRevenue",
-                "sessionConversionRate"
+                "bounceRate",
+                "newUsers"
             ],
-            "dimensions": [
-                "operatingSystemWithVersion"
-            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "googleAdsCustomerId",
+                    "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
             "dateRanges": [
                 {
-                    "startDate": "181DaysAgo",
+                    "startDate": "today",
                     "endDate": "today"
                 }
             ]
         }
     },
     {
-        "natural_language_query": "Adjúntame los Usuarios activos durante los últimos 7 días durante los últimos 27 meses",
+        "natural_language_query": "Anúnciame los Usuarios activos durante los últimos 7 días por nombre del primer anunciante de dv360 del usuario restringido a ID de la primera cuenta de motor de SA360 del usuario que tenga un valor de andom_va;ue a lo largo del último mes",
         "api_query": {
             "metrics": [
                 "active7DayUsers"
             ],
+            "dimensions": [
+                "firstUserDv360AdvertiserName"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "firstUserSa360EngineAccountId",
+                    "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
             "dateRanges": [
                 {
-                    "startDate": "27MonthsAgo",
+                    "startDate": "lastCalendarMonth",
+                    "endDate": "lastCalendarMonth"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Relátame los ingresos por compras y el total de usuarios de la cohorte por idioma que tenga Cupón de pedido que empieza con andom_va;ue del periodo de la última semana",
+        "api_query": {
+            "metrics": [
+                "purchaseRevenue",
+                "cohortTotalUsers"
+            ],
+            "dimensions": [
+                "language"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "orderCoupon",
+                    "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "lastCalendarWeek",
+                    "endDate": "lastCalendarWeek"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Aclara el ARPU filtrado por ID de la creatividad de Google Ads de la sesión que empieza con andom_va;ue del 18 de marzo de 2016 al 27 de junio de 2021",
+        "api_query": {
+            "metrics": [
+                "averageRevenuePerUser"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "sessionGoogleAdsCreativeId",
+                    "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "2016-03-18",
+                    "endDate": "2021-06-27"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Preséntame los Clics en promociones por tipo de cuenta de motor de sa360 de la sesión condicionado a Navegador cuyo valor incluye andom_va;ue entre el 18 de febrero de 2016 y el 26 de junio de 2017",
+        "api_query": {
+            "metrics": [
+                "promotionClicks"
+            ],
+            "dimensions": [
+                "sessionSa360EngineAccountType"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "browser",
+                    "stringFilter": {
+                        "matchType": "CONTAINS",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "2016-02-18",
+                    "endDate": "2017-06-26"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Indícame las transacciones por comprador y el arppu por url de página completa filtrado por ID de público que tenga un valor de andom_va;ue del día de hoy",
+        "api_query": {
+            "metrics": [
+                "transactionsPerPurchaser",
+                "averagePurchaseRevenuePerPayingUser"
+            ],
+            "dimensions": [
+                "fullPageUrl"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "audienceId",
+                    "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "today",
                     "endDate": "today"
                 }
             ]
         }
     },
     {
-        "natural_language_query": "Publica los artículos en los que se hizo clic incluidos en la lista y el dau/wau durante el día de ayer",
+        "natural_language_query": "Infórmame las vistas por sesión y las vistas de promociones de Media cuyo valor contiene andom_va;ue de los últimos tres meses",
         "api_query": {
             "metrics": [
-                "itemsClickedInList",
-                "dauPerWau"
+                "screenPageViewsPerSession",
+                "promotionViews"
             ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "medium",
+                    "stringFilter": {
+                        "matchType": "CONTAINS",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
             "dateRanges": [
                 {
-                    "startDate": "yesterday",
-                    "endDate": "yesterday"
+                    "startDate": "lastCalendarQuarter",
+                    "endDate": "lastCalendarQuarter"
                 }
             ]
         }
     },
     {
-        "natural_language_query": "Muestra las vistas por sesión y los artículos agregados al carrito durante los últimos 30 días",
+        "natural_language_query": "Divúlgame los Usuarios activos durante 1 día que tenga ID del grupo de anuncios de Google Ads igual a andom_va;ue en los últimos 158 días",
         "api_query": {
             "metrics": [
-                "screenPageViewsPerSession",
-                "itemsAddedToCart"
+                "active1DayUsers"
             ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "googleAdsAdGroupId",
+                    "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "158DaysAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Comenta las transacciones y los ingresos por compras por espacio para la creatividad de promoción del artículo con ID de mercado de intercambio de DV360 cuyo valor comienza con andom_va;ue desde el 10 de septiembre de 2012 hasta el 17 de enero de 2019",
+        "api_query": {
+            "metrics": [
+                "transactions",
+                "purchaseRevenue"
+            ],
+            "dimensions": [
+                "itemPromotionCreativeSlot"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "dv360ExchangeId",
+                    "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "2012-09-10",
+                    "endDate": "2019-01-17"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Describe el costo por clic de los anuncios y los artículos pagados condicionado a ID del tipo de creatividad de CM360 de la sesión que comience con andom_va;ue correspondientes a los últimos 14 días",
+        "api_query": {
+            "metrics": [
+                "advertiserAdCostPerClick",
+                "itemsCheckedOut"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "sessionCm360CreativeTypeId",
+                    "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "last14days",
+                    "endDate": "last14days"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Ilústrame el Importe del reembolso limitado a ID de la primera línea de pedido de DV360 del usuario cuyo valor comienza con andom_va;ue para el año 2019",
+        "api_query": {
+            "metrics": [
+                "refundAmount"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "firstUserDv360LineItemId",
+                    "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "2019-01-01",
+                    "endDate": "2019-12-31"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Exprésame las transacciones por comprador y las transacciones por primera fuente/primer medio manual del usuario limitado a Resolución de pantalla cuyo valor comienza con andom_va;ue del día 9 de mayo de 2014",
+        "api_query": {
+            "metrics": [
+                "transactionsPerPurchaser",
+                "transactions"
+            ],
+            "dimensions": [
+                "firstUserManualSourceMedium"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "screenResolution",
+                    "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "2014-05-09",
+                    "endDate": "2014-05-09"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Infórmame el Importe del envío donde Grupo de canales principal de la sesión concluye con andom_va;ue de los últimos siete días",
+        "api_query": {
+            "metrics": [
+                "shippingAmount"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "sessionPrimaryChannelGroup",
+                    "stringFilter": {
+                        "matchType": "ENDS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "lastCalendarWeek",
+                    "endDate": "lastCalendarWeek"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Revela el total de usuarios y los clics de la búsqueda de google orgánica filtrado por Nombre de la campaña manual de la sesión que termina con andom_va;ue en el último trimestre",
+        "api_query": {
+            "metrics": [
+                "totalUsers",
+                "organicGoogleSearchClicks"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "sessionManualCampaignName",
+                    "stringFilter": {
+                        "matchType": "ENDS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "lastCalendarQuarter",
+                    "endDate": "lastCalendarQuarter"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Expone los Clics en promociones por nombre del mercado de intercambio de dv360 de Semana ISO del año cuyo valor abarca andom_va;ue del periodo de los últimos 7 días",
+        "api_query": {
+            "metrics": [
+                "promotionClicks"
+            ],
+            "dimensions": [
+                "dv360ExchangeName"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "isoWeek",
+                    "stringFilter": {
+                        "matchType": "CONTAINS",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "last7days",
+                    "endDate": "last7days"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Descríbeme las Sesiones por usuario por id de la primera campaña manual del usuario filtrado por Primer ID de posición de CM360 del usuario que sea igual a andom_va;ue de las últimas 193 semanas",
+        "api_query": {
+            "metrics": [
+                "sessionsPerUser"
+            ],
+            "dimensions": [
+                "firstUserManualCampaignId"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "firstUserCm360PlacementId",
+                    "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "193WeeksAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Muestra los Compradores totales por usuario nuevo por nombre de la primera campaña manual del usuario limitado a Medio de SA360 de la sesión que incluye andom_va;ue en el mes de noviembre del 2012",
+        "api_query": {
+            "metrics": [
+                "firstTimePurchasersPerNewUser"
+            ],
+            "dimensions": [
+                "firstUserManualCampaignName"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "sessionSa360Medium",
+                    "stringFilter": {
+                        "matchType": "CONTAINS",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "2012-11-01",
+                    "endDate": "2012-11-30"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Notifícame los usuarios afectados por fallas y el porcentaje de sesiones con conversiones por nombre de la primera cuenta de motor de sa360 del usuario de Fuente o medio de SA360 de la sesión que empieza con andom_va;ue durante el último trimestre",
+        "api_query": {
+            "metrics": [
+                "crashAffectedUsers",
+                "sessionConversionRate"
+            ],
+            "dimensions": [
+                "firstUserSa360EngineAccountName"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "sessionSa360SourceMedium",
+                    "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "lastCalendarQuarter",
+                    "endDate": "lastCalendarQuarter"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Expón el Total de ingresos publicitarios por id del anunciante de cm360 de la sesión comienza con Nombre del primer grupo de anuncios de Google Ads del usuario andom_va;ue de la última semana",
+        "api_query": {
+            "metrics": [
+                "totalAdRevenue"
+            ],
+            "dimensions": [
+                "sessionCm360AdvertiserId"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "firstUserGoogleAdsAdGroupName",
+                    "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "last7days",
+                    "endDate": "last7days"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Declárame el ARPU por primera fuente de dv360 del usuario con ID del sitio de CM360 de la sesión cuyo valor incluye andom_va;ue del 9 de abril al 6 de agosto de 2011",
+        "api_query": {
+            "metrics": [
+                "averageRevenuePerUser"
+            ],
+            "dimensions": [
+                "firstUserDv360Source"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "sessionCm360SiteId",
+                    "stringFilter": {
+                        "matchType": "CONTAINS",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "2011-04-09",
+                    "endDate": "2011-08-06"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Manifiéstame los artículos en los que se hizo clic incluidos en la promoción y el costo de los anuncios por fuente o medio de cm360 de Semana del año cuyo valor finaliza con andom_va;ue a lo largo de los últimos 38 meses",
+        "api_query": {
+            "metrics": [
+                "itemsClickedInPromotion",
+                "advertiserAdCost"
+            ],
+            "dimensions": [
+                "cm360SourceMedium"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "yearWeek",
+                    "stringFilter": {
+                        "matchType": "ENDS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "38MonthsAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Informa los Compradores totales por usuario nuevo de Semana ISO del año que comience con andom_va;ue a lo largo de 2024",
+        "api_query": {
+            "metrics": [
+                "firstTimePurchasersPerNewUser"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "isoWeek",
+                    "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "2024-01-01",
+                    "endDate": "2024-12-31"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Publica el WAU/MAU comienza con Texto de palabra clave de Google Ads en andom_va;ue a lo largo de los últimos 14 días",
+        "api_query": {
+            "metrics": [
+                "wauPerMau"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "googleAdsKeyword",
+                    "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "last14days",
+                    "endDate": "last14days"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Presenta las Impresiones de la Búsqueda de Google orgánica filtrado por Primera fuente de SA360 del usuario que empieza con andom_va;ue en los últimos 30 días",
+        "api_query": {
+            "metrics": [
+                "organicGoogleSearchImpressions"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "firstUserSa360Source",
+                    "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
             "dateRanges": [
                 {
                     "startDate": "last30days",
                     "endDate": "last30days"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Comenta los Artículos vistos incluidos en la lista por primer grupo de canales principal del usuario con Nombre de la campaña de CM360 de la sesión que tenga un valor que acabe con andom_va;ue registrados en los últimos 7 días",
+        "api_query": {
+            "metrics": [
+                "itemsViewedInList"
+            ],
+            "dimensions": [
+                "firstUserPrimaryChannelGroup"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "sessionCm360CampaignName",
+                    "stringFilter": {
+                        "matchType": "ENDS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "last7days",
+                    "endDate": "last7days"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Muestra la conversión de comprador y la tasa de participación filtrado por ID de transmisión que acabe con andom_va;ue registrados en los últimos 48 meses",
+        "api_query": {
+            "metrics": [
+                "purchaserConversionRate",
+                "engagementRate"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "streamId",
+                    "stringFilter": {
+                        "matchType": "ENDS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "48MonthsAgo",
+                    "endDate": "today"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Explica los Usuarios activos durante los últimos 28 días por salientes filtrado por Primera fuente/primer medio del usuario que acabe con andom_va;ue correspondientes al último trimestre",
+        "api_query": {
+            "metrics": [
+                "active28DayUsers"
+            ],
+            "dimensions": [
+                "outbound"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "firstUserSourceMedium",
+                    "stringFilter": {
+                        "matchType": "ENDS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "lastCalendarQuarter",
+                    "endDate": "lastCalendarQuarter"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Indica las Transacciones por primera campaña de google ads del usuario de ID de la primera campaña de CM360 del usuario cuyo valor termina con andom_va;ue entre 2005 y 2011",
+        "api_query": {
+            "metrics": [
+                "transactions"
+            ],
+            "dimensions": [
+                "firstUserGoogleAdsCampaignName"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "firstUserCm360CampaignId",
+                    "stringFilter": {
+                        "matchType": "ENDS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "2005-01-01",
+                    "endDate": "2011-12-31"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Señálame los Clics en los anuncios por posición de la lista de artículos que tenga Nombre de la cuenta de CM360 de la sesión que termina con andom_va;ue de los últimos treinta días",
+        "api_query": {
+            "metrics": [
+                "advertiserAdClicks"
+            ],
+            "dimensions": [
+                "itemListPosition"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "sessionCm360AccountName",
+                    "stringFilter": {
+                        "matchType": "ENDS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "lastCalendarMonth",
+                    "endDate": "lastCalendarMonth"
+                }
+            ]
+        }
+    },
+    {
+        "natural_language_query": "Señala las vistas y los artículos vistos incluidos en la promoción por primer id de posición de cm360 del usuario de Fuente o medio manual cuyo valor termina con andom_va;ue de los últimos 8 años",
+        "api_query": {
+            "metrics": [
+                "screenPageViews",
+                "itemsViewedInPromotion"
+            ],
+            "dimensions": [
+                "firstUserCm360PlacementId"
+            ],
+            "dimensionFilter": {
+                "filter": {
+                    "fieldName": "manualSourceMedium",
+                    "stringFilter": {
+                        "matchType": "ENDS_WITH",
+                        "value": "andom_va;ue"
+                    }
+                }
+            },
+            "dateRanges": [
+                {
+                    "startDate": "8YearsAgo",
+                    "endDate": "today"
                 }
             ]
         }

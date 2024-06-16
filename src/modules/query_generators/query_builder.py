@@ -20,8 +20,8 @@ def build_query():
     if random.getrandbits(1):
         phrase, api_query = set_dimension(phrase, api_query)
 
-    if random.getrandbits(1):
-        phrase, api_query = set_dimension_filter(phrase, api_query)
+    # if random.getrandbits(1):
+    phrase, api_query = set_dimension_filter(phrase, api_query)
 
     phrase, api_query = set_date_range(phrase, api_query)
 
@@ -55,9 +55,9 @@ def set_dimension(phrase: str, api_query: dict):
 
 
 def set_dimension_filter(phrase: str, api_query: dict):
-    dimension_filter = get_random_dimension_filter()
-    api_query["dimensionFilter"] = dimension_filter.iloc[0]
-    phrase += f" {dimension_filter.iloc[1]}"
+    phrase_filter_content, api_query_filter_content = get_random_dimension_filter()
+    api_query["dimensionFilter"] = api_query_filter_content
+    phrase += f" {phrase_filter_content}"
     return phrase, api_query
 
 
