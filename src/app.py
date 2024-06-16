@@ -1,26 +1,39 @@
 # app.py
-import random
-from query_type import query_types
-from modules.query_generators import generate_type_1
-from modules.query_generators import generate_type_2
-from modules.query_generators import generate_type_3
-from modules.query_generators import generate_type_4
-from modules.export_csv import export as export_csv
+import json
+import pandas as pd
+from modules.query_generators.query_builder import build_query
+
 
 def main():
-    num_pairs = 100
+    num_pairs = 20
     pairs = []
 
     for _ in range(num_pairs):
-        type = random.choice(query_types)
-        type = 4
-        if(type==1): pair = generate_type_1()
-        elif(type==2): pair = generate_type_2()
-        elif(type==3): pair = generate_type_3()
-        elif(type==4): pair = generate_type_4()
-
+        pair = build_query()
         pairs.append(pair)
-    export_csv(pairs)
+
+    # Exportar los resultados a un archivo JSON
+    with open("output.json", "w", encoding="utf-8") as f:
+        json.dump(pairs, f, ensure_ascii=False, indent=4)
+    print("Exportación a JSON completada.")
+
+    # Cargar el archivo JSON
+    with open("output.json", "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    # Transformar los datos en un DataFrame
+    rows = []
+    for item in data:
+        natural_language_query = item["natural_language_query"]
+        api_query = json.dumps(item["api_query"], ensure_ascii=False)
+        rows.append([natural_language_query, api_query])
+
+    df = pd.DataFrame(rows, columns=["natural_language_query", "api_query"])
+
+    # Exportar a CSV
+    df.to_csv("output.csv", index=False, encoding="utf-8")
+    print("Exportación a CSV completada.")
+
 
 if __name__ == "__main__":
     main()

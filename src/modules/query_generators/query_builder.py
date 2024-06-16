@@ -1,10 +1,10 @@
 import random
-from modules.query_generators.utils.resources import get_random_initial_phrase
-from modules.query_generators.utils.resources import get_random_metric
-from modules.query_generators.utils.resources import get_2_random_metrics
-from modules.query_generators.utils.resources import get_random_dimension
-from modules.dimension_filters import generate as get_random_dimension_filter
-from modules.date_ranges import generate as get_random_date_range
+from modules.utils.resources import get_random_initial_phrase
+from modules.utils.resources import get_random_metric
+from modules.utils.resources import get_2_random_metrics
+from modules.utils.resources import get_random_dimension
+from modules.dimension_filters import get_random_dimension_filter
+from modules.date_ranges import get_random_date_range
 
 
 def build_query():
@@ -20,8 +20,8 @@ def build_query():
     if random.getrandbits(1):
         phrase, api_query = set_dimension(phrase, api_query)
 
-    # if random.getrandbits(1):
-    phrase, api_query = set_dimension_filter(phrase, api_query)
+    if random.getrandbits(1):
+        phrase, api_query = set_dimension_filter(phrase, api_query)
 
     phrase, api_query = set_date_range(phrase, api_query)
 
@@ -31,7 +31,7 @@ def build_query():
 def set_metric(phrase: str, api_query: dict):
     # Seleccionar una métrica aleatoria
     metric = get_random_metric()
-    phrase += f" {metric.iloc[3]} {metric.iloc[1]}"
+    phrase += f" {metric.iloc[3]} {metric.iloc[1]}".lower()
     api_query["metrics"] = [metric.iloc[0]]
     return phrase, api_query
 
