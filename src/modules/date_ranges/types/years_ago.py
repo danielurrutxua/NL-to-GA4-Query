@@ -15,5 +15,5 @@ def generate():
     ]
     chosen_variant = random.choice(variants)
     phrase = chosen_variant.format(num_years_ago=num_years_ago)
-    xYearsAgo = str(num_years_ago) + 'YearsAgo'
+    xYearsAgo = str(num_years_ago*365) + 'daysAgo'
     return phrase, {"startDate": xYearsAgo, "endDate": "today"}

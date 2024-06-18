@@ -14,5 +14,5 @@ def generate():
     ]
     chosen_variant = random.choice(variants)
     phrase = chosen_variant.format(num_months_ago=num_months_ago)
-    xMonthsAgo = str(num_months_ago) + 'MonthsAgo'
+    xMonthsAgo = str(num_months_ago*30) + 'daysAgo'
     return phrase, {"startDate": xMonthsAgo, "endDate": "today"}

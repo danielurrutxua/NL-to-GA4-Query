@@ -13,7 +13,7 @@ def generate():
         "registrados en los últimos {num_days_ago} días",
         "del periodo de los últimos {num_days_ago} días"
     ]
-    xDaysAgo = str(num_days_ago) + 'DaysAgo'
+    xDaysAgo = str(num_days_ago) + 'daysAgo'
     chosen_variant = random.choice(variants)
     phrase = chosen_variant.format(num_days_ago=num_days_ago)
     return phrase, {"startDate": xDaysAgo, "endDate": "today"}

@@ -57,7 +57,7 @@ def set_dimension(phrase: str, api_query: dict):
 def set_dimension_filter(phrase: str, api_query: dict):
     phrase_filter_content, api_query_filter_content = get_random_dimension_filter()
     api_query["dimensionFilter"] = api_query_filter_content
-    phrase += f" {phrase_filter_content}"
+    phrase += f" {phrase_filter_content}".lower()
     return phrase, api_query
 
 
