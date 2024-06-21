@@ -3,7 +3,7 @@ from modules.utils.resources import get_random_initial_phrase
 from modules.utils.resources import get_random_metric
 from modules.utils.resources import get_2_random_metrics
 from modules.utils.resources import get_random_dimension
-from modules.dimension_filters import get_random_dimension_filter
+from modules.filters import get_random_filter
 from modules.date_ranges import get_random_date_range
 
 
@@ -20,8 +20,8 @@ def build_query():
     if random.getrandbits(1):
         phrase, api_query = set_dimension(phrase, api_query)
 
-    if random.getrandbits(1):
-        phrase, api_query = set_dimension_filter(phrase, api_query)
+    phrase, api_query = set_filters(phrase, api_query)
+    
 
     phrase, api_query = set_date_range(phrase, api_query)
 
@@ -53,10 +53,44 @@ def set_dimension(phrase: str, api_query: dict):
     phrase += f" por {dimension.iloc[1].lower()}"
     return phrase, api_query
 
+def set_filters(phrase: str, api_query: dict):
+    # Definir las posibles acciones
+    actions = [None, "dimension", "metric", "both"]
+    
+    # Seleccionar una acción aleatoria
+    action = random.choice(actions)
+    
+    if action is None:
+        # No se llama a ninguno
+        return phrase, api_query
+    elif action == "dimension":
+        # Se llama solo a set_dimension_filter
+        phrase, api_query = set_dimension_filter(phrase, api_query)
+    elif action == "metric":
+        # Se llama solo a set_metric_filter
+        phrase, api_query = set_metric_filter(phrase, api_query)
+    elif action == "both":
+        # Se llaman a los dos, en orden aleatorio
+        if random.choice([True, False]):
+            phrase, api_query = set_dimension_filter(phrase, api_query)
+            phrase += " y"
+            phrase, api_query = set_metric_filter(phrase, api_query)
+        else:
+            phrase, api_query = set_metric_filter(phrase, api_query)
+            phrase += " y"
+            phrase, api_query = set_dimension_filter(phrase, api_query)
+    
+    return phrase, api_query
 
 def set_dimension_filter(phrase: str, api_query: dict):
-    phrase_filter_content, api_query_filter_content = get_random_dimension_filter()
+    phrase_filter_content, api_query_filter_content = get_random_filter(get_random_dimension())
     api_query["dimensionFilter"] = api_query_filter_content
+    phrase += f" {phrase_filter_content}".lower()
+    return phrase, api_query
+
+def set_metric_filter(phrase: str, api_query: dict):
+    phrase_filter_content, api_query_filter_content = get_random_filter(get_random_metric())
+    api_query["metricFilter"] = api_query_filter_content
     phrase += f" {phrase_filter_content}".lower()
     return phrase, api_query
 
