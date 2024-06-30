@@ -1,0 +1,59 @@
+Nombre de la API,Nombre de la IU,Descripción,Tipo de Dato
+browser,Navegador,Indica los navegadores utilizados para ver su sitio web.,String
+campaignName,Campaña,"El nombre de la campaña de marketing. Solo se muestra en los eventos de conversión. Incluye las campañas de Google Ads, las manuales y otras.",String
+city,Ciudad,Indica la ciudad de donde proviene la actividad del usuario.,String
+continent,Continente,"Indica el continente de donde proviene la actividad del usuario. Por ejemplo, Americas o Asia.",String
+country,País,Indica el país de donde proviene la actividad del usuario.,String
+currencyCode,Moneda,"Indica el código de la moneda local (según el estándar ISO 4217) del evento de comercio electrónico. Por ejemplo, USD o GBP. La moneda se especifica en el etiquetado con el parámetro currency. Las empresas que realizan transacciones en más de una moneda pueden especificar un código de moneda local cuando envían eventos de comercio electrónico a Analytics. Esta dimensión muestra esas monedas. Para obtener más información, consulta la Referencia de monedas.",String
+date,Fecha,"Se trata de la fecha del evento, con el formato AAAAMMDD.",Date
+defaultChannelGroup,Grupo de canales predeterminado,"El grupo de canales predeterminado de la conversión se basa principalmente en la fuente y el medio. Una enumeración que incluye Direct, Organic Search, Paid Social, Organic Social, Email, Affiliates, Referral, Paid Search, Video y Display.",String
+deviceCategory,Categoría del dispositivo,"Indica el tipo de dispositivo: computadora de escritorio, tablet o dispositivo móvil.",String
+deviceModel,Modelo del dispositivo,"Indica el modelo del dispositivo móvil (por ejemplo, iPhone 10, 6).",String
+eventName,Nombre del evento,El nombre del evento,String
+firstSessionDate,Fecha de la primera sesión,"Indica la fecha en la que ocurrió la primera sesión del usuario, con el formato AAAAMMDD.",Date
+firstUserCampaignName,Primera campaña del usuario,"El nombre de la campaña de marketing que primero adquirió al usuario Incluye las campañas de Google Ads, las manuales y otras.",String
+firstUserDefaultChannelGroup,Primer grupo de canales predeterminado del usuario,"Es el grupo de canales predeterminado que primero adquirió al usuario. El grupo de canales predeterminado se basa principalmente en la fuente y el medio. Una enumeración que incluye Direct, Organic Search, Paid Social, Organic Social, Email, Affiliates, Referral, Paid Search, Video y Display.",String
+firstUserMedium,Primer medio del usuario,Es el medio que primero adquirió al usuario para tu sitio web o aplicación.,String
+firstUserPrimaryChannelGroup,Primer grupo de canales principal del usuario,"Es el grupo de canales principal que adquirió un usuario originalmente. Los grupos de canales principales son aquellos que se usan en los informes estándares de Google Analytics y funcionan como un registro activo de los datos de tu propiedad en consonancia con la agrupación de canales a lo largo del tiempo. Para obtener más información, consulta el artículo Grupos de canales personalizados.",String
+firstUserSource,Primera fuente del usuario,Indica la fuente que primero adquirió al usuario en tu sitio web o aplicación.,String
+firstUserSourceMedium,Primera fuente/primer medio del usuario,Son los valores combinados de las dimensiones firstUserSource y firstUserMedium.,String
+fullPageUrl,URL de página completa,"El nombre de host, la ruta de la página y la cadena de consulta de las páginas web visitadas; por ejemplo, la parte fullPageUrl de https://www.example.com/store/contact-us?query_string=true es www.example.com/store/contact-us?query_string=true.",String
+hostName,Nombre de host,"Incluye el subdominio y los nombres de dominio de una URL; por ejemplo, el nombre de host de www.example.com/contacto.html es www.example.com.",String
+hour,Hora,Indica la hora de dos dígitos del día en que se registró el evento. Esta dimensión varía de 0 a 23 y se informa en la zona horaria de tu propiedad.,Integer
+isConversionEvent,Es evento de conversión,"La cadena true si el evento es una conversión Los eventos se marcan como conversiones en el momento de la recopilación. A partir de ese momento, se aplican los cambios que se realicen en la marca de conversiones de un evento. Puedes marcar cualquier evento como conversión en Google Analytics, y algunos eventos (es decir, first_open y purchase) se marcan como conversiones de forma predeterminada. Para obtener más información, consulta el artículo Acerca de las conversiones.",Boolean
+isoWeek,Semana ISO del año,"Número de semana ISO, donde cada semana comienza el lunes. Para obtener más información, consulta http://en.wikipedia.org/wiki/ISO_week_date. Los valores de ejemplo incluyen 01, 02 y 53.",Integer
+isoYear,Año ISO,"El año ISO del evento. Para obtener más información, consulta http://en.wikipedia.org/wiki/ISO_week_date. Entre los valores de ejemplo, se incluyen 2022 y 2023.",Integer
+isoYearIsoWeek,Semana ISO del año ISO,Los valores combinados de isoWeek e isoYear. Los valores de ejemplo incluyen 201652 y 201701.,String
+landingPage,Página de destino,Es la ruta de la página asociada con la primera vista de página en una sesión.,String
+language,Idioma,"Es la configuración de idioma del navegador o dispositivo del usuario. Por ejemplo, English.",String
+mobileDeviceBranding,Marca del dispositivo,"Nombre del fabricante o de la marca (por ejemplo, Samsung, HTC, Verizon o T-Mobile)",String
+month,Mes,Se refiere al mes del evento (un número entero de dos dígitos del 01 al 12).,Integer
+operatingSystem,Sistema operativo,"Los sistemas operativos utilizados por los usuarios de su aplicación o visitantes de su sitio web. Incluye los sistemas operativos para computadoras de escritorio y dispositivos móviles, como Windows y Android.",String
+pageLocation,Ubicación de la página,"El protocolo, el nombre de host, la ruta de la página y la cadena de consulta de las páginas web visitadas; por ejemplo, la parte pageLocation de https://www.example.com/store/contact-us?query_string=true es https://www.example.com/store/contact-us?query_string=true. Se propaga mediante el parámetro de evento page_location.",String
+pagePath,Ruta de la página,"La parte de la URL entre el nombre de host y la cadena de consulta de las páginas web visitadas; por ejemplo, la parte de pagePath de https://www.example.com/store/contact-us?query_string=true es /store/contact-us.",String
+pageReferrer,URL de referencia de la página,"La URL de referencia completa, incluidos el nombre de host y la ruta de acceso Esta URL de referencia es la URL anterior del usuario y puede ser el dominio de este sitio web, o bien otros dominios. Se propaga mediante el parámetro de evento page_referrer.",String
+pageTitle,Título de la página,Indica los títulos de páginas web que se utilizan en su sitio.,String
+platform,Plataforma,"La plataforma en la que se ejecutó su aplicación o sitio web; por ejemplo, en la Web, iOS o Android. Para determinar el tipo de un flujo en un informe, usa platform y streamId.",String
+platformDeviceCategory,Categoría de plataforma y dispositivo,Es la plataforma y el tipo de dispositivo en los que se ejecutó tu sitio web o aplicación para dispositivos móviles. (ejemplo: Android / dispositivos móviles),String
+primaryChannelGroup,Grupo de canales principal,"Indica el grupo de canales principal que se atribuyó al evento de conversión. Los grupos de canales principales son aquellos que se usan en los informes estándares de Google Analytics y funcionan como un registro activo de los datos de tu propiedad en consonancia con la agrupación de canales a lo largo del tiempo. Para obtener más información, consulta el artículo Grupos de canales personalizados.",String
+region,Región,"Indica la región geográfica de donde proviene la actividad del usuario, según su dirección IP.",String
+screenResolution,Resolución de pantalla,"La resolución de pantalla del monitor del usuario. Por ejemplo, 1920 x 1080.",String
+searchTerm,Término de búsqueda,"Es el término que buscó el usuario. Por ejemplo, si el usuario visita /some-page.html?q=some-term, esta dimensión muestra some-term. Se propaga automáticamente si la medición optimizada está habilitada. Se propaga mediante el parámetro de evento search_term.",String
+sessionCampaignId,ID de campaña de la sesión,"Es el ID de la campaña de marketing de una sesión. Incluye las campañas de Google Ads, las manuales y otras.",String
+sessionCampaignName,Campaña de la sesión,"Es el nombre de la campaña de marketing de una sesión. Incluye las campañas de Google Ads, las manuales y otras.",String
+sessionDefaultChannelGroup,Grupo de canales predeterminado de la sesión,"El grupo de canales predeterminado de la sesión se basa principalmente en la fuente y el medio. Una enumeración que incluye Direct, Organic Search, Paid Social, Organic Social, Email, Affiliates, Referral, Paid Search, Video y Display.",String
+sessionMedium,Medio de la sesión,Es el medio que inició una sesión en tu sitio web o aplicación.,String
+sessionPrimaryChannelGroup,Grupo de canales principal de la sesión,"Es el grupo de canales principal que generó la sesión. Los grupos de canales principales son aquellos que se usan en los informes estándares de Google Analytics y funcionan como un registro activo de los datos de tu propiedad en consonancia con la agrupación de canales a lo largo del tiempo. Para obtener más información, consulta el artículo Grupos de canales personalizados.",String
+sessionSource,Fuente de la sesión,Es la fuente que inició una sesión en tu sitio web o aplicación.,String
+sessionSourceMedium,Fuente/medio de la sesión,Son los valores combinados de las dimensiones sessionSource y sessionMedium.,String
+sessionSourcePlatform,Plataforma de origen de la sesión,Es la plataforma de origen de la campaña de la sesión. No dependas de que este campo muestre Manual para el tráfico que usa UTM; este campo se actualizará de mostrar Manual a (not set) para el próximo lanzamiento de funciones.,String
+source,Fuente,Indica la fuente que se atribuyó al evento de conversión.,String
+sourceMedium,Fuente o medio,Son los valores combinados de las dimensiones source y medium.,String
+sourcePlatform,Plataforma de origen,La plataforma de origen del evento de conversións campaign. Don't depend on this field returningManualfor traffic that uses UTMs; this field will update from returningManualto returning(sin definir)` para el próximo lanzamiento de la función.,String
+streamName,Nombre de la flujo,Es el nombre del flujo de datos de tu aplicación o sitio web.,String
+userAgeBracket,Edad,Indica los grupos etarios de los usuarios.,String
+userGender,Género,Indica el género del usuario.,String
+week,Semana,"Indica la semana del evento (un número de dos dígitos del 01 al 53). Cada semana comienza el domingo. El 1 de enero siempre es en la semana 1. La primera y la última semana del año tienen menos de 7 días en la mayoría de los años. Las semanas que no sean la primera ni la última del año siempre tienen 7 días. Para los años en los que el 1 de enero es domingo, la primera semana de ese año y la última semana del año anterior tienen 7 días.",Integer
+year,Año,"Año del evento en formato de cuatro dígitos Por ejemplo, 2020 o 2024.",Integer
+yearMonth,Mes del año,Valores combinados de año y mes. Los valores de ejemplo incluyen 202212 o 202301.,String
+yearWeek,Semana del año,Valores combinados de año y semana. Los valores de ejemplo incluyen 202253 o 202301.,String
