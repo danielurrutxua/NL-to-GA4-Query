@@ -32,19 +32,19 @@ def generate_string_type_filter(dimension_or_metric):
     match random.choice(list(MatchTypeString)):
         case MatchTypeString.EXACT:
             variant = random.choice(equal_variants)
-            phrase = variant.format(object=dimension_or_metric.iloc[1], value=value)
+            phrase = variant.format(object=random.choice([syn.strip() for syn in dimension_or_metric.iloc[3].split(',')]), value=value)
             match_type = MatchTypeString.EXACT.name
         case MatchTypeString.BEGINS_WITH:
             variant = random.choice(variants_begins_with)
-            phrase = variant.format(object=dimension_or_metric.iloc[1], value=value)
+            phrase = variant.format(object=random.choice([syn.strip() for syn in dimension_or_metric.iloc[3].split(',')]), value=value)
             match_type = MatchTypeString.BEGINS_WITH.name
         case MatchTypeString.ENDS_WITH:
             variant = random.choice(variants_ends_with)
-            phrase = variant.format(object=dimension_or_metric.iloc[1], value=value)
+            phrase = variant.format(object=random.choice([syn.strip() for syn in dimension_or_metric.iloc[3].split(',')]), value=value)
             match_type = MatchTypeString.ENDS_WITH.name
         case MatchTypeString.CONTAINS:
             variant = random.choice(variants_contains)
-            phrase = variant.format(object=dimension_or_metric.iloc[1], value=value)
+            phrase = variant.format(object=random.choice([syn.strip() for syn in dimension_or_metric.iloc[3].split(',')]), value=value)
             match_type = MatchTypeString.CONTAINS.name
 
     api_query = {

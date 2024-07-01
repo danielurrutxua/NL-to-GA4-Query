@@ -5,7 +5,7 @@ from modules.utils.resources import export_csv_compact
 
 
 def main():
-    num_pairs = 2000000
+    num_pairs = 20
     pairs = []
 
     for _ in range(num_pairs):

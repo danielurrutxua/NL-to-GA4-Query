@@ -27,7 +27,6 @@ def get_random_english_word():
 
 
 def export_csv(pairs: list):
-    # Transformar los datos en un DataFrame
     rows = []
     for item in pairs:
         natural_language_query = item['natural_language_query']
@@ -36,10 +35,9 @@ def export_csv(pairs: list):
         metrics = ";".join(api_query.get('metrics', []))
         dimensions = ";".join(api_query.get('dimensions', []))
         
-        # Asumimos que solo hay un rango de fechas por simplicidad
-        date_ranges = api_query.get('dateRanges', [{}])[0]
-        start_date = date_ranges.get('startDate', "")
-        end_date = date_ranges.get('endDate', "")
+        #date_ranges = api_query.get('dateRanges', [{}])[0]
+        #start_date = date_ranges.get('startDate', "")
+        #end_date = date_ranges.get('endDate', "")
         
         dimension_filter = ""
         if 'dimensionFilter' in api_query:
@@ -67,15 +65,15 @@ def export_csv(pairs: list):
                 value = filter_expression['numericFilter'].get('value', {}).get('int64Value', "")
                 metric_filter = f"{field_name};{operation};{value}"
         
-        rows.append([natural_language_query, metrics, dimensions, start_date, end_date, dimension_filter, metric_filter])
+        #rows.append([natural_language_query, metrics, dimensions, start_date, end_date, dimension_filter, metric_filter])
+        rows.append([natural_language_query, metrics, dimensions, dimension_filter, metric_filter])
 
-    df = pd.DataFrame(rows, columns=['natural_language_query', 'metrics', 'dimensions', 'start_date', 'end_date', 'dimensionFilter', 'metricFilter'])
+    #df = pd.DataFrame(rows, columns=['natural_language_query', 'metrics', 'dimensions', 'start_date', 'end_date', 'dimensionFilter', 'metricFilter'])
+    df = pd.DataFrame(rows, columns=['natural_language_query', 'metrics', 'dimensions', 'dimensionFilter', 'metricFilter'])
 
-    # Exportar a CSV
     df.to_csv('output.csv', index=False, encoding='utf-8')
     print("Exportación a CSV completada.")
 def export_csv_compact(pairs: list):
-    # Transformar los datos en un DataFrame
     rows = []
     for item in pairs:
         natural_language_query = item['natural_language_query']
@@ -84,7 +82,6 @@ def export_csv_compact(pairs: list):
         metrics = ";".join(api_query.get('metrics', []))
         dimensions = ";".join(api_query.get('dimensions', []))
         
-        # Asumimos que solo hay un rango de fechas por simplicidad
         date_ranges = api_query.get('dateRanges', [{}])[0]
         start_date = date_ranges.get('startDate', "")
         end_date = date_ranges.get('endDate', "")
@@ -115,7 +112,6 @@ def export_csv_compact(pairs: list):
                 value = filter_expression['numericFilter'].get('value', {}).get('int64Value', "")
                 metric_filter = f"{field_name};{operation};{value}"
         
-        # Crear la cadena comprimida para la columna 'target' con identificadores de letra
         target_parts = []
         if metrics:
             target_parts.append(f"m:{metrics}")
@@ -135,12 +131,10 @@ def export_csv_compact(pairs: list):
 
     df = pd.DataFrame(rows, columns=['natural_language_query', 'target'])
 
-    # Exportar a CSV
     df.to_csv('output_compact.csv', index=False, encoding='utf-8')
     print("Exportación a CSV compacta completada.")
 
 def export_csv_compact_with_bars(pairs: list):
-    # Transformar los datos en un DataFrame
     rows = []
     for item in pairs:
         natural_language_query = item['natural_language_query']
@@ -149,7 +143,6 @@ def export_csv_compact_with_bars(pairs: list):
         metrics = ";".join(api_query.get('metrics', []))
         dimensions = ";".join(api_query.get('dimensions', []))
         
-        # Asumimos que solo hay un rango de fechas por simplicidad
         date_ranges = api_query.get('dateRanges', [{}])[0]
         start_date = date_ranges.get('startDate', "")
         end_date = date_ranges.get('endDate', "")
@@ -180,7 +173,6 @@ def export_csv_compact_with_bars(pairs: list):
                 value = filter_expression['numericFilter'].get('value', {}).get('int64Value', "")
                 metric_filter = f"{field_name};{operation};{value}"
         
-        # Crear la cadena comprimida para la columna 'target' con barras separadoras
         target_parts = [
             metrics if metrics else "",
             dimensions if dimensions else "",
@@ -196,6 +188,5 @@ def export_csv_compact_with_bars(pairs: list):
 
     df = pd.DataFrame(rows, columns=['natural_language_query', 'target'])
 
-    # Exportar a CSV
     df.to_csv('output_compact.csv', index=False, encoding='utf-8')
     print("Exportación a CSV compacta completada.")

@@ -8,7 +8,6 @@ from modules.date_ranges import get_random_date_range
 
 
 def build_query():
-    # Seleccionar aleatoriamente una manera de comenzar la frase
     phrase = get_random_initial_phrase()
     api_query = {}
 
@@ -22,26 +21,26 @@ def build_query():
 
     phrase, api_query = set_filters(phrase, api_query)
     
-
-    phrase, api_query = set_date_range(phrase, api_query)
+    #phrase, api_query = set_date_range(phrase, api_query)
 
     return {"natural_language_query": phrase, "api_query": api_query}
 
 
 def set_metric(phrase: str, api_query: dict):
-    # Seleccionar una métrica aleatoria
     metric = get_random_metric()
-    phrase += f" {metric.iloc[3]} {metric.iloc[1]}".lower()
+    synonym = random.choice([syn.strip() for syn in metric.iloc[3].split(',')])
+    phrase += f" {synonym}".lower()
     api_query["metrics"] = [metric.iloc[0]]
     return phrase, api_query
 
 
 def set_2_metrics(phrase: str, api_query: dict):
-    # Seleccionar dos métricas aleatorias
     metrics = get_2_random_metrics()
     metric1, metric2 = metrics.iloc[0], metrics.iloc[1]
-    metric_phrase1 = f"{metric1.iloc[3]} {metric1.iloc[1]}"
-    metric_phrase2 = f"{metric2.iloc[3]} {metric2.iloc[1]}"
+    synonym_metric1 = random.choice([syn.strip() for syn in metric1.iloc[3].split(',')])
+    synonym_metric2 = random.choice([syn.strip() for syn in metric2.iloc[3].split(',')])
+    metric_phrase1 = f"{synonym_metric1}"
+    metric_phrase2 = f"{synonym_metric2}"
     phrase += f" {metric_phrase1.lower()} y {metric_phrase2.lower()}"
     api_query["metrics"] = [metric1.iloc[0], metric2.iloc[0]]
     return phrase, api_query
@@ -50,27 +49,22 @@ def set_2_metrics(phrase: str, api_query: dict):
 def set_dimension(phrase: str, api_query: dict):
     dimension = get_random_dimension()
     api_query["dimensions"] = [dimension.iloc[0]]
-    phrase += f" por {dimension.iloc[1].lower()}"
+    synonym = random.choice([syn.strip() for syn in dimension.iloc[3].split(',')])
+    phrase += f" por {synonym.lower()}"
     return phrase, api_query
 
 def set_filters(phrase: str, api_query: dict):
-    # Definir las posibles acciones
     actions = [None, "dimension", "metric", "both"]
     
-    # Seleccionar una acción aleatoria
     action = random.choice(actions)
     
     if action is None:
-        # No se llama a ninguno
         return phrase, api_query
     elif action == "dimension":
-        # Se llama solo a set_dimension_filter
         phrase, api_query = set_dimension_filter(phrase, api_query)
     elif action == "metric":
-        # Se llama solo a set_metric_filter
         phrase, api_query = set_metric_filter(phrase, api_query)
     elif action == "both":
-        # Se llaman a los dos, en orden aleatorio
         if random.choice([True, False]):
             phrase, api_query = set_dimension_filter(phrase, api_query)
             phrase += " y"
@@ -96,15 +90,7 @@ def set_metric_filter(phrase: str, api_query: dict):
 
 
 def set_date_range(phrase: str, api_query: dict):
-    # Seleccionar un tipo de rango de fecha aleatorio
     date_phrase, date_range_api_query = get_random_date_range()
     api_query["dateRanges"] = [date_range_api_query]
     phrase += f" {date_phrase}"
     return phrase, api_query
-
-
-# Ejemplo de uso
-if __name__ == "__main__":
-    result = build_query()
-    print(result["natural_language_query"])
-    print(result["api_query"])
