@@ -1,9 +1,10 @@
 import pandas as pd
 
-initial_phrases_df = pd.read_csv("resources/sinonimos_dime.csv")
-metrics_df = pd.read_csv("resources/metrics.csv")
-dimensions_df = pd.read_csv("resources/dimensions.csv")
-english_words_df = pd.read_csv("resources/4000-most-common-english-words-csv.csv")
+initial_phrases_df = pd.read_csv("../resources/sinonimos_dime.csv")
+metrics_df = pd.read_csv("../resources/metrics_reduced.csv")
+dimensions_df = pd.read_csv("../resources/dimensions_reduced.csv")
+english_words_df = pd.read_csv("../resources/4000-most-common-english-words-csv.csv")
+
 
 
 def get_random_initial_phrase():
