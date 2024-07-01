@@ -53,6 +53,13 @@ def generate_string_type_filter(dimension_or_metric):
             "stringFilter": {"matchType": match_type, "value": value},
         }
     }
+    
+    api_query = {
+        "filter": {
+            "fieldName": dimension_or_metric.iloc[0],
+            "fieldFilter": {"match": match_type, "value": value},
+        }
+    }
 
     return phrase, api_query
 
@@ -87,6 +94,13 @@ def generate_numeric_type_filter(dimension_or_metric):
         "filter": {
             "fieldName": dimension_or_metric.iloc[0],
             "numericFilter": {"operation": match_type, "value": {"int64Value": value}},
+        }
+    }
+    
+    api_query = {
+        "filter": {
+            "fieldName": dimension_or_metric.iloc[0],
+            "fieldFilter": {"match": match_type, "value": value},
         }
     }
 
