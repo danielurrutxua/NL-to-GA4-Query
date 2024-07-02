@@ -7,7 +7,7 @@ from modules.filters import get_random_filter
 from modules.date_ranges import get_random_date_range
 
 
-def build_query():
+def build_query(filtros, fechas):
     phrase = get_random_initial_phrase()
     api_query = {}
 
@@ -19,9 +19,11 @@ def build_query():
     if random.getrandbits(1):
         phrase, api_query = set_dimension(phrase, api_query)
 
-    phrase, api_query = set_filters(phrase, api_query)
+    if filtros == 'y':
+        phrase, api_query = set_filters(phrase, api_query)
     
-    #phrase, api_query = set_date_range(phrase, api_query)
+    if fechas == 'y':
+        phrase, api_query = set_date_range(phrase, api_query)
 
     return {"natural_language_query": phrase, "api_query": api_query}
 
