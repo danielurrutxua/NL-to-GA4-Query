@@ -30,7 +30,8 @@ def build_query(filtros, fechas):
 
 def set_metric(phrase: str, api_query: dict):
     metric = get_random_metric()
-    synonym = random.choice([syn.strip() for syn in metric.iloc[3].split(',')])
+    synonym = random.choice([syn.strip() for syn in metric.iloc[4].split(',')])
+    print(synonym)
     phrase += f" {synonym}".lower()
     api_query["metrics"] = [metric.iloc[0]]
     return phrase, api_query
@@ -39,8 +40,8 @@ def set_metric(phrase: str, api_query: dict):
 def set_2_metrics(phrase: str, api_query: dict):
     metrics = get_2_random_metrics()
     metric1, metric2 = metrics.iloc[0], metrics.iloc[1]
-    synonym_metric1 = random.choice([syn.strip() for syn in metric1.iloc[3].split(',')])
-    synonym_metric2 = random.choice([syn.strip() for syn in metric2.iloc[3].split(',')])
+    synonym_metric1 = random.choice([syn.strip() for syn in metric1.iloc[4].split(',')])
+    synonym_metric2 = random.choice([syn.strip() for syn in metric2.iloc[4].split(',')])
     metric_phrase1 = f"{synonym_metric1}"
     metric_phrase2 = f"{synonym_metric2}"
     phrase += f" {metric_phrase1.lower()} y {metric_phrase2.lower()}"
