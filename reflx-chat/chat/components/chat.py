@@ -61,18 +61,41 @@ def action_bar() -> rx.Component:
     return rx.center(
         rx.vstack(
             rx.chakra.form(
-                rx.chakra.form_control(
+                rx.chakra.form_control(       
                     rx.hstack(
                         rx.radix.text_field.root(
                             rx.radix.text_field.input(
-                                placeholder="Type something...",
+                                placeholder="ID Propiedad de GA4",
+                                id="propiedad",
+                                width=["33%"],
+                            ),
+                            rx.radix.text_field.input(
+                                placeholder="Fecha Inicio (Formato YYYY-MM-DD)",
+                                id="inicio",
+                                width=["33%"],
+
+                            ),  
+                            rx.radix.text_field.input(
+                                placeholder="Fecha Fin (Formato YYYY-MM-DD)",
+                                id="fin",
+                                width=["33%"],
+
+                            ),                                
+                        ),                        
+                        align_items="center",
+                        padding_y= "10px"
+                    ),             
+                    rx.hstack(
+                        rx.radix.text_field.root(
+                            rx.radix.text_field.input(
+                                placeholder="Consulta...",
                                 id="question",
                                 width=["15em", "20em", "45em", "50em", "50em", "50em"],
                             ),
                             rx.radix.text_field.slot(
                                 rx.tooltip(
                                     rx.icon("info", size=18),
-                                    content="Enter a question to get a response.",
+                                    content="Pregúntale a GA4.",
                                 )
                             ),
                         ),
@@ -80,7 +103,7 @@ def action_bar() -> rx.Component:
                             rx.cond(
                                 State.processing,
                                 loading_icon(height="1em"),
-                                rx.text("Send"),
+                                rx.text("Enviar"),
                             ),
                             type="submit",
                         ),
@@ -93,13 +116,14 @@ def action_bar() -> rx.Component:
                 reset_on_submit=True,
             ),
             rx.text(
-                "ReflexGPT may return factually incorrect or misleading responses. Use discretion.",
+                "Solamente disponibles métricas segmentadas por una dimensión. Work in progress",
                 text_align="center",
                 font_size=".75em",
                 color=rx.color("mauve", 10),
             ),
             rx.logo(margin_top="-1em", margin_bottom="-1em"),
-            align_items="center",
+            
+            align_items="center",            
         ),
         position="sticky",
         bottom="0",

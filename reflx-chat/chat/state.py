@@ -2,7 +2,7 @@ import os
 import json
 import requests
 import reflex as rx
-from openai import OpenAI
+#from openai import OpenAI
 
 
 # Checking if the API key is set properly
@@ -33,6 +33,9 @@ class State(rx.State):
 
     # The current question.
     question: str
+    propiedad: str
+    inicio: str
+    fin: str
 
     # Whether we are processing the question.
     processing: bool = False
@@ -75,6 +78,9 @@ class State(rx.State):
     async def process_question(self, form_data: dict[str, str]):
         # Get the question from the form
         question = form_data["question"]
+        propiedad = form_data["propiedad"]
+        inicio = form_data["inicio"]
+        fin = form_data["fin"]
 
         # Check if the question is empty
         if question == "":
@@ -82,10 +88,10 @@ class State(rx.State):
 
         model = self.openai_process_question
 
-        async for value in model(question):
+        async for value in model(question, propiedad, inicio, fin):
             yield value     
 
-    async def openai_process_question(self, question: str):
+    async def openai_process_question(self, question: str, propiedad: str, inicio: str, fin: str):
         """Get the response from the API.
 
         Args:
@@ -121,21 +127,29 @@ class State(rx.State):
             stream=True,
         )'''
         
-        endpoint_url = "http://35.233.142.137:5000/translate"
+        endpoint_url = "http://35.233.239.226:5000/translate"
         data = {
-            "text": question
+            "text": question,
+            "propiedad": propiedad,
+            "inicio": inicio,
+            "fin": fin
         }
         
         response = requests.post(endpoint_url, headers={"Content-Type": "application/json"}, data=json.dumps(data))
         
         if response.status_code == 200:
             translated_text = response.json().get('translated_text')
+            respuesta = response.json().get('respuesta')
             print(question)
             print(translated_text)
-            self.chats[self.current_chat][-1].answer += translated_text
+            #self.chats[self.current_chat][-1].answer += translated_text
+            #self.chats[self.current_chat][-1].answer += "\n" 
+            self.chats[self.current_chat][-1].answer += respuesta
             yield
         else:
-            self.chats[self.current_chat][-1].answer += translated_text
+            #self.chats[self.current_chat][-1].answer += translated_text
+            #self.chats[self.current_chat][-1].answer += "\n" 
+            self.chats[self.current_chat][-1].answer += respuesta
             yield
 
         # Toggle the processing flag.

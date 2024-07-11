@@ -82,7 +82,7 @@ def navbar():
         rx.hstack(
             rx.hstack(
                 rx.avatar(fallback="RC", variant="solid"),
-                rx.heading("Reflex Chat"),
+                rx.heading("TFM Data Science"),
                 rx.desktop_only(
                     rx.badge(
                     State.current_chat,
@@ -92,30 +92,7 @@ def navbar():
                 ),
                 align_items="center",
             ),
-            rx.hstack(
-                modal(rx.button("+ New chat")),
-                sidebar(
-                    rx.button(
-                        rx.icon(
-                            tag="messages-square",
-                            color=rx.color("mauve", 12),
-                        ),
-                        background_color=rx.color("mauve", 6),
-                    )
-                ),
-                rx.desktop_only(
-                    rx.button(
-                        rx.icon(
-                            tag="sliders-horizontal",
-                            color=rx.color("mauve", 12),
-                        ),
-                        background_color=rx.color("mauve", 6),
-                    )
-                ),
-                align_items="center",
-            ),
-            justify_content="space-between",
-            align_items="center",
+           
         ),
         backdrop_filter="auto",
         backdrop_blur="lg",
