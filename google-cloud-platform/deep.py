@@ -66,17 +66,17 @@ def camelCase(api_parameters, list, type):
       
     return return_list
 
-  if type == 'd':
+  if type == 'd':    
     for word in list:
       if word == 'none':
-        return 'none'
+        return_list.append('date')
       else:
         filas_con_palabra = api_parameters[api_parameters['Nombre de la API'].str.lower().str.fullmatch(word, na=False)]
         return_list.append(filas_con_palabra['Nombre de la API'].unique()[0])
       
     return return_list
 
-def returnTranslation(text, model, nl_tokenizer, api_tokenizer, api_index_lookup, sequence_len):
+def returnTranslation(text, model, nl_tokenizer, api_tokenizer, api_index_lookup, sequence_len, propiedad, inicio, fin):
     
     translated_text = translate_text(text, model, nl_tokenizer, api_tokenizer, api_index_lookup, sequence_len)
     metric_lookup = pd.read_csv('metrics_lookuptable.csv')
@@ -98,12 +98,12 @@ def returnTranslation(text, model, nl_tokenizer, api_tokenizer, api_index_lookup
 
     for dimension in d:
         dimensions_api.append(Dimension(name=dimension))
-        
+    
     request = RunReportRequest(
-        property=f"properties/299616702", #Cambiar por algo dinamico
+        property=propiedad, #Cambiar por algo dinamico
         dimensions=dimensions_api,
         metrics=metrics_api,
-        date_ranges=[DateRange(start_date="30daysAgo", end_date="today")],
+        date_ranges=[DateRange(start_date=inicio, end_date=fin)],
     )
     
     response = client_data.run_report(request)
@@ -170,9 +170,10 @@ df['dimensions'] = df['dimensions'].apply(lambda x: re.sub(';', ' ', x))
 df['dimensionFilter'] = df['dimensionFilter'].fillna('none')
 df['dimensionFilter'] = df['dimensionFilter'].astype('str')
 df['dimensionFilter'] = df['dimensionFilter'].apply(lambda x: re.sub(';', ' ', x))
+df['dimensionFilter'] = df['dimensionFilter'].apply(lambda x: re.sub('_', '', x))
 
 
-df['target'] = 'get ' + df['metrics'] + ' segmentedBy ' + df['dimensions'] + ' filteredBy ' + df['dimensionFilter']
+df['target'] = 'get ' + df['metrics'] + ' segmentedBy ' + df['dimensions']# + ' filteredBy ' + df['dimensionFilter']
 
 df['natural_language_query'] = df['natural_language_query'].apply(lambda row: clean_text(row))
 df['target'] = df['target'].apply(lambda row: clean_and_prepare_text(row))
@@ -212,9 +213,13 @@ model = keras.models.load_model('modelo.keras')
 @app.route('/translate', methods=['POST'])
 def translate():
     data = request.json
-    text = data['text']    
+    text = data['text']  
+    propiedad = data['propiedad']
+    inicio = data['inicio']
+    fin = data['fin']  
+    
     # Aquí va tu función translate_text adaptada para recibir el input desde la request
-    traduccion, datos = returnTranslation(text, model, nl_tokenizer, api_tokenizer, api_index_lookup, sequence_len)    
+    traduccion, datos = returnTranslation(text, model, nl_tokenizer, api_tokenizer, api_index_lookup, sequence_len, propiedad, inicio, fin)    
     return jsonify({'translated_text': traduccion, 'respuesta': datos})
 
 # Iniciar la aplicación

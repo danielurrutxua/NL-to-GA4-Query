@@ -127,10 +127,10 @@ class State(rx.State):
             stream=True,
         )'''
         
-        endpoint_url = "http://35.233.239.226:5000/translate"
+        endpoint_url = "http://35.247.85.124:5000/translate"
         data = {
             "text": question,
-            "propiedad": propiedad,
+            "propiedad": "properties/" + propiedad,
             "inicio": inicio,
             "fin": fin
         }

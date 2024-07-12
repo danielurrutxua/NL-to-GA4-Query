@@ -61,25 +61,38 @@ def action_bar() -> rx.Component:
     return rx.center(
         rx.vstack(
             rx.chakra.form(
-                rx.chakra.form_control(       
+                rx.chakra.form_control(  
+                    rx.hstack(
+                        rx.text(
+                            "Esta aplicación es puramente formativa. Propieades disponibles: 299616702. Frases de prueba: sugiere total de acciones por usuario" ,
+                            text_align="center",
+                            font_size=".80em",
+                            color=rx.color("mauve", 10),
+                        ),
+                        align_items="center",
+                        padding_y= "10px"
+                    ),                        
                     rx.hstack(
                         rx.radix.text_field.root(
                             rx.radix.text_field.input(
                                 placeholder="ID Propiedad de GA4",
+                                value="299616702",
                                 id="propiedad",
                                 width=["33%"],
+                                required= True
                             ),
                             rx.radix.text_field.input(
                                 placeholder="Fecha Inicio (Formato YYYY-MM-DD)",
                                 id="inicio",
                                 width=["33%"],
+                                required= True
 
                             ),  
                             rx.radix.text_field.input(
                                 placeholder="Fecha Fin (Formato YYYY-MM-DD)",
                                 id="fin",
                                 width=["33%"],
-
+                                required= True,
                             ),                                
                         ),                        
                         align_items="center",
@@ -109,6 +122,7 @@ def action_bar() -> rx.Component:
                         ),
                         align_items="center",
                     ),
+                    
                     is_disabled=State.processing,
                 ),
                 # Procesa la petición state
