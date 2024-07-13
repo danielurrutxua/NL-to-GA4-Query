@@ -2,7 +2,7 @@
 
 ![image](https://github.com/user-attachments/assets/668e4245-f5fa-4536-b117-472babfe55f6)
 
-## 📈 Herramienta para Eliminar la Dependencia del Equipo Comercial del Equipo de Analítica Digital
+## 📈 Herramienta para eliminar la dependencia del equipo comercial del equipo de Analítica Digital
 
 En muchas organizaciones, el equipo comercial depende del equipo de analítica digital para obtener datos y análisis sobre los clientes. Esto puede resultar en retrasos y cuellos de botella que afectan la eficiencia y la agilidad de las operaciones comerciales. Una herramienta que permita al equipo comercial acceder directamente a los datos de los clientes puede ser altamente beneficiosa.
 
