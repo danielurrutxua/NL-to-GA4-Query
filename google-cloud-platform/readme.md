@@ -3,6 +3,12 @@
 
 Este proyecto proporciona una API basada en Flask que permite realizar consultas a Google Analytics utilizando un lenguaje natural. El script en Python maneja la interpretación de texto en lenguaje natural, la consulta a la API de Google Analytics y el retorno de resultados en formato JSON.
 
+## Contenidos
+
+- **deep.py** : Script que genera las variables necesarias y levanta el servidor para poder consultarlo con cualquier lenguaje de programación.
+- **modelo.keras** : Modelo entrenado guardado en el notebook que incluye este repositorio.
+- **output.csv** : Dataset usado para entrenar el modelo.
+
 ## Requisitos
 
 Para ejecutar este proyecto, asegúrate de tener instalados los siguientes paquetes de Python:
