@@ -1,5 +1,60 @@
 # Procesamiento dataset, modelado, entrenamiento y consumo del modelo
 
+## Modelo Transformer Encoder-Decoder
+
+Un modelo Transformer Encoder-Decoder es una arquitectura de red neuronal diseñada para tareas de procesamiento de lenguaje natural (NLP) como traducción automática, resumen de texto y generación de texto. Fue introducido en el artículo "Attention is All You Need" por Vaswani et al. en 2017. Esta arquitectura se destaca por su capacidad de manejar dependencias a largo plazo en el texto mediante el mecanismo de atención.
+
+### Componentes Principales
+
+1. **Encoder (Codificador)**:
+    - El codificador recibe una secuencia de entrada y la convierte en una representación interna. 
+    - Está compuesto por varias capas idénticas apiladas, cada una de las cuales tiene dos subcapas:
+        - **Multi-Head Self-Attention**: Permite que el modelo preste atención a diferentes partes de la secuencia de entrada de manera simultánea.
+        - **Feed-Forward Neural Network**: Una red neuronal totalmente conectada que procesa las representaciones de atención.
+    - Se añaden conexiones residuales alrededor de cada subcapa, seguidas de normalización de capa (layer normalization).
+
+2. **Decoder (Decodificador)**:
+    - El decodificador genera la secuencia de salida una palabra (o token) a la vez.
+    - También está compuesto por varias capas idénticas apiladas, cada una con tres subcapas:
+        - **Masked Multi-Head Self-Attention**: Similar a la atención en el codificador, pero enmascara los tokens futuros para que las predicciones en un tiempo t solo dependan de los tokens anteriores.
+        - **Multi-Head Attention**: Atención sobre la salida del codificador, permitiendo al decodificador enfocarse en diferentes partes de la secuencia de entrada.
+        - **Feed-Forward Neural Network**: Similar a la del codificador.
+
+3. **Embeddings y Positional Encoding**:
+    - Dado que el Transformer no tiene una estructura recurrente o convolucional, se añaden embeddings posicionales para que el modelo entienda el orden de la secuencia.
+    - Los embeddings posicionales se suman a los embeddings de palabras antes de entrar en el codificador y el decodificador.
+
+### Mecanismo de Atención
+
+El mecanismo de atención permite que cada palabra (o token) en una secuencia de entrada preste atención a otras palabras de la misma secuencia de manera dinámica. Esto se hace calculando una ponderación (peso) para cada palabra en función de su relevancia.
+
+1. **Self-Attention**:
+    - Calcula tres vectores para cada palabra: `Query` (Q), `Key` (K), y `Value` (V).
+    - La atención se calcula como un producto punto entre el `Query` de una palabra y el `Key` de todas las palabras, seguido de una normalización.
+    - Los valores resultantes se ponderan con los `Value` correspondientes para obtener la representación final.
+
+2. **Multi-Head Attention**:
+    - El mecanismo de atención se aplica varias veces en paralelo (cabezas múltiples), permitiendo al modelo enfocarse en diferentes partes de la secuencia simultáneamente.
+    - Las salidas de todas las cabezas se concatenan y se proyectan a través de una capa lineal.
+
+### Ventajas del Transformer
+
+1. **Paralelismo**: A diferencia de los modelos recurrentes, los Transformers permiten un procesamiento paralelo, lo que acelera significativamente el entrenamiento.
+2. **Manejo de Dependencias a Largo Plazo**: Gracias al mecanismo de atención, los Transformers pueden capturar relaciones a largo plazo en el texto de manera más efectiva que las RNN o LSTM.
+3. **Escalabilidad**: Los Transformers pueden manejar secuencias largas y grandes volúmenes de datos con más eficiencia.
+
+### Aplicaciones
+
+- **Traducción Automática**: Convierten texto de un idioma a otro.
+- **Resumen de Texto**: Generan resúmenes concisos de documentos largos.
+- **Generación de Texto**: Crean texto coherente y relevante dado un contexto o inicio de frase.
+- **Clasificación de Texto**: Clasifican documentos en categorías predefinidas.
+- **Respuesta a Preguntas**: Responden preguntas basadas en el contenido de un texto.
+
+En resumen, la arquitectura Transformer Encoder-Decoder ha revolucionado el campo del procesamiento de lenguaje natural y ha sido la base para modelos avanzados como BERT y GPT, que han logrado resultados sobresalientes en diversas tareas de NLP.
+
+# Explicación notebook
+
 ## Instalación de las librerías necesarias
 
 Se instalan Keras y KerasNLP
