@@ -1,6 +1,8 @@
 
 # Guía para Crear y Activar una Máquina Virtual en Google Cloud Platform
 
+![image](https://github.com/user-attachments/assets/81996964-2964-4a2e-ad83-310847ca85d1)
+
 Esta guía detalla los pasos para crear y activar una máquina virtual (VM) en Google Cloud Platform (GCP) usando Compute Engine.
 
 ## Prerrequisitos
