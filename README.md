@@ -2,6 +2,13 @@
 
 ![image](https://github.com/user-attachments/assets/668e4245-f5fa-4536-b117-472babfe55f6)
 
+## 📁 Contenidos
+- **dataset-generator** : Scripts utilizados para generar el dataset de pares entre lenguaje natural y el listado de metricas, dimensiones, filtros y fechas compatibles con la API de Google Analytics 4.
+- **google-cloud-platform** : Archivos a subir a la máquina virtual que actúa de endpoint con un servidor Flask en Google Cloud Platform con el servicio Compute Engine.
+- **notebook** : Archivo compatible con Google Collab para entrenar el modelo Transformer Enconder-Decoder con KerasNLP
+- **reflx-chat** : Interfaz gráfica para consultar el modelo entrenado anteriormente y alojado en Google Cloud.
+- **resources** : Diferentes archivos usados en el proceso (listado de metricas, dimensiones, sinónimos, etc)
+
 ## 📈 Herramienta para eliminar la dependencia del equipo comercial del equipo de Analítica Digital
 
 En muchas organizaciones, el equipo comercial depende del equipo de analítica digital para obtener datos y análisis sobre los clientes. Esto puede resultar en retrasos y cuellos de botella que afectan la eficiencia y la agilidad de las operaciones comerciales. Una herramienta que permita al equipo comercial acceder directamente a los datos de los clientes puede ser altamente beneficiosa.
@@ -27,17 +34,17 @@ Supongamos una empresa de software B2B con un equipo comercial de 10 personas y 
 #### Costos Actuales:
 - **Salario promedio del equipo comercial**: 60,000€ anuales por persona.
 - **Salario promedio del equipo de analítica digital**: 80,000€ anuales por persona.
-- **Costo de oportunidad**: Si un comercial espera 2 días para obtener datos y cerrar una venta, se estima una pérdida de ingresos potenciales de $1,000 por día.
+- **Costo de oportunidad**: Si un comercial espera 2 días para obtener datos y cerrar una venta, se estima una pérdida de ingresos potenciales de 1,000€ por día.
 
 ### Impacto Económico de la Herramienta
 
 1. **Reducción del Tiempo de Espera**:
     - Eliminando el tiempo de espera de 2 días, los comerciales pueden cerrar ventas más rápidamente.
-    - Si cada comercial cierra una venta adicional de 1,000€ por día debido a la reducción de tiempo de espera, esto resultaría en $10,000 adicionales por día para el equipo comercial completo.
+    - Si cada comercial cierra una venta adicional de 1,000€ por día debido a la reducción de tiempo de espera, esto resultaría en €10,000 adicionales por día para el equipo comercial completo.
 
 2. **Aumento en la Eficiencia del Equipo de Analítica Digital**:
     - El equipo de analítica digital puede dedicar más tiempo a análisis complejos y estratégicos en lugar de responder consultas rutinarias.
-    - Asumiendo que el equipo de analítica digital puede mejorar su productividad en un 30%, la empresa podría ahorrar o redirigir recursos equivalentes a $72,000 anuales.
+    - Asumiendo que el equipo de analítica digital puede mejorar su productividad en un 30%, la empresa podría ahorrar o redirigir recursos equivalentes a 72,000€ anuales.
 
 3. **Costo de Implementación de la Herramienta**:
     - Supongamos que el desarrollo e implementación de la herramienta cuesta 50,000€.
