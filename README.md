@@ -1,6 +1,6 @@
 # NL-to-GA4-Query
 
-![image](https://github.com/user-attachments/assets/668e4245-f5fa-4536-b117-472babfe55f6)
+![TFM](https://github.com/user-attachments/assets/8d17ff97-fed0-433c-bfcf-05085900bff7)
 
 ## 📁 Contenidos
 - **dataset-generator** : Scripts utilizados para generar el dataset de pares entre lenguaje natural y el listado de metricas, dimensiones, filtros y fechas compatibles con la API de Google Analytics 4.
