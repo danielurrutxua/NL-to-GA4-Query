@@ -40,7 +40,7 @@ Supongamos una empresa de software B2B con un equipo comercial de 10 personas y 
 
 1. **Reducción del Tiempo de Espera**:
     - Eliminando el tiempo de espera de 2 días, los comerciales pueden cerrar ventas más rápidamente.
-    - Si cada comercial cierra una venta adicional de 1,000€ por día debido a la reducción de tiempo de espera, esto resultaría en €10,000 adicionales por día para el equipo comercial completo.
+    - Si cada comercial tiene una probabilidad del 10% de cerrar una venta adicional de 1,000€ por día debido a la reducción de tiempo de espera, esto resultaría en €1,000 adicionales por día para el equipo comercial completo, de 10 miembros.
 
 2. **Aumento en la Eficiencia del Equipo de Analítica Digital**:
     - El equipo de analítica digital puede dedicar más tiempo a análisis complejos y estratégicos en lugar de responder consultas rutinarias.
@@ -52,12 +52,16 @@ Supongamos una empresa de software B2B con un equipo comercial de 10 personas y 
 
 ### Análisis del Retorno de Inversión (ROI)
 
-- **Ingresos Adicionales Anuales**: 10,000€ por día * 250 días laborables = 2,500,000€
+- **Ingresos Adicionales Anuales**: 1,000€ por día * 250 días laborables = 250,000€
 - **Ahorros Anuales por Mejora en Productividad del Equipo de Analítica Digital**: 72,000€
 - **Costo Total del Primer Año**: 50,000€ (implementación) + 10,000€ (mantenimiento) = 60,000€
 
 **ROI del Primer Año**:
-![image](https://github.com/user-attachments/assets/e8d9f028-3e1f-46a7-b48b-95224615e1fc)
+![image](https://github.com/user-attachments/assets/f2d53386-c7d8-436a-a7d9-e97695b415ab)
+
+**ROI de años siguientes**
+![image](https://github.com/user-attachments/assets/7dcc5ab7-454a-484f-a6dd-a685f70868e8)
+
 
 ### Conclusión
 
