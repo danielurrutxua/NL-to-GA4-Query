@@ -1,64 +1,23 @@
-# Reflex Chat App
+# Reflex.dev
 
-A user-friendly, highly customizable Python web app designed to demonstrate LLMs in a ChatGPT format.
+Reflex.dev es una plataforma de desarrollo web que permite a los programadores crear aplicaciones web interactivas y dinámicas con facilidad. Con Reflex.dev, puedes concentrarte en la lógica de tu aplicación sin preocuparte por los detalles complicados del front-end y el back-end.
 
-<div align="center">
-<img src="./docs/demo.gif" alt="icon"/>
-</div>
+## Características Principales
 
-# Getting Started
+- **Framework Unificado**: Reflex.dev proporciona un entorno de desarrollo unificado que simplifica la creación de aplicaciones web completas. No necesitas configurar múltiples herramientas y frameworks separados.
+- **Desarrollo Rápido**: Ofrece una serie de herramientas y utilidades que aceleran el proceso de desarrollo, permitiéndote construir y desplegar aplicaciones más rápidamente.
+- **Escalabilidad**: Diseñado para crecer contigo, Reflex.dev soporta aplicaciones desde prototipos simples hasta grandes sistemas empresariales.
+- **Interactividad**: Facilita la creación de interfaces de usuario interactivas con una mínima cantidad de código, gracias a su enfoque en la simplicidad y eficiencia.
+- **Ecosistema Completo**: Incluye todo lo necesario para el desarrollo web, desde la gestión de bases de datos hasta la autenticación de usuarios y la gestión del estado de la aplicación.
 
-You'll need a valid OpenAI subscription - save your API key under the environment variable `OPENAI_API_KEY`:
+## Instalación
 
-```bash
-export OPENAI_API_KEY="YOUR_OPENAI_API_KEY" # replace me!
-```
+Para comenzar a usar Reflex.dev, puedes seguir estos sencillos pasos:
 
-### 🧬 1. Clone the Repo
-
-```bash
-git clone https://github.com/reflex-dev/reflex-chat.git
-```
-
-### 📦 2. Install Reflex
-
-To get started with Reflex, you'll need:
-
-- Python 3.7+
-- Node.js 12.22.0+ \(No JavaScript knowledge required!\)
-- Pip dependencies: `reflex`, `openai`
-
-Install `pip` dependencies with the provided `requirements.txt`:
-
-```bash
-pip install -r requirements.txt
-```
-
-### 🚀 3. Run the application
-
-Initialize and run the app:
-
-```
-reflex init
-reflex run
-```
-
-# Features
-
-- 100% Python-based, including the UI, using Reflex
-- Create and delete chat sessions
-- The application is fully customizable and no knowledge of web dev is required to use it.
-    - See https://reflex.dev/docs/styling/overview for more details 
-- Easily swap out any LLM
-- Responsive design for various devices
-
-# Contributing
-
-We welcome contributions to improve and extend the LLM Web UI. 
-If you'd like to contribute, please do the following:
-- Fork the repository and make your changes. 
-- Once you're ready, submit a pull request for review.
-
-# License
-
-The following repo is licensed under the MIT License.
+1. **Instalar Dependencias**: Asegúrate de tener Node.js y npm instalados en tu sistema.
+2. **Crear un Proyecto Nuevo**:
+   ```bash
+   npx create-reflex-app my-app
+   cd my-app
+   npm install
+   npm start
