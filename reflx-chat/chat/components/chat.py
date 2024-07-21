@@ -76,7 +76,6 @@ def action_bar() -> rx.Component:
                         rx.radix.text_field.root(
                             rx.radix.text_field.input(
                                 placeholder="ID Propiedad de GA4",
-                                value="299616702",
                                 id="propiedad",
                                 width=["33%"],
                                 required= True
