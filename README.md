@@ -5,9 +5,9 @@
 ## 📁 Contenidos
 - **dataset-generator** : Scripts utilizados para generar el dataset de pares entre lenguaje natural y el listado de metricas, dimensiones, filtros y fechas compatibles con la API de Google Analytics 4.
 - **google-cloud-platform** : Archivos a subir a la máquina virtual que actúa de endpoint con un servidor Flask en Google Cloud Platform con el servicio Compute Engine.
-- **notebook** : Archivo compatible con Google Collab para entrenar el modelo Transformer Enconder-Decoder con KerasNLP
+- **notebook** : Archivo compatible con Google Collab para entrenar el modelo Transformer Enconder-Decoder con KerasNLP.
 - **reflx-chat** : Interfaz gráfica para consultar el modelo entrenado anteriormente y alojado en Google Cloud.
-- **resources** : Diferentes archivos usados en el proceso (listado de metricas, dimensiones, sinónimos, etc)
+- **resources** : Diferentes archivos usados en el proceso (listado de metricas, dimensiones, sinónimos, etc).
 
 ## 📈 Herramienta para eliminar la dependencia del equipo comercial del equipo de Analítica Digital
 
